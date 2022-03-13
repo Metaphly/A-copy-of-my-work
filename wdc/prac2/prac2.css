@@ -56,3 +56,8 @@ body.cross {
 {
     font-family:cursive;
 }
+
+.red-border
+{
+    border: red;
+}
