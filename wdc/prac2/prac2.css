@@ -14,15 +14,16 @@ del {
 }
 
 mark {
-    color:dimgrey;
+    color:drakblue;
     background-color:pink;
 }
 
 h2 {
-    text-align: center;
+    text-align:left;
+    font-family:sans-serif;
 }
 
 pre{
     font-family:monospace;
-    font-size:80%;
+    font-size:100%;
 }
