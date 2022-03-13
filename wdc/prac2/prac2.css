@@ -36,7 +36,7 @@ h3 {
     color:rgba(0,0,0,0.5)
 }
 
-body {
+body.cross {
     background-image: url("cross.png");
     background-color: #DCF5F5;
    }
