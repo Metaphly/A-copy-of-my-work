@@ -80,3 +80,13 @@ hr
     border-style: solid;
     border-color: blue;
 }
+
+.top-round
+{
+    rad
+}
+
+.bottom-round
+{
+    border-radius: 8px;
+}
