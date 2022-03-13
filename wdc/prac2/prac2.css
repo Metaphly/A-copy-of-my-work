@@ -118,10 +118,11 @@ hr
     background-color: yellow;
     border-style: solid;
     border-color: red;
+    border-width: 1px;
     margin: 10px 20px 10px 20px;
     padding: 12px;
-    width: 676px;
-    height: 176px;
+    width: 674px;
+    height: 174px;
 }
 
 #inner2
@@ -131,7 +132,8 @@ hr
     background-color: yellow;
     border-style: solid;
     border-color: red;
+    border-width: 1px;
     padding: 12px;
-    width: 376px;
-    height: 376px;
+    width: 374px;
+    height: 374px;
 }
