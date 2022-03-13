@@ -94,16 +94,16 @@ hr
     border-radius: 0px 0px 8px 8px;
 }
 
-#Blue-background-1
+.Blue-background-1
 {
     margin: 0;
     padding: 0;
-    background-color: darkblue;
+    background-color: blue;
 }
 
-#Blue-background-2
+.Blue-background-2
 {
-    margin-top: 20;
+    margin-top: 20px;
     padding: 0;
-    background-color: darkblue;
+    background-color: blue;
 }
