@@ -83,10 +83,10 @@ hr
 
 .top-round
 {
-    rad
+    border-radius: 8px 8px 0px 0px;
 }
 
 .bottom-round
 {
-    border-radius: 8px;
+    border-radius: 0px 0px 8px 8px;
 }
