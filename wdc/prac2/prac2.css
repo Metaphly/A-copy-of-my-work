@@ -85,8 +85,7 @@ hr
 
 .top-round
 {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px 8px 0px 0px;
 }
 
 .bottom-round
