@@ -98,10 +98,12 @@ hr
 {
     margin: 0;
     padding: 0;
+    background-color: darkblue;
 }
 
 #Blue-background-2
 {
     margin-top: 20;
     padding: 0;
+    background-color: darkblue;
 }
