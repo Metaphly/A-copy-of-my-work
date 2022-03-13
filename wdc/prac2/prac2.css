@@ -43,7 +43,8 @@ body.cross {
 
 #content {
     background-color: white;
-    border: 1px darkgrey;
+    border-width: 1px;
+    border-color: darkgrey;
     border-radius: 8px;
    }
 
@@ -54,21 +55,22 @@ body.cross {
 
 .fancy
 {
-    font-family:cursive;
+    font-family: cursive;
 }
 
 .red-border
 {
-    border: 1px solid red;
+    border-style: solid;
+    border-color: red;
 }
 
 hr
 {
-    border:normal solid #CFDFE4;
+    border-color: #CFDFE4;
 }
 
 .red-outline
 {
     outline-style: solid;
-    outline-color:red;
+    outline-color: red;
 }
