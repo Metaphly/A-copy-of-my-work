@@ -69,5 +69,6 @@ hr
 
 .red-outline
 {
+    outline-style: solid;
     outline-color:red;
 }
