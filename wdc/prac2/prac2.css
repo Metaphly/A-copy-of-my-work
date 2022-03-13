@@ -99,6 +99,8 @@ hr
     margin: 0;
     padding: 0;
     background-color: blue;
+    border-style: solid;
+    border-color: red;
 }
 
 .Blue-background-2
@@ -106,4 +108,6 @@ hr
     margin-top: 20px;
     padding: 0;
     background-color: blue;
+    border-style: solid;
+    border-color: red;
 }
