@@ -126,6 +126,7 @@ hr
 
 #inner2
 {
+    margin: auto;
     text-align:right;
     background-color: yellow;
     border-style: solid;
