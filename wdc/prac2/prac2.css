@@ -43,6 +43,8 @@ body.cross {
 
 #content {
     background-color: white;
+    border: 1px darkgrey;
+    border-radius: 8px;
    }
 
 .blue
