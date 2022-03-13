@@ -94,7 +94,7 @@ hr
     border-radius: 0px 0px 8px 8px;
 }
 
-.Blue-background-1
+#Blue-background-1
 {
     margin: 0;
     padding: 0;
@@ -103,11 +103,21 @@ hr
     border-color: red;
 }
 
-.Blue-background-2
+#Blue-background-2
 {
     margin-top: 20px;
     padding: 0;
     background-color: blue;
     border-style: solid;
     border-color: red;
+}
+
+#inner1
+{
+
+}
+
+#inner2
+{
+
 }
