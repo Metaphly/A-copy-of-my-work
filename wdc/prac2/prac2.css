@@ -130,4 +130,7 @@ hr
     background-color: yellow;
     border-style: solid;
     border-color: red;
+    padding: 12px;
+    width: 388px;
+    height: 388px;
 }
