@@ -141,3 +141,12 @@ hr
     width: 374px;
     height: 374px;
 }
+
+.quote
+{
+    font-family:'Raleway', sans-serif;
+    color: dimgrey;
+    line-height: 1.5;
+    word-spacing: 0.2 em;
+    text-align: justify;
+}
