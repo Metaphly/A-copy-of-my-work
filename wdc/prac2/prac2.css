@@ -2,10 +2,6 @@ h1 {
     font-family:'Raleway', sans-serif;
 }
 
-h2 {
-    font-family:'Raleway', sans-serif;
-}
-
 p {
     font-family:'Noto Serif', serif;
 }
@@ -25,7 +21,7 @@ mark {
 
 h2 {
     text-align:left;
-    font-family:sans-serif;
+    font-family:'Raleway', sans-serif;
 }
 
 pre {
@@ -43,6 +39,7 @@ h3 {
 body.cross {
     background-image: url("cross.png");
     background-color: #DCF5F5;
+    font-family:'Noto Serif', serif;
    }
 
 #content {
