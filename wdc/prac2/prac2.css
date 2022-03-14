@@ -151,3 +151,8 @@ hr
     text-align: justify;
     text-justify: inter-word;
 }
+
+h4
+{
+    font-style: italic;
+}
