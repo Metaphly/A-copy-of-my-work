@@ -20,6 +20,14 @@ function make_post()
         content.style.color = "red";
     }
 
+    if(document.getElementById("bold").checked){
+        content.style.color = "red";
+    }
+
+    if(){
+
+    }
+
     post.appendChild(time);
     post.appendChild(content);
 
