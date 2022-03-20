@@ -29,12 +29,21 @@ function make_post()
     }
 }
 
-function hide_main()
+function hide_main(sel)
 {
     document.getElementById("main").style.display = "none";
    // document.getElementById("main").style.visibility = "hidden";
     document.getElementById("menu").style.display = "";
     //document.getElementById("menu").style.visibility = "visible";
+    if(sel == 1){
+        document.getElementById("main").style.display = "none";
+        document.getElementById("menu").style.display = "";
+    }else if(sel == 2){
+        document.getElementById("main").style.display = "";
+    //document.getElementById("main").style.visibility = "visible";
+        document.getElementById("menu").style.display = "none";
+    //document.getElementById("menu").style.visibility = "hidden";
+    }
 }
 
 function hide_menu()
