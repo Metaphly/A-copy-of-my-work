@@ -20,12 +20,12 @@ function make_post()
         content.style.color = "red";
     }
 
-    if(document.getElementById("bold").checked){
-        content.style.color = "red";
+    if(document.getElementById("bol").checked){
+        content.bold();
     }
 
-    if(){
-
+    if(document.getElementById("ita").checked){
+        content.ita();
     }
 
     post.appendChild(time);
