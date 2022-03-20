@@ -9,6 +9,7 @@ function make_post()
     let time = document.createElement("p");
     let content = document.createElement("p");
     let muls = document.getElementById("multi").value;
+    console.log(muls);
     time.classList.add("post-time");
     content.classList.add("post-content");
     time.innerText = new Date();
@@ -21,7 +22,10 @@ function make_post()
     }
 
     post.appendChild(time);
-    post.appendChild(content);
+    for(let i=0; i<muls; i++)
+    {
+        post.appendChild(content);
+    }
     document.getElementById("posts").appendChild(post);
 }
 
