@@ -19,7 +19,7 @@ function make_post()
 
 function hide_main()
 {
-    document.getElementById("main").style.display = "none";
+    document.getElementById("main").style.visibility = "hidden";
     document.getElementById("menu").style.display = "block";
 }
 
