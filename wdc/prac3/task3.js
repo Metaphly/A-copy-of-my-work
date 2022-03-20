@@ -58,8 +58,8 @@ function show_posts()
 {
     var therange =document.getElementById("slib").value;
     var posts = document.getElementsByClassName("single_post");
-    for(let i=)
+    for(let i=0; i<posts.length;i++)
     {
-
+        posts[i].style.display = "none"
     }
 }
