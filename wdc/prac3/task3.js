@@ -21,7 +21,7 @@ function make_post()
     }
 
     if(document.getElementById("bol").checked){
-        content.bold();
+        content.style.fontWeight = 'bold';
     }
 
     if(document.getElementById("ita").checked){
