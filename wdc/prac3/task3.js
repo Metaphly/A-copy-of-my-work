@@ -23,12 +23,10 @@ function make_post()
     post.appendChild(time);
     post.appendChild(content);
 
-    for(var i=0; i<6; i++)
+    for(var i=0; i<muls; i++)
     {
-        let repeated = post;
-        document.getElementById("posts").appendChild(repeated);
+        document.getElementById("posts").appendChild(post.cloneNode(true));
     }
-    document.getElementById("posts").appendChild(post);
 }
 
 function hide_main()
