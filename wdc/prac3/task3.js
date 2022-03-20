@@ -70,5 +70,5 @@ function show_posts()
 
 function change_background()
 {
-    
+    document.body.style.backgroundColor = "red";
 }
