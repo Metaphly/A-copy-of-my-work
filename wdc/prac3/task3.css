@@ -25,14 +25,12 @@ h1,h2,h3 {
     width: 100px;
     height: 100px;
     float: left;
-    display:block;
 }
 #posts {
     border: 1px solid darkseagreen;
     padding: 10px;
     margin: 0px 10px 10px 150px;
     min-height: 100px;
-    display:block;
 }
 hr {
     clear: both;
