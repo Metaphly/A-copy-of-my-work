@@ -1,4 +1,5 @@
 function get_time()
 {
-    document.getElementById("current_time").innerHTML = "Paragraph changed.";
+    let d = new Date();
+    document.getElementById("current_time").innerHTML = d.toLocaleTimeString();
 }
