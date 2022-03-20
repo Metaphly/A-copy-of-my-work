@@ -5,5 +5,5 @@ function count_incre()
 
 function make_post()
 {
-    document.getElementById("posts").innerHTML++;
+    document.getElementById("posts").innerText = "Good day";
 }
