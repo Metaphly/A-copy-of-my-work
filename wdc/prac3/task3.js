@@ -21,11 +21,12 @@ function make_post()
     }
 
     post.appendChild(time);
+    post.appendChild(content);
+    
     for(var i=0; i<6; i++)
     {
-        //post.appendChild(content);
-    }
     document.getElementById("posts").appendChild(post);
+    }
 }
 
 function hide_main()
