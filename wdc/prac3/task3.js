@@ -6,5 +6,6 @@ function count_incre()
 function make_post()
 {
     let time = document.createElement("p");
-    document.getElementById("posts").innerText;
+    time.innerText = "This is a paragraph";
+    document.getElementById("posts").appendChild(time);
 }
