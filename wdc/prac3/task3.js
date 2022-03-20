@@ -25,6 +25,6 @@ function hide_main()
 
 function hide_menu()
 {
-    document.getElementById("main").style.display = "block";
+    document.getElementById("main").style.visibility = "visible";
     document.getElementById("menu").style.display = "none";
 }
