@@ -67,3 +67,8 @@ function show_posts()
         }
     }
 }
+
+function change_background()
+{
+    
+}
