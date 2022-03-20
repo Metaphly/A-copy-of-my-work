@@ -19,12 +19,12 @@ function make_post()
 
 function hide_main()
 {
-    document.getElementById("main").style.visibility = "hidden";
-    document.getElementById("menu").style.visibility = "visible";
+    document.getElementById("main").style.display = "none";
+    document.getElementById("menu").style.display = "block";
 }
 
 function hide_menu()
 {
-    document.getElementById("main").style.visibility = "visible";
-    document.getElementById("menu").style.visibility = "hidden";
+    document.getElementById("main").style.display = "block";
+    document.getElementById("menu").style.display = "none";
 }
