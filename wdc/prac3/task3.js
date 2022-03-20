@@ -21,11 +21,11 @@ function make_post()
     }
 
     if(document.getElementById("bol").checked){
-        content.style.fontWeight = 'bold';
+        content.style.fontWeight = "bold";
     }
 
     if(document.getElementById("ita").checked){
-        content.ita();
+        content.style.fontStyle = "italic";
     }
 
     post.appendChild(time);
