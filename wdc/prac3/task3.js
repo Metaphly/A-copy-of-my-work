@@ -16,3 +16,15 @@ function make_post()
     post.appendChild(content);
     document.getElementById("posts").appendChild(post);
 }
+
+function hide_main()
+{
+    document.getElementById("main").style.display = "none";
+    document.getElementById("menu").style.display = "block";
+}
+
+function hide_menu
+{
+    document.getElementById("main").style.display = "block";
+    document.getElementById("menu").style.display = "none";
+}
