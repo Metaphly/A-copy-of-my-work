@@ -26,8 +26,8 @@ function make_post()
     for(var i=0; i<6; i++)
     {
         document.getElementById("posts").appendChild(post);
-        console.log(i);
     }
+    document.getElementById("posts").appendChild(post);
 }
 
 function hide_main()
