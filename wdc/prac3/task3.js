@@ -53,7 +53,7 @@ function hide_menu()
     //document.getElementById("menu").style.visibility = "hidden";
 }
 
-function show_post()
+function show_posts()
 {
     var therange=document.getElementById("slib").value;
 }
