@@ -14,9 +14,9 @@ function make_post()
     content.innerText = document.getElementById("post_content").value;
 
     if(document.getElementById('c_b').checked) {
-
+        content.style.color = "blue";
     }else if(document.getElementById('c_r').checked) {
-
+        content.style.color = "red";
     }
 
     post.appendChild(time);
