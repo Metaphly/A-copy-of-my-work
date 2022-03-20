@@ -5,5 +5,5 @@ function count_incre()
 
 function make_post()
 {
-    document.getElementById("posts").innerText = document.getElementsByTagName("textarea").innerText;
+    document.getElementById("posts").innerText = document.getElementsByTagName("textarea")[0].innerText;
 }
