@@ -11,7 +11,7 @@ function make_post()
     time.classList.add("post-time");
     content.classList.add("post-content");
     time.innerText = new Date();
-    content.innerText = "Gosh";
+    content.innerText = document.getElementById("post_content").value;
     post.appendChild(time);
     post.appendChild(content);
     document.getElementById("posts").appendChild(post);
