@@ -55,5 +55,5 @@ function hide_menu()
 
 function show_post()
 {
-
+    var therange=document.getElementById("slib").value;
 }
