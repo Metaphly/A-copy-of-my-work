@@ -13,9 +13,9 @@ function make_post()
     time.innerText = new Date();
     content.innerText = document.getElementById("post_content").value;
 
-    if(document.getElementById('gender_Male').checked) {
-        
-    }else if(document.getElementById('gender_Female').checked) {
+    if(document.getElementById('c_b').checked) {
+
+    }else if(document.getElementById('c_r').checked) {
 
     }
 
