@@ -23,7 +23,7 @@ function make_post()
     post.appendChild(time);
     for(var i=0; i<6; i++)
     {
-        post.appendChild(content);
+        //post.appendChild(content);
     }
     document.getElementById("posts").appendChild(post);
 }
