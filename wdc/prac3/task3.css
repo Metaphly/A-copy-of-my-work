@@ -35,3 +35,8 @@ h1,h2,h3 {
 hr {
     clear: both;
 }
+
+.post-time
+{
+    font-weight: bold;
+}
