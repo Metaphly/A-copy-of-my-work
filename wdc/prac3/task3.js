@@ -57,4 +57,9 @@ function hide_menu()
 function show_posts()
 {
     var therange=document.getElementById("slib").value;
+    var posts = document.getElementsByClassName("single_post");
+    for(let i=)
+    {
+
+    }
 }
