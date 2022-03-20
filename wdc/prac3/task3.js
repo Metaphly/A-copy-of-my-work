@@ -25,7 +25,8 @@ function make_post()
 
     for(var i=0; i<6; i++)
     {
-        document.getElementById("posts").appendChild(post);
+        let repeated = post;
+        document.getElementById("posts").appendChild(repeated);
     }
     document.getElementById("posts").appendChild(post);
 }
