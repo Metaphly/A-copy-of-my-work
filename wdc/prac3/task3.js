@@ -57,9 +57,13 @@ function hide_menu()
 function show_posts()
 {
     var therange =document.getElementById("slib").value;
-    var posts = document.getElementsByClassName("single_post");
+    var posts = document.getElementsByClassName("single-post");
     for(let i=0; i<posts.length;i++)
     {
-        posts[i].style.display = "none"
+        posts[i].style.display = "";
+        if(i>=therange)
+        {
+            posts[i].style.display = "none";
+        }
     }
 }
