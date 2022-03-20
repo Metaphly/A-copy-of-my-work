@@ -70,5 +70,6 @@ function show_posts()
 
 function change_background()
 {
-    document.body.style.backgroundColor = "red";
+    let cor =document.getElementById("baclor").value;
+    document.body.style.backgroundColor = cor;
 }
