@@ -22,10 +22,11 @@ function make_post()
 
     post.appendChild(time);
     post.appendChild(content);
-    
+
     for(var i=0; i<6; i++)
     {
-    document.getElementById("posts").appendChild(post);
+        document.getElementById("posts").appendChild(post);
+        console.log(i);
     }
 }
 
