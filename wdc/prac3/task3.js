@@ -8,6 +8,7 @@ function make_post()
     let post = document.createElement("div");
     let time = document.createElement("p");
     let content = document.createElement("p");
+    let muls = document.getElementById("multi").value;
     time.classList.add("post-time");
     content.classList.add("post-content");
     time.innerText = new Date();
