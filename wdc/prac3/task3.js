@@ -12,6 +12,13 @@ function make_post()
     content.classList.add("post-content");
     time.innerText = new Date();
     content.innerText = document.getElementById("post_content").value;
+
+    if(document.getElementById('gender_Male').checked) {
+        
+    }else if(document.getElementById('gender_Female').checked) {
+
+    }
+
     post.appendChild(time);
     post.appendChild(content);
     document.getElementById("posts").appendChild(post);
