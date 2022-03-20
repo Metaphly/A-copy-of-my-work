@@ -21,7 +21,7 @@ function make_post()
     }
 
     post.appendChild(time);
-    for(let i=0; i<muls; i++)
+    for(var i=0; i<6; i++)
     {
         post.appendChild(content);
     }
