@@ -1,4 +1,4 @@
-function count_pass()
+function count_incre()
 {
     document.getElementById("mcount").innerHTML++;
 }
