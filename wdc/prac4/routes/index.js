@@ -28,7 +28,7 @@ router.get('/colour.html', function(req, res, next) {
   visited++;
 });
 
-router.get('/colour.txt', function(req, res, next) {
+router.get('/color.txt', function(req, res, next) {
   if(nvisited%4 == 0)
   {
     res.send("red");

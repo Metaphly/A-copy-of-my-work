@@ -21,6 +21,6 @@ function change_color()
         headc.style.color = xhttp.responseText;
         }
     };
-    xhttp.open("GET", "/colour.txt");
+    xhttp.open("GET", "/color.txt");
     xhttp.send();
 }
