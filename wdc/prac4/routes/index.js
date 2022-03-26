@@ -9,4 +9,10 @@ router.get('/last.txt', function(req, res, next) {
   last_time = last_time.toLocaleString();
 });
 
+router.get('/color.html', function(req, res, next) {
+  res.send(last_time);
+  last_time = new Date();
+  last_time = last_time.toLocaleString();
+});
+
 module.exports = router;
