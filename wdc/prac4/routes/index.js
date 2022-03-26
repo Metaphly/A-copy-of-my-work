@@ -11,7 +11,13 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
-  res.send('<h1 style="property:red;">Red</h1>');
+  if()
+  {
+    res.send('<h1 style="property:red;">Red</h1>');
+  }else if()
+  {
+    
+  }
 });
 
 module.exports = router;
