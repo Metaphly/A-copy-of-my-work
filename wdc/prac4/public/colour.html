@@ -11,6 +11,7 @@
                 var chead = document.createElement("h1");
                 chead.innerText = xhttp.responseText;
                 chead.style.color = xhttp.responseText;
+                document.body.appendChild(chead);
             }
         };
         xhttp.open("GET", "/colour.html");
@@ -23,7 +24,6 @@
 </head>
 
 <body>
-    <h1 id='ch'></h1>
 </body>
 
 </html>
