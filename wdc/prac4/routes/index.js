@@ -11,7 +11,19 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/colorn.html', function(req, res, next) {
-  res.send(visited.toString());
+  if(visited%4 == 0)
+  {
+    res.send("red");
+  }else if(visited%4 == 1)
+  {
+    res.send("yellow");
+  }else if(visited%4 == 2)
+  {
+    res.send("green");
+  }else if(visited%4 == 3)
+  {
+    res.send("blue");
+  }
   visited++;
 });
 
