@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var visited = 0;
 var nvisited = 0;
+var times = [];
 
 let last_time = "";
 
@@ -44,6 +45,26 @@ router.get('/color.html', function(req, res, next) {
 });
 
 router.get('/log.html', function(req, res, next) {
+
+  times.push();
+  res.send(
+    `<!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>3.3</title>
+    </head>
+
+    <body>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    </body>
+
+    </html>`
+    );
 
 }
 
