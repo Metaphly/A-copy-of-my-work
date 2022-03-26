@@ -25,7 +25,7 @@ router.get('/color.html', function(req, res, next) {
     res.send('<h1 style="color:blue;">blue</h1>');
   }*/
 
-  res.sendFile('views/test.html', {root: __dirname })
+  res.sendFile('color.html', {root: __dirname })
   visited++;
 });
 
