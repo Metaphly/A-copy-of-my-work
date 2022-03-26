@@ -25,7 +25,7 @@ router.get('/color.html', function(req, res, next) {
   }else if(visited%4 == 3)
   {
     color = "blue";
-  }*/
+  }
   res.send(
 `<!DOCTYPE html>
 <html lang='en'>
