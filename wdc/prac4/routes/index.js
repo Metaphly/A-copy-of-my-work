@@ -44,7 +44,6 @@ router.get('/color.html', function(req, res, next) {
   visited++;
 });
 
-/*
 router.get('/log.html', function(req, res, next) {
 
   times.push(Date());
@@ -68,9 +67,9 @@ router.get('/log.html', function(req, res, next) {
     ${thelist}
     </body>
 
-    </html>`)
+    </html>`
+    );
 });
-*/
 
 router.get('/color.txt', function(req, res, next) {
   if(nvisited%4 == 0)
