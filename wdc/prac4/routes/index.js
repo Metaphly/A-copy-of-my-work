@@ -51,7 +51,7 @@ router.get('/log.html', function(req, res, next) {
   for (var element of times) {
     var liste = createElement("li");
     liste.innerText = element;
-    
+    thelist.appendChild(liste);
   }
   res.send(
     `<!DOCTYPE html>
@@ -62,7 +62,7 @@ router.get('/log.html', function(req, res, next) {
     </head>
 
     <body>
-    <h1 style="color:${color};">${color}</h1>
+    ${thelist}
     </body>
 
     </html>`
