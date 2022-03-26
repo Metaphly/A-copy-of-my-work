@@ -33,7 +33,6 @@ function show_times()
         var times = JSON.parse(xhttp.responseText);
         for (var element of times) {
             var liste = document.createElement("li");
-            liste.innerText = element;
             thelist.appendChild(liste);
             }
         }
