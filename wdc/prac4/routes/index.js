@@ -3,6 +3,7 @@ var router = express.Router();
 var visited = 0;
 var nvisited = 0;
 var times = [];
+var ntimes = [];
 
 let last_time = "";
 
@@ -89,7 +90,8 @@ router.get('/color.txt', function(req, res, next) {
 });
 
 router.get('/log.json', function(req, res, next) {
-
+  times.push(Date());
+  res.
 });
 
 module.exports = router;
