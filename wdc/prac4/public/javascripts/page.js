@@ -24,5 +24,3 @@ function change_color()
     xhttp.open("GET", "/colour.txt");
     xhttp.send();
 }
-
-last_time()
