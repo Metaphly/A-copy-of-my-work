@@ -45,8 +45,23 @@ router.get('/color.html', function(req, res, next) {
 });
 
 router.get('/log.html', function(req, res, next) {
-  res.end();
-}
+
+  times.push(Date());
+  var thelist = createElement("ul");
+  res.send(
+    `<!DOCTYPE html>
+    <html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>3.2</title>
+    </head>
+
+    <body>
+    <h1 style="color:${color};">${color}</h1>
+    </body>
+
+    </html>`
+});
 
 router.get('/color.txt', function(req, res, next) {
   if(nvisited%4 == 0)
