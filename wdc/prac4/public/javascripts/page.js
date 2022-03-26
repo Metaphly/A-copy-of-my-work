@@ -44,3 +44,23 @@ function show_times()
     xhttp.open("GET", "/log.json");
     xhttp.send();
 }
+
+function update_times()
+{
+    let xhttp = new XMLHttpRequest();
+    var tlist = document.getElementById("timel");
+    tlist.innerHTML="";
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var times = JSON.parse(xhttp.responseText);
+        for (let i = 0; i < times.length; i++) {
+            var liste = document.createElement("li");
+            liste.innerText = times[i];
+            console.log(liste.innerText);
+            tlist.appendChild(liste);
+            }
+        }
+    };
+    xhttp.open("GET", "/log-ro.json");
+    xhttp.send();
+}
