@@ -46,13 +46,15 @@ router.get('/color.html', function(req, res, next) {
 
 router.get('/log.html', function(req, res, next) {
 
-  ${times}.push(Date());
+  times.push(Date());
   var thelist = "<ul>";
   for (var element of times) {
     //var liste = document.createElement("li");
-    liste.innerText = element;
-    thelist.appendChild(liste);
+    //liste.innerText = element;
+    //thelist.appendChild(liste);
+    thelist = thelist + "<li>" + element + "</li>";
   }
+  thelist = thelist + "</ul>";
   res.send(
     `<!DOCTYPE html>
     <html lang='en'>
@@ -62,8 +64,7 @@ router.get('/log.html', function(req, res, next) {
     </head>
 
     <body>
-    <script>
-    </script>
+    ${thelist}
     </body>
 
     </html>`)
