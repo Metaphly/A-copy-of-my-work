@@ -50,9 +50,6 @@ router.get('/log.html', function(req, res, next) {
   times.push(Date());
   var thelist = "<ul>";
   for (var element of times) {
-    //var liste = document.createElement("li");
-    //liste.innerText = element;
-    //thelist.appendChild(liste);
     thelist = thelist + "<li>" + element + "</li>";
   }
   thelist = thelist + "</ul>";
