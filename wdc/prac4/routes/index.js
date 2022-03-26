@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/last.txt', function(req, res, next) {
-  res.send("time");
+  res.send("test");
 });
 
 module.exports = router;
