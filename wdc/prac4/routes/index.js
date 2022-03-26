@@ -24,8 +24,6 @@ router.get('/colour.html', function(req, res, next) {
   {
     res.send("blue");
   }
-
-
   visited++;
 });
 
