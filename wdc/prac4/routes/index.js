@@ -88,4 +88,8 @@ router.get('/color.txt', function(req, res, next) {
   nvisited++;
 });
 
+router.get('/log.json', function(req, res, next) {
+
+});
+
 module.exports = router;
