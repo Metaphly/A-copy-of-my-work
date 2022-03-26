@@ -45,8 +45,7 @@ router.get('/color.html', function(req, res, next) {
 });
 
 router.get('/log.html', function(req, res, next) {
-
-res.end();
+  res.end();
 }
 
 router.get('/color.txt', function(req, res, next) {
