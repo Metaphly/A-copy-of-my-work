@@ -44,6 +44,7 @@ router.get('/color.html', function(req, res, next) {
   visited++;
 });
 
+/*
 router.get('/log.html', function(req, res, next) {
 
   times.push(Date());
@@ -52,7 +53,7 @@ router.get('/log.html', function(req, res, next) {
     //var liste = document.createElement("li");
     //liste.innerText = element;
     //thelist.appendChild(liste);
-    thelist = thelist + "<li>" + '"' + element + '"' + "</li>";
+    thelist = thelist + "<li>" + element + "</li>";
   }
   thelist = thelist + "</ul>";
   res.send(
@@ -69,6 +70,7 @@ router.get('/log.html', function(req, res, next) {
 
     </html>`)
 });
+*/
 
 router.get('/color.txt', function(req, res, next) {
   if(nvisited%4 == 0)
