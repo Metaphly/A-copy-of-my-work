@@ -28,7 +28,7 @@ function change_color()
 function show_times()
 {
     let xhttp = new XMLHttpRequest();
-    let tlist = document.getElementById("timel");
+    var tlist = document.getElementById("timel");
     //tlist.innerHTML="";
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -37,7 +37,7 @@ function show_times()
             var liste = document.createElement("li");
             liste.innerText = times[i];
             console.log(liste.innerText);
-            //tlist.appendChild(liste);
+            tlist.appendChild(liste);
             }
         }
     };
