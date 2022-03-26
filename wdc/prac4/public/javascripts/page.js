@@ -29,7 +29,8 @@ function show_times()
 {
     let xhttp = new XMLHttpRequest();
     var tlist = document.getElementById("timel");
-    //tlist.innerHTML="";
+    console.log(tlist.innerHTML);
+    tlist.innerHTML="";
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var times = JSON.parse(xhttp.responseText);
