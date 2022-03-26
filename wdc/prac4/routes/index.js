@@ -13,6 +13,7 @@ router.get('/last.txt', function(req, res, next) {
 router.get('/color.html', function(req, res, next) {
   cheading = document.createElement("h1");
   cheading.innerText = "Red";
+  res.set('Content-Type', 'text/html');
   res.send(cheading);
 });
 
