@@ -28,12 +28,13 @@ function change_color()
 function show_times()
 {
     let xhttp = new XMLHttpRequest();
+    let tlist = document.getElementById("timel");
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var times = JSON.parse(xhttp.responseText);
         for (var element of times) {
             var liste = document.createElement("li");
-            thelist.appendChild(liste);
+            tlist.appendChild(liste);
             }
         }
     };
