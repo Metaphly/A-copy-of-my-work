@@ -3,7 +3,14 @@
 
 <head>
     <script>
-    let xhttp =
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+    }
+    };
+    xhttp.open("GET", "filename");
+    xhttp.send();
     </script>
     <meta charset='UTF-8'>
     <title>3.2</title>
