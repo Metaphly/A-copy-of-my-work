@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var visited = 0;
 
 let last_time = "";
 
@@ -10,6 +11,7 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
+  document.createElement("div")
   res.send('<h1>Red</h1>');
 });
 
