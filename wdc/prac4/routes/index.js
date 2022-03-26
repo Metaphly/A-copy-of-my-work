@@ -11,7 +11,7 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
-  if(visited%4 == 0)
+  /*if(visited%4 == 0)
   {
     res.send('<h1 style="color:red;">red</h1>');
   }else if(visited%4 == 1)
@@ -23,7 +23,9 @@ router.get('/color.html', function(req, res, next) {
   }else if(visited%4 == 3)
   {
     res.send('<h1 style="color:blue;">blue</h1>');
-  }
+  }*/
+
+  res.sendFile('views/test.html', {root: __dirname })
   visited++;
 });
 
