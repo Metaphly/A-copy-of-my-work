@@ -90,8 +90,8 @@ router.get('/color.txt', function(req, res, next) {
 });
 
 router.get('/log.json', function(req, res, next) {
-  times.push(Date());
-  res.
+  ntimes.push(Date());
+  res.json(ntimes);
 });
 
 module.exports = router;
