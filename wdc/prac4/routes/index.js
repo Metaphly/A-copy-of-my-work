@@ -10,8 +10,8 @@ router.get('/last.txt', function(req, res, next) {
   last_time = last_time.toLocaleString();
 });
 
-router.get('/color.html', function(req, res, next) {
-  /*if(visited%4 == 0)
+router.get('/colour.html', function(req, res, next) {
+  if(visited%4 == 0)
   {
     res.send("red");
   }else if(visited%4 == 1)
@@ -23,9 +23,9 @@ router.get('/color.html', function(req, res, next) {
   }else if(visited%4 == 3)
   {
     res.send("blue");
-  }*/
+  }
 
-  
+
   visited++;
 });
 
