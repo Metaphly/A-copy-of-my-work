@@ -33,10 +33,10 @@ function show_times()
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var times = JSON.parse(xhttp.responseText);
-        console.log(times[0]);
-        for (let element of times) {
+        for (let i = 0; i < times.length; i++) {
             var liste = document.createElement("li");
-            liste.innerText = "element";
+            liste.innerText = times[i];
+            console.log(liste.innerText);
             //tlist.appendChild(liste);
             }
         }
