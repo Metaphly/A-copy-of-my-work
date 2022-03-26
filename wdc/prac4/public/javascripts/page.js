@@ -35,6 +35,7 @@ function show_times()
         var times = JSON.parse(xhttp.responseText);
         for (var element of times) {
             var liste = document.createElement("li");
+            console.log(element);
             liste.innerText = element;
             tlist.appendChild(liste);
             }
