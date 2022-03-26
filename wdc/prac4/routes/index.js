@@ -47,6 +47,7 @@ router.get('/color.html', function(req, res, next) {
 router.get('/log.html', function(req, res, next) {
 
   times.push(Date());
+  list = createElement("ul");
   res.send(
     `<!DOCTYPE html>
     <html lang='en'>
