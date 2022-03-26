@@ -8,8 +8,9 @@
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("ch").innerText = xhttp.responseText;
-                document.getElementById("ch").style.color = xhttp.responseText;
+                var chead = document.createElement("h1");
+                chead.innerText = xhttp.responseText;
+                chead.style.color = xhttp.responseText;
             }
         };
         xhttp.open("GET", "/colour.html");
