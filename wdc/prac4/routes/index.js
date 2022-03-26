@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var visited = 0;
+var nvisited = 0;
 
 let last_time = "";
 
@@ -25,6 +26,23 @@ router.get('/colour.html', function(req, res, next) {
     res.send("blue");
   }
   visited++;
+});
+
+router.get('/colour.txt', function(req, res, next) {
+  if(nvisited%4 == 0)
+  {
+    res.send("red");
+  }else if(nvisited%4 == 1)
+  {
+    res.send("yellow");
+  }else if(nvisited%4 == 2)
+  {
+    res.send("green");
+  }else if(nvisited%4 == 3)
+  {
+    res.send("blue");
+  }
+  nvisited++;
 });
 
 module.exports = router;
