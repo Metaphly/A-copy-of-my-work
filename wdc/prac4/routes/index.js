@@ -12,7 +12,7 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
-  if(visited%4 == 0)
+  /*if(visited%4 == 0)
   {
     res.send("red");
   }else if(visited%4 == 1)
@@ -24,7 +24,9 @@ router.get('/color.html', function(req, res, next) {
   }else if(visited%4 == 3)
   {
     res.send("blue");
-  }
+  }*/
+
+  res.type('html');
   visited++;
 });
 
