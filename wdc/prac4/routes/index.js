@@ -10,7 +10,7 @@ router.get('/last.txt', function(req, res, next) {
   last_time = last_time.toLocaleString();
 });
 
-router.get('/color.html', function(req, res, next) {
+router.get('/colorn.html', function(req, res, next) {
   if(visited%4 == 0)
   {
     res.send("red");
