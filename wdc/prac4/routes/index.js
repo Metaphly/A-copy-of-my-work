@@ -62,7 +62,7 @@ router.get('/log.html', function(req, res, next) {
     </head>
 
     <body>
-    ${thelist}
+    ${times[0]}
     </body>
 
     </html>`
