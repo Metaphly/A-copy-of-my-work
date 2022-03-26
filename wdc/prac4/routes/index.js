@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/last.txt', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.send("time");
 });
 
 module.exports = router;
