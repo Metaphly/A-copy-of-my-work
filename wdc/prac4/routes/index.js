@@ -12,18 +12,19 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
-  /*if(visited%4 == 0)
+  var color = "";
+  if(visited%4 == 0)
   {
-    res.send("red");
+    color = "red";
   }else if(visited%4 == 1)
   {
-    res.send("yellow");
+    color = "yellow";
   }else if(visited%4 == 2)
   {
-    res.send("green");
+    color = "green";
   }else if(visited%4 == 3)
   {
-    res.send("blue");
+    color = "blue";
   }*/
   res.send(
 `<!DOCTYPE html>
@@ -34,7 +35,7 @@ router.get('/color.html', function(req, res, next) {
 </head>
 
 <body>
-<h1>Hi</h1>
+<h1 >${color}</h1>
 </body>
 
 </html>`
