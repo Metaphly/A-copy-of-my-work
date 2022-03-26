@@ -35,7 +35,7 @@ router.get('/color.html', function(req, res, next) {
 </head>
 
 <body>
-<h1 >${color}</h1>
+<h1 style="color:${color};">${color}</h1>
 </body>
 
 </html>`
