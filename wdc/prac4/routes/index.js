@@ -46,7 +46,7 @@ router.get('/color.html', function(req, res, next) {
 
 router.get('/log.html', function(req, res, next) {
 
-  times.push();
+  times.push(Date());
   res.send(
     `<!DOCTYPE html>
     <html lang='en'>
