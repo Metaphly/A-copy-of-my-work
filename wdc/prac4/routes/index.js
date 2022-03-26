@@ -11,8 +11,9 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
-  document.createElement("div")
-  res.send('<h1>Red</h1>');
+  cheading = document.createElement("h1");
+  cheading.innerText = "Red";
+  res.send(cheading);
 });
 
 module.exports = router;
