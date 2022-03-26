@@ -6,7 +6,7 @@ let last_time = "";
 router.get('/last.txt', function(req, res, next) {
   res.send(last_time);
   last_time = new Date();
-  last_time = last_timed.toLocaleString();
+  last_time = last_time.toLocaleString();
 });
 
 module.exports = router;
