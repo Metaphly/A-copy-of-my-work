@@ -10,7 +10,7 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
-  res.render('bcolor.html');
+  res.render('color.html');
 });
 
 module.exports = router;
