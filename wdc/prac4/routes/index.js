@@ -25,7 +25,20 @@ router.get('/color.html', function(req, res, next) {
   {
     res.send("blue");
   }*/
-  
+  res.send(
+`<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <title>3.2</title>
+</head>
+
+<body>
+<h1>Hi</h1>
+</body>
+
+</html>`
+);
   visited++;
 });
 
