@@ -60,7 +60,7 @@ router.get('/log.html', function(req, res, next) {
     <html lang='en'>
     <head>
         <meta charset='UTF-8'>
-        <title>3.2</title>
+        <title>3.3</title>
     </head>
 
     <body>
