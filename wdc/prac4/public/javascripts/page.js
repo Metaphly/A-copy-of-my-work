@@ -1,4 +1,4 @@
-function change_color()
+function last_time()
 {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
