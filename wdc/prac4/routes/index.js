@@ -11,7 +11,7 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/colorn.html', function(req, res, next) {
-  res.send(visited);
+  res.send(visited.toString());
   visited++;
 });
 
