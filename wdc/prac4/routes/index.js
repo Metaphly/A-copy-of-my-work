@@ -10,9 +10,7 @@ router.get('/last.txt', function(req, res, next) {
 });
 
 router.get('/color.html', function(req, res, next) {
-  let head_co = document.createElement("h1");
-  head_co.innerText = "Red"
-  res.send(head_co);
+  res.send('<h1>Red</h1>');
 });
 
 module.exports = router;
