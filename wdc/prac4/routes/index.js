@@ -43,6 +43,10 @@ router.get('/color.html', function(req, res, next) {
   visited++;
 });
 
+router.get('/log.html', function(req, res, next) {
+
+}
+
 router.get('/color.txt', function(req, res, next) {
   if(nvisited%4 == 0)
   {
