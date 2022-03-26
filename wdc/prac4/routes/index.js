@@ -62,10 +62,10 @@ router.get('/log.html', function(req, res, next) {
     </head>
 
     <body>
-    ${times[0]}
+    ${thelist}
     </body>
 
-    </html>`
+    </html>`)
 });
 
 router.get('/color.txt', function(req, res, next) {
