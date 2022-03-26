@@ -48,6 +48,11 @@ router.get('/log.html', function(req, res, next) {
 
   times.push(Date());
   var thelist = createElement("ul");
+  for (var element of times) {
+    var liste = createElement("li");
+    liste.innerText = element;
+    
+  }
   res.send(
     `<!DOCTYPE html>
     <html lang='en'>
