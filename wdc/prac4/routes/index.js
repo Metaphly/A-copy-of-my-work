@@ -47,12 +47,12 @@ router.get('/color.html', function(req, res, next) {
 router.get('/log.html', function(req, res, next) {
 
   times.push(Date());
-  var thelist = document.createElement("ul");
-  for (var element of times) {
-    var liste = document.createElement("li");
-    liste.innerText = element;
-    thelist.appendChild(liste);
-  }
+  //var thelist = document.createElement("ul");
+  //for (var element of times) {
+    //var liste = document.createElement("li");
+    //liste.innerText = element;
+    //thelist.appendChild(liste);
+  //}
   res.send(
     `<!DOCTYPE html>
     <html lang='en'>
