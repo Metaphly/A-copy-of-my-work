@@ -47,9 +47,9 @@ router.get('/color.html', function(req, res, next) {
 router.get('/log.html', function(req, res, next) {
 
   times.push(Date());
-  var thelist = createElement("ul");
+  var thelist = document.createElement("ul");
   for (var element of times) {
-    var liste = createElement("li");
+    var liste = document.createElement("li");
     liste.innerText = element;
     thelist.appendChild(liste);
   }
@@ -62,7 +62,7 @@ router.get('/log.html', function(req, res, next) {
     </head>
 
     <body>
-    ${thelist}
+    ${times[0]}
     </body>
 
     </html>`)
