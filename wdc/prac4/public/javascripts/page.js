@@ -7,6 +7,8 @@ function last_time()
               timp.innerText = "This page was last viewed " + xhttp.responseText;
           }
        };
-      xhttp.open("GET", "/last.txt");
-     xhttp.send();
+    xhttp.open("GET", "/last.txt");
+    xhttp.send();
 }
+
+last_time()
