@@ -46,27 +46,7 @@ router.get('/color.html', function(req, res, next) {
 
 router.get('/log.html', function(req, res, next) {
 
-  //times.push(Date());
-  //list = document.createElement("ul");
-  res.send(
-    `<!DOCTYPE html>
-    <html lang='en'>
-    <head>
-        <meta charset='UTF-8'>
-        <title>3.3</title>
-    </head>
-
-    <body>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    </body>
-
-    </html>`
-    );
-
+res.end();
 }
 
 router.get('/color.txt', function(req, res, next) {
