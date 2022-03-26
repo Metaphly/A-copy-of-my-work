@@ -10,8 +10,9 @@ router.get('/last.txt', function(req, res, next) {
   last_time = last_time.toLocaleString();
 });
 
-router.get('/color.html', function(req, res, next) {
+router.get('/colorn.html', function(req, res, next) {
   res.send(visited);
+  visited++;
 });
 
 module.exports = router;
