@@ -71,8 +71,7 @@ function check_accept()
     console.log(this.responseText);
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        document.body.appendChild(xhttp.responseText);
-        console.log(this.responseText);
+        document.getElementById("contents").innerHTML = (xhttp.responseText);
         }
     };
     xhttp.open("GET", "/content.ajax");
