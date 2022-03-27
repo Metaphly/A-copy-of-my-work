@@ -104,7 +104,8 @@ router.get('/accept', function(req, res, next) {
 router.get('/content.ajax', function(req, res, next) {
   if(accept)
   {
-    res.send(`<p></p><p></p>`);
+    res.send(`<p>You are doing well tarnished</p>
+    <p>You will become the eldern king</p>`);
   }else
   {
     res.sendStatus(403);
