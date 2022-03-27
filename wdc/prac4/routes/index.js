@@ -108,7 +108,7 @@ router.get('/content.ajax', function(req, res, next) {
     <p>You will become the eldern king</p>`);
   }else
   {
-    res.sendStatus(403);
+    res.status(403).send('403 Forbidden');
   }
 });
 
