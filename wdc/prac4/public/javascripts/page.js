@@ -71,12 +71,8 @@ function check_accept()
     console.log(this.responseText);
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        //xhttp.responseText;
-        d
+        document.body.appendChild(xhttp.responseText);
         console.log(this.responseText);
-        }//else if(this.status == 403)
-        {
-            //document.getElementById("timel").style.display="inline";
         }
     };
     xhttp.open("GET", "/content.ajax");
