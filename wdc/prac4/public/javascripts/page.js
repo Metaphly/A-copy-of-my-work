@@ -70,11 +70,9 @@ function check_accept())
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var headc = document.getElementById("colorHead");
-        headc.innerText = xhttp.responseText;
-        headc.style.color = xhttp.responseText;
+        xhttp.responseText;
         }
     };
-    xhttp.open("GET", "/color.txt");
+    xhttp.open("GET", "/content.ajax");
     xhttp.send();
 }
