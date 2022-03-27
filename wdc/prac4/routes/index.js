@@ -96,7 +96,7 @@ router.get('/log-ro.json', function(req, res, next) {
 });
 
 router.get('/accept', function(req, res, next) {
-  res.json(ntimes);
+  res.status(200).end();
 });
 
 module.exports = router;
