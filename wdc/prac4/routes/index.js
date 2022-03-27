@@ -104,10 +104,10 @@ router.get('/accept', function(req, res, next) {
 router.get('/content.ajax', function(req, res, next) {
   if(accept)
   {
-    res.send(``);
+    res.send(`<p></p><p></p>`);
   }else
   {
-
+    res.sendStatus(403);
   }
 });
 
