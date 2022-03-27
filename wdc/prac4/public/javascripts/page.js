@@ -68,10 +68,11 @@ function update_times()
 function check_accept()
 {
     let xhttp = new XMLHttpRequest();
+    console.log(xhttp.status);
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         xhttp.responseText;
-        console.log(xhttp.responseText);
+        console.log(xhttp.status);
         }//else if(this.status == 403)
         {
             //document.getElementById("timel").style.display="inline";
