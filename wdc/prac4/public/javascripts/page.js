@@ -68,6 +68,7 @@ function update_times()
 function check_accept()
 {
     let xhttp = new XMLHttpRequest();
+    console.log(xhttp.status);
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         document.getElementById("contents").innerHTML = (xhttp.responseText);
