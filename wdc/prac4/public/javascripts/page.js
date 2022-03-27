@@ -72,9 +72,9 @@ function check_accept()
     if (this.readyState == 4 && this.status == 200) {
         xhttp.responseText;
         console.log(xhttp.responseText);
-        }else if(this.status == 403)
+        }//else if(this.status == 403)
         {
-            document.getElementById("timel").style.display="inline";
+            //document.getElementById("timel").style.display="inline";
         }
     };
     xhttp.open("GET", "/content.ajax");
