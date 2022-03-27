@@ -65,11 +65,15 @@ function update_times()
     xhttp.send();
 }
 
-function check_accept()
+function get_content()
 {
     let xhttp = new XMLHttpRequest();
     console.log(xhttp.status);
     xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 403)
+    {
+        document.getElementById("terms").style.display = "inline";
+    }
     if (this.readyState == 4 && this.status == 200) {
         document.getElementById("contents").innerHTML = (xhttp.responseText);
         }
