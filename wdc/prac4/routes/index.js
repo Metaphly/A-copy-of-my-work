@@ -4,6 +4,7 @@ var visited = 0;
 var nvisited = 0;
 var times = [];
 var ntimes = [];
+var accept = false;
 
 let last_time = "";
 
@@ -97,6 +98,7 @@ router.get('/log-ro.json', function(req, res, next) {
 
 router.get('/accept', function(req, res, next) {
   res.status(200).end();
+  accept = true;
 });
 
 module.exports = router;
