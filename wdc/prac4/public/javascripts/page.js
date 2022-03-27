@@ -87,6 +87,7 @@ function get_accept()
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         document.getElementById("terms").style.display = "none";
+        get_content();
         }
     };
     xhttp.open("GET", "/accept");
