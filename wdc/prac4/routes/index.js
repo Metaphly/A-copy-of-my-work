@@ -101,4 +101,14 @@ router.get('/accept', function(req, res, next) {
   accept = true;
 });
 
+router.get('/content.ajax', function(req, res, next) {
+  if(accept)
+  {
+    res.send(``);
+  }else
+  {
+
+  }
+});
+
 module.exports = router;
