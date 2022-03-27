@@ -68,7 +68,6 @@ function update_times()
 function get_content()
 {
     let xhttp = new XMLHttpRequest();
-    console.log(xhttp.status);
     xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 403)
     {
@@ -79,5 +78,17 @@ function get_content()
         }
     };
     xhttp.open("GET", "/content.ajax");
+    xhttp.send();
+}
+
+function get_accept()
+{
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("terms").style.display = "none";
+        }
+    };
+    xhttp.open("GET", "/accept");
     xhttp.send();
 }
