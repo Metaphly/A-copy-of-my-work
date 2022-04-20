@@ -9,7 +9,7 @@ CREATE TABLE Students
 
 CREATE TABLE Subjects
 (
-    subject_code VARCHAR(20),
+    subject_code VARCHAR(30),
     subject VARCHAR(60),
     faculty VARCHAR(60),
     PRIMARY KEY (subject_code)
@@ -18,7 +18,7 @@ CREATE TABLE Subjects
 CREATE TABLE Enrolments
 (
     student_id VARCHAR(10),
-    subject_code VARCHAR(10),
+    subject_code VARCHAR(30),
     mark INT,
     PRIMARY KEY (student_id,subject_code)
 );
