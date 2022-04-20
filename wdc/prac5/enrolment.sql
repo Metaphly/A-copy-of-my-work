@@ -1,1 +1,14 @@
-CREATE TABLE 
+CREATE TABLE Students
+{
+
+};
+
+CREATE TABLE Subjects
+{
+
+};
+
+CREATE TABLE Enrolments
+{
+
+};
