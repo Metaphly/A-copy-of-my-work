@@ -1,3 +1,3 @@
 SELECT given_name, family_name
-FROM Studnets
+FROM Students
 WHERE program='BCompSc';
