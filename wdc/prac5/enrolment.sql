@@ -9,9 +9,9 @@ CREATE TABLE Students
 
 CREATE TABLE Subjects
 (
-    subject_code VARCHAR(10),
-    subject VARCHAR(20),
-    faculty VARCHAR(20),
+    subject_code VARCHAR(20),
+    subject VARCHAR(60),
+    faculty VARCHAR(60),
     PRIMARY KEY (subject_code)
 );
 
