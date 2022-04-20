@@ -19,5 +19,6 @@ CREATE TABLE Enrolments
 {
     student_id VARCHAR(10),
     subject_code VARCHAR(10),
-    mark INT
+    mark INT,
+    PRIMARY KEY (student_id,subject_code)
 };
