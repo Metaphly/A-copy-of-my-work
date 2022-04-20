@@ -29,3 +29,8 @@ INSERT INTO Students VALUES ('a1111113','Bob','Smith','BCompSc');
 INSERT INTO Students VALUES ('a1111114','Wei','Zhang','BCompSc');
 
 SELECT * FROM Students;
+
+INSERT INTO Subjects VALUES ('COMP SCI 1102','Object Oriented Programming','ECMS');
+INSERT INTO Subjects VALUES ('COMP SCI 2207','Web and Database Computing','ECMS');
+INSERT INTO Subjects VALUES ('COMP SCI 2000','Computer Systems','ECMS');
+INSERT INTO Subjects VALUES ('PHIL 2039','Philosophy of Mind','Arts');
