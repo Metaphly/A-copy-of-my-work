@@ -1,1 +1,1 @@
-SELECT * FROM Enrolments;
+SELECT * FROM Subjects;
