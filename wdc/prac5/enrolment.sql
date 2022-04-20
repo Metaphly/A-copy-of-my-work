@@ -22,3 +22,8 @@ CREATE TABLE Enrolments
     mark INT,
     PRIMARY KEY (student_id,subject_code)
 );
+
+INSERT INTO Students VALUES ('a1111111','Fang','Li','BE(Hons)(Soft)');
+INSERT INTO Students VALUES ('a1111112','Jane','Brown','BE(Hons)(Soft)');
+INSERT INTO Students VALUES ('a1111113','Bob','Smith','BCompSc');
+INSERT INTO Students VALUES ('a1111114','Wei','Zhang','BCompSc');
