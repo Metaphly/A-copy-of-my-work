@@ -42,12 +42,8 @@ const SPECIALS = [
 ];
 
 var vueinst = new Vue({
-
-});
-
-var app = new Vue({
     el: '#sp',
     data: {
-      message: 'Hello Vue!'
+        choose: 'Choose ...'
     }
-  })
+});
