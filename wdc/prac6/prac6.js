@@ -45,6 +45,7 @@ var vueinst = new Vue({
     el: '#sp,#ad',
     data: {
         choose: 'Choose ...',
-        special: SPECIALS[0]
+        special: SPECIALS[0],
+        show_ad: true
     }
 });
