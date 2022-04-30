@@ -9,6 +9,14 @@ body, #app {
     margin: 0;
 }
 
+.night_eye
+{
+    color: #F5CB5C;
+    background-color: #333533;
+    padding: 0;
+    margin: 0;
+}
+
 nav .pure-menu-link {
     color: #CFDBD5;
     font-weight: bold;
