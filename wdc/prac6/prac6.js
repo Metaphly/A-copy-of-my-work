@@ -52,7 +52,8 @@ var vueinst = new Vue({
         { title:'Home',         url:'/' },
         { title:'About',        url:'/about' },
         { title:'Contact Us',   url:'/contact' }],
-        c_text:'type your comment here'
+        c_text:'type your comment here',
+        c_arr:[]
     },
     computed:{
     back_color: function(){
