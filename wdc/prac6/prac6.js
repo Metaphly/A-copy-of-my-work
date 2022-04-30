@@ -47,6 +47,7 @@ var vueinst = new Vue({
         choose: 'Choose ...',
         special: SPECIALS[0],
         show_ad: true,
-        dark_mode: false
+        dark_mode: false,
+        back_color
     }
 });
