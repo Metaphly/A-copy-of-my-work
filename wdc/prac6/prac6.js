@@ -54,7 +54,7 @@ var vueinst = new Vue({
 
     back_color: function(){
         if(this.dark_mode){
-            return #333533
+            return #333533;
         }
     }
 
