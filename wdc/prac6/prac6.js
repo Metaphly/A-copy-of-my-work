@@ -56,5 +56,12 @@ var vueinst = new Vue({
         }
         return "#FFFFFF";
     }
+
+    text_color: function(){
+        if(this.dark_mode){
+            return "#F5CB5C";
+        }
+        return "#333533";
+    }
     }
 });
