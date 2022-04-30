@@ -36,7 +36,7 @@
                 </nav>
             </header>
 
-            <div class="pad" id="ad">
+            <div class="pad" id="ad" v-if="">
                 <button class="pure-button" style="float:right;" onclick="vueinst.show_ad = false;">close</button>
                 <img v-bind:src="special.url" alt="" onclick="vueinst.special=SPECIALS[Math.floor((Math.random() * 3))];" />
                 <h3>{{special.name}}</h3>
