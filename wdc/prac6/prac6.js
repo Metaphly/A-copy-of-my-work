@@ -46,7 +46,7 @@ var vueinst = new Vue({
 });
 
 var app = new Vue({
-    el: '#app',
+    el: '#sp',
     data: {
       message: 'Hello Vue!'
     }
