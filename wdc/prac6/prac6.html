@@ -27,7 +27,7 @@
                 <nav class="pure-menu pure-menu-horizontal">
                     <ul id="topmenu" class="pure-menu-list">
                         <li class="pure-menu-item" v-for="item in top_menu">
-                            {{ item.message }}
+                            <a v-bind:href="item.url" class="pure-menu-link">{{ item.title }}</a>
                         </li>
                     </ul>
                     <div class="pure-menu">
