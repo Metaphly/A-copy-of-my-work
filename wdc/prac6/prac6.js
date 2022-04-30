@@ -48,15 +48,13 @@ var vueinst = new Vue({
         special: SPECIALS[0],
         show_ad: true,
         dark_mode: false
-    }
-
+    },
     computed:{
-
     back_color: function(){
         if(this.dark_mode){
-            return #333533;
+            return "#333533";
         }
+        return "#FFFFFF";
     }
-
     }
 });
