@@ -51,7 +51,8 @@ var vueinst = new Vue({
         top_menu:[
         { title:'Home',         url:'/' },
         { title:'About',        url:'/about' },
-        { title:'Contact Us',   url:'/contact' }]
+        { title:'Contact Us',   url:'/contact' }],
+        c_text:'type your comment here'
     },
     computed:{
     back_color: function(){
