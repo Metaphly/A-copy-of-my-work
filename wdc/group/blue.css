@@ -77,8 +77,8 @@
 .event
 {
     display: inline-block;
-    margin-left:1%;
-    width: 29%;
-    height:300px;
+    margin-left:5px;
+    width: 30%;
+    height:320px;
     border: 1px solid #C4C4C4;
 }
