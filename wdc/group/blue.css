@@ -58,3 +58,8 @@
     border-radius: 48px;
     cursor: pointer;
 }
+
+.sectionheader
+{
+    text-align: center;
+}
