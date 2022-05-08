@@ -71,11 +71,13 @@
     left: 50%;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+    display:block;
 }
 
 .event
 {
-    width: 28%;
+    display: inline-block;
+    width: 29%;
     height: 300px;
     border: 1px solid #C4C4C4;
 }
