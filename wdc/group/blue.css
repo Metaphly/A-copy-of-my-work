@@ -76,15 +76,18 @@
 
 #allevents
 {
-    
+    padding-top: 75%;
 }
 
 .event
 {
-    padding-top: 75%;
     display: inline-block;
     margin-left:1%;
     width: 29%;
-    height: 50%;
     border: 1px solid #C4C4C4;
+
+    top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
