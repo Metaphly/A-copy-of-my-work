@@ -82,3 +82,10 @@
     height:320px;
     border: 1px solid #C4C4C4;
 }
+
+.eventcontent
+{
+    height:50%;
+    background-color: #163776;
+    color:#FFFFFF;
+}
