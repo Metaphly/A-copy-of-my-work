@@ -1,8 +1,8 @@
 #topblue{
     position: absolute;
-    /*width: 1440px;
-    height: 144px;*/
+    /*width: 1440px;*/
+    height: 144px;
     left: 0px;
     top: 0px;
-    background: #163776;
+    background-color: #163776;
 }
