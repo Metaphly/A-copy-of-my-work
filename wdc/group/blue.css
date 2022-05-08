@@ -49,6 +49,7 @@
 .bluebutton
 {
     background-color: #163776;
+    border: 3px solid #163776;
     color:#FFFFFF;
     border-radius: 48px;
 }
