@@ -24,15 +24,16 @@
     color: #F8FD09;
 }
 
-#toprightmenu
+/*#toprightmenu
 {
     float: right;
     margin-right: 2%;
-}
+}*/
 
 #toprightmenu a
 {
     color: #FDF9F9;
-    margin-right: 1%;
+    float: right;
+    margin-right: 2%;
     text-decoration: none;
 }
