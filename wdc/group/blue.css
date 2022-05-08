@@ -76,10 +76,9 @@
 
 .event
 {
-    position: relative;
+    padding-top: 75%;
     display: inline-block;
     margin-left:1%;
     width: 29%;
-    height: same-as-width;
     border: 1px solid #C4C4C4;
 }
