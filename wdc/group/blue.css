@@ -6,3 +6,19 @@
     top: 0px;
     background-color: #163776;
 }
+
+#logotext{
+    position: absolute;
+    width: 394px;
+    height: 101px;
+    left: 21px;
+    top: 17px;
+
+    font-family: 'Tomorrow';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 77px;
+
+    color: #F8FD09;
+}
