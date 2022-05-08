@@ -72,3 +72,9 @@
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
+
+.event
+{
+    width: 200px;
+    
+}
