@@ -76,6 +76,7 @@
 
 .event
 {
+    position: relative;
     display: inline-block;
     margin-left:1%;
     width: 29%;
