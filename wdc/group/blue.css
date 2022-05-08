@@ -5,7 +5,6 @@
     left: 0px;
     top: 0px;
     background-color: #163776;
-    display: block;
 }
 
 #logotext{
@@ -38,5 +37,10 @@
     float: right;
     margin-right: 2%;
     text-decoration: none;
+}
+
+#notblue
+{
+    margin-top:144px;
 }
 
