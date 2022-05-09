@@ -89,3 +89,10 @@
     background-color: #163776;
     color:#FFFFFF;
 }
+
+.center
+{
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
