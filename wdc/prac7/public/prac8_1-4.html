@@ -7,9 +7,9 @@
     <style>.button-success {background: rgb(28, 184, 65);color: white;}</style>
   </head>
   <body>
-  
+
     <div id="main">
-  
+
         <h1>My Blog</h1>
         <hr />
         <div id="newpost">
@@ -30,16 +30,37 @@
             <form class="pure-form">
                 <button type="button" class="pure-button pure-input-1-2 pure-button-primary">show all posts</button>
             </form>
-        
+
         </div>
-        
+
         <div id="tcs" style="display: none;">
             <h2>Terms and Conditions</h2>
             <p>All your base are belong to us.</p>
             <button class="pure-button button-success">Accept</button>
         </div>
-    
+
     </div>
-  
+
+    <script>
+
+        function send() {
+
+            var lines = document.getElementById("lines").value.split('\n');
+            var suffix = document.getElementById("suffix").value;
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("output").innerText = this.responseText;
+                }
+            };
+            xhttp.open("POST", "/combine", true);
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(JSON.stringify({ lines: lines, suffix: suffix }));
+
+        }
+
+    </script>
+
   </body>
 </html>
