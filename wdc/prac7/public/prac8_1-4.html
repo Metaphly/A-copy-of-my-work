@@ -21,7 +21,7 @@
                     <textarea class="pure-input-1-2" id="content" placeholder="Blog Post Content"></textarea>
                 </fieldset>
 
-                <button type="button" class="pure-button pure-input-1-2 pure-button-primary">make post</button>
+                <button type="button" class="pure-button pure-input-1-2 pure-button-primary" onclick="sendpost()">make post</button>
             </form>
         </div>
         <hr />
@@ -43,7 +43,7 @@
 
     <script>
 
-        function send() {
+        function sendpost() {
 
             var newtitle = document.getElementById("title").value;
             var newcontent = document.getElementById("content").value;
