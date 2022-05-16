@@ -27,7 +27,6 @@
         <hr />
         <div id="posts">
             <h2>Current Posts</h2>
-            <div id="realposts"><div>
             <form class="pure-form">
                 <button type="button" class="pure-button pure-input-1-2 pure-button-primary" onclick="showposts()">show all posts</button>
             </form>
@@ -62,7 +61,7 @@
 
         function showposts() {
             var xhttp = new XMLHttpRequest();
-            var postsarea = document.getElementById("realposts");
+            var postsarea = document.getElementById("posts");
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
