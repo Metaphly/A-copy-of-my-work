@@ -44,4 +44,18 @@ router.post('/combine', function(req, res, next) {
   res.send(responseout);
 });
 
+router.post('/combine', function(req, res, next) {
+  let responseout = "";
+  let inputlines = req.body.lines
+  for(let line in inputlines)
+  {
+    responseout = responseout + inputlines[line] + req.body.suffix + '\n';
+  }
+  res.send(responseout);
+});
+
+router.post('/users/addpost', function(req, res, next) {
+
+});
+
 module.exports = router;
