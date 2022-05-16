@@ -54,8 +54,4 @@ router.post('/combine', function(req, res, next) {
   res.send(responseout);
 });
 
-router.post('/users/addpost', function(req, res, next) {
-
-});
-
 module.exports = router;
