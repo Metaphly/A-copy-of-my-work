@@ -27,6 +27,7 @@
         <hr />
         <div id="posts">
             <h2>Current Posts</h2>
+            <div id="realposts"><div>
             <form class="pure-form">
                 <button type="button" class="pure-button pure-input-1-2 pure-button-primary">show all posts</button>
             </form>
@@ -61,14 +62,15 @@
 
         function showposts() {
             var xhttp = new XMLHttpRequest();
-            var postsarea = document.getElementById("posts");
+            var postsarea = document.getElementById("realposts");
 
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var posts = JSON.parse(xhttp.responseText);
                     for (let i = 0; i < times.length; i++)
                     {
-                        var divs = document.createElement("divs");
+                        var divs = document.createElement("div");
+                        var smalltitle = 
                     }
                 }
             };
