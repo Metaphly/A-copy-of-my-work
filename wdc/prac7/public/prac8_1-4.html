@@ -54,7 +54,7 @@
                     document.getElementById("output").innerText = this.responseText;
                 }
             };
-            xhttp.open("GET", "/users/", true);
+            xhttp.open("GET", "/users/addpost", true);
             xhttp.setRequestHeader("Content-type", "application/json");
             xhttp.send(JSON.stringify({ title: newtitle, content: newcontent }));
 
