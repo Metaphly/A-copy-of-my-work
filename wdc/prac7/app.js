@@ -22,7 +22,7 @@ app.use('/users', usersRouter);
 app.use((req, res, next) => {
     var requestsnum = "Received" + nrequest + "requests";
     nrequest++;
-    console.log(requestsnum);
+    console.log("hello");
     next()
 })
 
