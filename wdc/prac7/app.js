@@ -9,19 +9,18 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 var nrequest = 0;
+app.use(function(req, res, next){
+    var requestsnum = "Received" + nrequest + "requests";
+    nrequest++;
+    console.log("hello");
+    next();
+})
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use((req, res, next) => {
-    var requestsnum = "Received" + nrequest + "requests";
-    nrequest++;
-    console.log("hello");
-    next()
-})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
