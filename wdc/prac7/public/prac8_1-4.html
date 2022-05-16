@@ -17,8 +17,8 @@
             <form class="pure-form">
 
                 <fieldset class="pure-group">
-                    <input type="text" class="pure-input-1-2" placeholder="Blog post title">
-                    <textarea class="pure-input-1-2" placeholder="Blog Post Content"></textarea>
+                    <input type="text" class="pure-input-1-2" id="title" placeholder="Blog post title">
+                    <textarea class="pure-input-1-2" id="content" placeholder="Blog Post Content"></textarea>
                 </fieldset>
 
                 <button type="button" class="pure-button pure-input-1-2 pure-button-primary">make post</button>
@@ -45,8 +45,8 @@
 
         function send() {
 
-            var lines = document.getElementById("lines").value.split('\n');
-            var suffix = document.getElementById("suffix").value;
+            var newtitle = document.getElementById("title").value;
+            var newcontent = document.getElementById("content").value;
 
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
