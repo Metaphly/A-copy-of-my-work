@@ -10,7 +10,7 @@ var blogposts=[];
 
 router.post('/addpost', function(req, res, next) {
   blogposts.unshift(req.body);
-  res.send('correct');
+  res.send(blogposts);
 });
 
 module.exports = router;
