@@ -67,10 +67,11 @@
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var posts = JSON.parse(xhttp.responseText);
-                    for (let i = 0; i < times.length; i++)
+                    for (let i = 0; i < posts.length; i++)
                     {
                         var divs = document.createElement("div");
-                        var smalltitle = 
+                        var smalltitle = document.createElement("h2");
+                        var smallcontent = document.createElement("p");
                     }
                 }
             };
