@@ -6,6 +6,8 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+var blogposts=[];
+
 router.post('/addpost', function(req, res, next) {
   res.send('correct');
 });
