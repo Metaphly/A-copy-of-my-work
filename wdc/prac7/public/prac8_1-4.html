@@ -29,7 +29,7 @@
             <h2>Current Posts</h2>
             <div id="realposts"><div>
             <form class="pure-form">
-                <button type="button" class="pure-button pure-input-1-2 pure-button-primary">show all posts</button>
+                <button type="button" class="pure-button pure-input-1-2 pure-button-primary" onclick="showposts()">show all posts</button>
             </form>
 
         </div>
@@ -72,6 +72,11 @@
                         var divs = document.createElement("div");
                         var smalltitle = document.createElement("h2");
                         var smallcontent = document.createElement("p");
+                        smalltitle.innerText = posts[i].title;
+                        smallcontent.innerText = posts[i].content;
+                        divs.appendChild(smalltitle);
+                        divs.appendChild(smallcontent);
+                        postsarea.appendChild(divs);
                     }
                 }
             };
