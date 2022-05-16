@@ -10,8 +10,8 @@ var app = express();
 
 var nrequest = 0;
 app.use(function(req, res, next){
-    var requestsnum = "Received " + nrequest + " requests";
     nrequest++;
+    var requestsnum = "Received " + nrequest + " requests";
     console.log(requestsnum);
     next();
 })
