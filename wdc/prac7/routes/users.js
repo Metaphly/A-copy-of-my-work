@@ -10,6 +10,10 @@ var blogposts=[];
 
 router.post('/addpost', function(req, res, next) {
   blogposts.unshift(req.body);
+  res.end();
+});
+
+router.get('/getposts', function(req, res, next) {
   res.send(blogposts);
 });
 
