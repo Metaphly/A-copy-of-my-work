@@ -19,4 +19,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+app.use((req, res, next) => {
+    var requestsnum = "Received" + nrequest + "requests";
+    nrequest++;
+    console.log(requestsnum);
+    next()
+})
+
 module.exports = app;
