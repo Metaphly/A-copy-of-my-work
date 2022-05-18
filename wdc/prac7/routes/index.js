@@ -6,6 +6,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/cookie', function(req, res, next) {
+  if('task3_1' in req.cookies){
+    res.cookie('task3_1',parseInt(req.cookies.task3_1)+1);
+    res.end();
+  } else {
+    res.cookie('task3_1',1);
+    res.end();
+  }
+});
+
 router.get('/brew', function(req, res, next) {
   var reqdrink = req.query.drink;
   if(reqdrink == "tea")

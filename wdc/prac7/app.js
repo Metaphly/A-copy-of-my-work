@@ -14,7 +14,7 @@ app.use(function(req, res, next){
     var requestsnum = "Received " + nrequest + " requests";
     console.log(requestsnum);
     next();
-})
+});
 
 app.use(logger('dev'));
 app.use(express.json());
