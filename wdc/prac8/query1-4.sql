@@ -1,1 +1,1 @@
-SELECT * FROM rental WHERE 
+SELECT * FROM rental WHERE return_date = NULL;
