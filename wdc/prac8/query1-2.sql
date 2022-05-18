@@ -1,1 +1,1 @@
-SELECT COUNT(film_id) FROM film;
+SELECT last_name first_name FROM actor;
