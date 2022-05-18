@@ -1,1 +1,1 @@
-SELECT * from film WHERE title = "TWISTED PIRATES";
+SELECT film_id from film WHERE title = "TWISTED PIRATES";
