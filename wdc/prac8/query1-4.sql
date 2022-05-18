@@ -1,4 +1,4 @@
 SELECT rental.rental_date
-FROM customer
-INNER JOIN rental
+FROM rental
+INNER JOIN customer
 WHERE rental.return_date IS NULL;
