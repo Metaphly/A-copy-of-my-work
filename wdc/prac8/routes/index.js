@@ -13,7 +13,7 @@ router.get('/actors', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT  FROM posts;";
+    let query = "SELECT last_name,first_name FROM actor;";
     connection.query(query, function(error, rows, fields) {
       connection.release(); // release connection
       if (error) {
