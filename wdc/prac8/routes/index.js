@@ -15,13 +15,12 @@ router.get('/actors', function(req, res, next) {
 
     let query = "SELECT last_name,first_name FROM actor;";
     connection.query(query, function(error, rows, fields) {
-      connection.release(); // release connection
+      connection.release();
       if (error) {
-        console.log(error);
         res.sendStatus(500);
         return;
       }
-      res.json(rows); //send response
+      res.json(rows);
     });
 });
 
