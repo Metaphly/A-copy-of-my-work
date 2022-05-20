@@ -22,29 +22,6 @@ router.get('/actors', function(req, res, next) {
       }
       res.json(rows);
     });
-  });
-});
-
-router.post('/newActor', function(req, res, next) {
-
-  req.pool.getConnection(function(error,connection){
-    if(error){
-      res.sendStatus(500);
-      return;
-    }
-
-    let query = "INSERT INTO actor (first_name,last_name) VALUES(?,?);";
-    connection.query(query,[req.body.fname,req.body.lname], function(error, rows, fields) {
-      connection.release();
-      if (error) {
-        console.log(error);
-        res.sendStatus(500);
-        return;
-      }
-      res.end();
-    });
-
-  });
 });
 
 module.exports = router;

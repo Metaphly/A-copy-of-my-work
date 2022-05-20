@@ -16,7 +16,6 @@
       }
 
     </style>
-    <script src="javascripts/page.js"></script>
   </head>
   <body>
     <header><h1>Actors!</h1></header>
@@ -32,8 +31,10 @@
                   <th>Last Name</th>
               </tr>
           </thead>
-          <tbody id="actorlist">
-              <tr>
+          <tbody>
+              <tr id="actorlist">
+                  <td>Some</td>
+                  <td>Actor</td>
               </tr>
           </tbody>
         </table>
@@ -48,7 +49,7 @@
               <input type="text" id="actor-first-name" placeholder="First/Given Name" />
               <label for="actor-last-name">Last Name</label>
               <input type="text" id="actor-last-name" placeholder="First/Family Name" />
-              <button type="button" class="pure-button pure-button-primary" onclick="send_actor()">Add</button>
+              <button type="button" class="pure-button pure-button-primary">Add</button>
           </fieldset>
         </form>
       </aside>
