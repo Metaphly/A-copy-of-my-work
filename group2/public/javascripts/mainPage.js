@@ -11,7 +11,7 @@ function get_events(){
                 let anevent = document.createElement('div');
                 anevent.className='event';
 
-                let eventcontent = document.createElement('td');
+                let eventcontent = document.createElement('div');
                 eventcontent.className= 'eventcontent';
 
                 eventcontent.innerText = event.description;
