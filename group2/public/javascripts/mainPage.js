@@ -28,8 +28,9 @@ function get_events(){
                 details.appendChild( eventname);
                 details.appendChild(location);
                 details.appendChild(time);
-                eventArea.appendChild(eventcontent);
-                eventArea.appendChild(details);
+                anevent.appendChild(eventcontent);
+                anevent.appendChild(details);
+                eventArea.appendChild(anevent);
             }
         }
     };
