@@ -29,10 +29,9 @@ CREATE TABLE user_events
 
 );
 
-INSERT INTO users VALUES ('a1111111','Fang','Li','BE(Hons)(Soft)');
-INSERT INTO users VALUES ('a1111112','Jane','Brown','BE(Hons)(Soft)');
-INSERT INTO users VALUES ('a1111113','Bob','Smith','BCompSc');
-INSERT INTO users VALUES ('a1111114','Wei','Zhang','BCompSc');
+INSERT INTO users(email,password) VALUES ('james@event.com','james');
+INSERT INTO users(email,password) VALUES ('john@event.com','john');
+
 
 SELECT * FROM Students;
 
