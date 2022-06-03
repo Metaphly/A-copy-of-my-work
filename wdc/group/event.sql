@@ -13,7 +13,9 @@ CREATE TABLE events
     start_time VARCHAR(60),
     end_time VARCHAR(60),
     descirption VARCHAR(400),
-    PRIMARY KEY (event_id)
+    creator int,
+    PRIMARY KEY (event_id),
+    FOREIGN KEY (creator) REFERENCES users(user_id)
 );
 
 CREATE TABLE user_events
