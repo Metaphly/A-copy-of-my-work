@@ -5,7 +5,7 @@ function get_events(){
         if (this.readyState == 4 && this.status == 200) {
             var event_list = JSON.parse(this.responseText);
 
-            var actorArea = document.getElementById('actorlist');
+            var actorArea = document.getElementById('allevents');
             for (let event of event_list) {
                 let fname = document.createElement('td');
                 let lname = document.createElement('td');
