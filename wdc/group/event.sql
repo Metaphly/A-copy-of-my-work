@@ -1,17 +1,19 @@
 CREATE TABLE users
 (
-    user_id VARCHAR(10),
+    user_id int NOT NULL AUTO_INCREMENT,
     email VARCHAR(20),
-    mypassword VARCHAR(20),
+    password VARCHAR(20),
     PRIMARY KEY (user_id)
 );
 
 CREATE TABLE events
 (
-    subject_code VARCHAR(30),
-    subject VARCHAR(60),
-    faculty VARCHAR(60),
-    PRIMARY KEY (subject_code)
+    event_id int NOT NULL AUTO_INCREMENT,
+    location VARCHAR(60),
+    start_time VARCHAR(60),
+    end_time VARCHAR(60),
+    descirption VARCHAR(400),
+    PRIMARY KEY (event_id)
 );
 
 CREATE TABLE user_events
