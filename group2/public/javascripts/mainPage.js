@@ -3,10 +3,10 @@ function get_events(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            var actor_list = JSON.parse(this.responseText);
+            var event_list = JSON.parse(this.responseText);
 
             var actorArea = document.getElementById('actorlist');
-            for (let actor of actor_list) {
+            for (let event of event_list) {
                 let fname = document.createElement('td');
                 let lname = document.createElement('td');
                 let wname = document.createElement('tr');
