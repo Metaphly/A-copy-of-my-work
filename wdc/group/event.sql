@@ -16,7 +16,7 @@ CREATE TABLE events
     description VARCHAR(400),
     creator int,
     PRIMARY KEY (event_id),
-    FOREIGN KEY (creator) REFERENCES users(user_id)
+    FOREIGN KEY (creator) REFERENCES users(user_id) ON DELETE CASCADE
 );
 
 CREATE TABLE user_events
