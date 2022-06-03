@@ -9,6 +9,7 @@ CREATE TABLE users
 CREATE TABLE events
 (
     event_id int NOT NULL AUTO_INCREMENT,
+    event_name(60);
     location VARCHAR(60),
     start_time VARCHAR(60),
     end_time VARCHAR(60),
@@ -32,23 +33,4 @@ CREATE TABLE user_events
 INSERT INTO users(email,password) VALUES ('james@event.com','james');
 INSERT INTO users(email,password) VALUES ('john@event.com','john');
 
-
-SELECT * FROM Students;
-
-INSERT INTO Subjects VALUES ('COMP SCI 1102','Object Oriented Programming','ECMS');
-INSERT INTO Subjects VALUES ('COMP SCI 2207','Web and Database Computing','ECMS');
-INSERT INTO Subjects VALUES ('COMP SCI 2000','Computer Systems','ECMS');
-INSERT INTO Subjects VALUES ('PHIL 2039','Philosophy of Mind','Arts');
-
-SELECT * FROM Subjects;
-
-INSERT INTO Enrolments VALUES ('a1111111','COMP SCI 1102','62');
-INSERT INTO Enrolments VALUES ('a1111111','COMP SCI 2000','80');
-INSERT INTO Enrolments VALUES ('a1111112','COMP SCI 1102','55');
-INSERT INTO Enrolments VALUES ('a1111112','COMP SCI 2207','80');
-INSERT INTO Enrolments VALUES ('a1111113','PHIL 2039','65');
-INSERT INTO Enrolments VALUES ('a1111113','COMP SCI 1102','46');
-INSERT INTO Enrolments VALUES ('a1111114','COMP SCI 2207','67');
-INSERT INTO Enrolments VALUES ('a1111114','COMP SCI 2000','49');
-
-SELECT * FROM Enrolments;
+INSERT INTO events(email,password) VALUES ('john@event.com','john');
