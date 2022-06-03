@@ -20,10 +20,13 @@ CREATE TABLE events
 
 CREATE TABLE user_events
 (
-    student_id VARCHAR(10),
-    subject_code VARCHAR(30),
-    mark INT,
-    PRIMARY KEY (student_id,subject_code)
+    id int NOT NULL AUTO_INCREMENT,
+    user_id VARCHAR(10),
+    event_id VARCHAR(30),
+    PRIMARY KEY (id,user_id,event_code),
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (event_id) REFERENCES events(event_id)
+
 );
 
 INSERT INTO Students VALUES ('a1111111','Fang','Li','BE(Hons)(Soft)');
