@@ -14,9 +14,17 @@ function get_events(){
                 let eventcontent = document.createElement('td');
                 eventcontent.className= 'eventcontent';
 
-                let wname = document.createElement('tr');
-                fname.innerText = actor.first_name;
-                lname.innerText = actor.last_name;
+                ventname.innerText = event.description;
+
+                let details = document.createElement('ul');
+                let eventname = document.createElement('li');
+                let location = document.createElement('li');
+                let time = document.createElement('li');
+
+                eventname.innerText = event.event_name;
+                location.innerText = event.location;
+                location.innerText = event.time;
+
                 wname.appendChild(fname);
                 wname.appendChild(lname);
                 actorArea.appendChild(wname);
