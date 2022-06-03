@@ -1,7 +1,7 @@
 CREATE TABLE users
 (
     user_id int NOT NULL AUTO_INCREMENT,
-    email VARCHAR(20),
+    email VARCHAR(20) UNIQUE,
     password VARCHAR(20),
     PRIMARY KEY (user_id,email)
 );
