@@ -1,4 +1,4 @@
-CREATE TABLE Users
+CREATE TABLE users
 (
     student_id VARCHAR(10),
     given_name VARCHAR(20),
@@ -7,7 +7,7 @@ CREATE TABLE Users
     PRIMARY KEY (student_id)
 );
 
-CREATE TABLE Events
+CREATE TABLE events
 (
     subject_code VARCHAR(30),
     subject VARCHAR(60),
