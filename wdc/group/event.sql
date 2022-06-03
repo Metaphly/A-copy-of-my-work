@@ -21,8 +21,8 @@ CREATE TABLE events
 CREATE TABLE user_events
 (
     id int NOT NULL AUTO_INCREMENT,
-    user_id VARCHAR(10),
-    event_id VARCHAR(30),
+    user_id int,
+    event_id int,
     PRIMARY KEY (id,user_id,event_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (event_id) REFERENCES events(event_id)
