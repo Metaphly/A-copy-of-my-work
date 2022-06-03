@@ -3,7 +3,7 @@ CREATE TABLE users
     user_id int NOT NULL AUTO_INCREMENT,
     email VARCHAR(20),
     password VARCHAR(20),
-    PRIMARY KEY (user_id)
+    PRIMARY KEY (user_id,email)
 );
 
 CREATE TABLE events
