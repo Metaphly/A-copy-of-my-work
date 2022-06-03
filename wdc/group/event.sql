@@ -9,7 +9,7 @@ CREATE TABLE users
 CREATE TABLE events
 (
     event_id int NOT NULL AUTO_INCREMENT,
-    event_name(60);
+    event_name VARCHAR(60),
     location VARCHAR(60),
     start_time VARCHAR(60),
     end_time VARCHAR(60),
@@ -33,4 +33,8 @@ CREATE TABLE user_events
 INSERT INTO users(email,password) VALUES ('james@event.com','james');
 INSERT INTO users(email,password) VALUES ('john@event.com','john');
 
-INSERT INTO events(email,password) VALUES ('john@event.com','john');
+SELECT * FROM users;
+
+INSERT INTO events(event_name,event_id) VALUES (,'Hello','Hello');
+
+SELECT * FROM events;
