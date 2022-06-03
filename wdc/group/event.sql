@@ -29,10 +29,10 @@ CREATE TABLE user_events
 
 );
 
-INSERT INTO Students VALUES ('a1111111','Fang','Li','BE(Hons)(Soft)');
-INSERT INTO Students VALUES ('a1111112','Jane','Brown','BE(Hons)(Soft)');
-INSERT INTO Students VALUES ('a1111113','Bob','Smith','BCompSc');
-INSERT INTO Students VALUES ('a1111114','Wei','Zhang','BCompSc');
+INSERT INTO users VALUES ('a1111111','Fang','Li','BE(Hons)(Soft)');
+INSERT INTO users VALUES ('a1111112','Jane','Brown','BE(Hons)(Soft)');
+INSERT INTO users VALUES ('a1111113','Bob','Smith','BCompSc');
+INSERT INTO users VALUES ('a1111114','Wei','Zhang','BCompSc');
 
 SELECT * FROM Students;
 
