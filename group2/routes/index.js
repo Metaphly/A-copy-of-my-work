@@ -13,7 +13,7 @@ router.get('/events', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT * FROM events;";
+    let query = "SELECT event_id,event_name,location,start_time FROM events;";
     connection.query(query, function(error, rows, fields) {
       connection.release();
       if (error) {
