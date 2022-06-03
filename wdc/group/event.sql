@@ -37,5 +37,7 @@ DELETE FROM users WHERE email='james@event.com';
 SELECT * FROM users;
 
 INSERT INTO events(event_name,description,creator) VALUES ('Hello','Hello',1);
+INSERT INTO events(event_name,description,creator) VALUES ('Hello','Hello',1);
+
 
 SELECT * FROM events;
