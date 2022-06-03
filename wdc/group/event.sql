@@ -41,3 +41,8 @@ INSERT INTO events(event_name,description,creator) VALUES ('Hello','Hello',1);
 
 
 SELECT * FROM events;
+
+TABLE user_events;
+TABLE events;
+TABLE user;
+
