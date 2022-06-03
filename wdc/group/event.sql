@@ -32,6 +32,7 @@ CREATE TABLE user_events
 
 INSERT INTO users(email,password) VALUES ('james@event.com','james');
 INSERT INTO users(email,password) VALUES ('john@event.com','john');
+DELETE FROM users WHERE email='james@event.com';
 
 SELECT * FROM users;
 
