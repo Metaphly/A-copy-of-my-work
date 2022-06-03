@@ -13,7 +13,7 @@ CREATE TABLE events
     location VARCHAR(60),
     start_time VARCHAR(60),
     end_time VARCHAR(60),
-    descirption VARCHAR(400),
+    description VARCHAR(400),
     creator int,
     PRIMARY KEY (event_id),
     FOREIGN KEY (creator) REFERENCES users(user_id)
@@ -35,6 +35,6 @@ INSERT INTO users(email,password) VALUES ('john@event.com','john');
 
 SELECT * FROM users;
 
-INSERT INTO events(event_name,event_id) VALUES (,'Hello','Hello');
+INSERT INTO events(event_name,description,creator) VALUES ('Hello','Hello',1);
 
 SELECT * FROM events;
