@@ -1,10 +1,9 @@
 CREATE TABLE users
 (
-    student_id VARCHAR(10),
-    given_name VARCHAR(20),
-    family_name VARCHAR(20),
-    program VARCHAR(20),
-    PRIMARY KEY (student_id)
+    user_id VARCHAR(10),
+    email VARCHAR(20),
+    mypassword VARCHAR(20),
+    PRIMARY KEY (user_id)
 );
 
 CREATE TABLE events
