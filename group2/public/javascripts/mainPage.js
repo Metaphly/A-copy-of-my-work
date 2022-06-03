@@ -7,7 +7,7 @@ function get_events(){
 
             var actorArea = document.getElementById('allevents');
             for (let event of event_list) {
-                let fname = document.createElement('td');
+                let fname = document.createElement('div');
                 let lname = document.createElement('td');
                 let wname = document.createElement('tr');
                 fname.innerText = actor.first_name;
