@@ -24,8 +24,8 @@ CREATE TABLE user_events
     user_id int,
     event_id int,
     PRIMARY KEY (id,user_id,event_id),
-    FOREIGN KEY (user_id) REFERENCES users(user_id),
-    FOREIGN KEY (event_id) REFERENCES events(event_id)
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (event_id) REFERENCES events(event_id) ON DELETE CASCADE
 
 );
 
