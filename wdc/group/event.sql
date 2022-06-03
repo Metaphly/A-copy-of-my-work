@@ -15,7 +15,7 @@ CREATE TABLE events
     PRIMARY KEY (subject_code)
 );
 
-CREATE TABLE Enrolments
+CREATE TABLE user_events
 (
     student_id VARCHAR(10),
     subject_code VARCHAR(30),
