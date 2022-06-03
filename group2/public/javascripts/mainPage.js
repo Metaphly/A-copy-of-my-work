@@ -5,7 +5,7 @@ function get_events(){
         if (this.readyState == 4 && this.status == 200) {
             var event_list = JSON.parse(this.responseText);
 
-            var actorArea = document.getElementById('allevents');
+            var eventArea = document.getElementById('allevents');
             for (let event of event_list) {
 
                 let anevent = document.createElement('div');
@@ -23,14 +23,18 @@ function get_events(){
 
                 eventname.innerText = event.event_name;
                 location.innerText = event.location;
-                location.innerText = event.time;
+                time.innerText = event.start_time;
 
-                wname.appendChild(fname);
-                wname.appendChild(lname);
-                actorArea.appendChild(wname);
+                details.appendChild( eventname);
+                details.appendChild(location);
+                details.appendChild(time);
+                eventArea.appendChild(eventcontent);
+                eventArea.appendChild(details);
             }
         }
     };
     xhttp.open("GET", "/events");
     xhttp.send();
 }
+
+get_events();
