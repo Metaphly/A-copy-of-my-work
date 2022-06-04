@@ -41,9 +41,8 @@ function get_events(){
 function login() {
 
     let user = {
-        username: document.getElementsByName('username')[0].value,
-        password: document.getElementsByName('password')[0].value
-    };
+        username: document.getElementsByID('email').value,
+        password: document.getElementsByID('password').value
 
     let xhttp = new XMLHttpRequest();
 
