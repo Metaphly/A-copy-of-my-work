@@ -60,5 +60,3 @@ function login() {
     xhttp.send(JSON.stringify(user));
 
 }
-
-get_events();
