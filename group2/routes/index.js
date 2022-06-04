@@ -32,19 +32,18 @@ router.get('/login', function(req, res, next) {
       return;
     }
 
-    connection.query("SELECT * FROM users WHERE email = req.body.email;",[], function(error, rows, fields) {
+    let query = "SELECT event_id,event_name,location,start_time FROM events;";
+    connection.query(query, function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
         return;
       }
-
-      } else {
-        console.log('Incorrect request');
-        res.sendStatus(400);
-      }
+      res.json(rows);
     });
   });
 });
+
+
 
 module.exports = router;
