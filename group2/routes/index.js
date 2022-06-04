@@ -88,7 +88,7 @@ router.post('/signup', function(req, res, next) {
         return;
       }
       console.log('sccuess');
-      req.session.user = [];
+      req.session.user = {"email":req.body.email};
       res.sendStatus(200);
     });
   });
