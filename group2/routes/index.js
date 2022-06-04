@@ -33,7 +33,7 @@ router.get('/login', function(req, res, next) {
     }
 
     let query = "SELECT event_id,event_name,location,start_time FROM events;";
-    connection.query(query, function(error, rows, fields) {
+    connection.query("SELECT * FROM users WHERE email = ?;",[req.body.email], function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
@@ -43,7 +43,5 @@ router.get('/login', function(req, res, next) {
     });
   });
 });
-
-
 
 module.exports = router;
