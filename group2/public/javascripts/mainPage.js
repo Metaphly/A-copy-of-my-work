@@ -49,13 +49,37 @@ function login() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("Sucess");
+            alert("Valid Login");
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("Failed");
+            alert("Invalid Login");
         }
     };
 
     xhttp.open("POST", "/login");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user));
+
+}
+
+function signup() {
+
+    let user = {
+        name: document.getElementsByName('name')[0].value,
+        username: document.getElementsByName('username')[0].value,
+        password: document.getElementsByName('password')[0].value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Valid Signup");
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Invalid Signup");
+        }
+    };
+
+    xhttp.open("POST", "/signup");
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(user));
 
