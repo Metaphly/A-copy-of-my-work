@@ -50,13 +50,15 @@ router.get('/login', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT event_id,event_name,location,start_time FROM events;";
+    let query = "SELECT email.password FROM users;";
     connection.query(query, function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
         return;
       }
+      if ('username' in req.body && 'password' in req.body) {
+
       res.json(rows);
     });
   });
