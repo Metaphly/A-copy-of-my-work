@@ -45,6 +45,7 @@ router.post('/login', function(req, res, next) {
         res.sendStatus(401);
       } else if(rows[0].password == req.body.password) {
         console.log('sccuess');
+        req.session.user = rows[0];
         res.sendStatus(200);
       } else {
         console.log('wrong password');
@@ -87,7 +88,7 @@ router.post('/signup', function(req, res, next) {
         return;
       }
       console.log('sccuess');
-      req.session.user = ;
+      req.session.user = "adwwad";
       res.sendStatus(200);
     });
   });
