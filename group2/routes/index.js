@@ -87,6 +87,7 @@ router.post('/signup', function(req, res, next) {
         return;
       }
       console.log('sccuess');
+      req.session.user = ;
       res.sendStatus(200);
     });
   });
