@@ -43,6 +43,7 @@ function login() {
     let user = {
         email: document.getElementsByID('email').value,
         password: document.getElementsByID('password').value
+    }
 
     let xhttp = new XMLHttpRequest();
 
