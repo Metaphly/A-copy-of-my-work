@@ -39,8 +39,6 @@ router.get('/login', function(req, res, next) {
         return;
       }
 
-      rows[0]
-
       } else {
         console.log('Incorrect request');
         res.sendStatus(400);
