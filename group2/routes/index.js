@@ -50,8 +50,7 @@ router.get('/login', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT email.password FROM users;";
-    connection.query(query, function(error, rows, fields) {
+    connection.query("SELECT * FROM users WHERE email = req.body.email;",[], function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
@@ -61,7 +60,7 @@ router.get('/login', function(req, res, next) {
 
         if(req.body.username in users && users[req.body.username].password === req.body.password){
           console.log('success');
-          req.session.user = users[req.body.username];
+          //req.session.user = users[req.body.username];
           res.sendStatus(200);
         } else {
           console.log('bad login');
