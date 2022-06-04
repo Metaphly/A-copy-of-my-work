@@ -40,12 +40,14 @@ router.post('/login', function(req, res, next) {
         return;
       }
 
-      //if(rows.length==0)
+      if(rows.length==0)
       {
-        //console.log('incorrect email');
-        //res.sendStatus(401);
+        console.log('incorrect email');
+        res.sendStatus(401);
+      } else{
+        res.json(rows);
       }
-      res.json(rows);
+      
     });
   });
 });
