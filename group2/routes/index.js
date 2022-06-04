@@ -38,12 +38,12 @@ router.post('/login', function(req, res, next) {
       if (error) {
         res.sendStatus(500);
         return;
-      } else {
-        if(rows==null)
-        {
-          console.log('incorrect email');
-          res.sendStatus(401);
-        }
+      }
+
+      if(rows==null)
+      {
+        console.log('incorrect email');
+        res.sendStatus(401);
       }
       res.json(rows);
     });
