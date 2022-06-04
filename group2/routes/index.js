@@ -56,6 +56,7 @@ router.get('/login', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
+      
       //if ('username' in req.body && 'password' in req.body) {
 
         if(req.body.username in users && users[req.body.username].password === req.body.password){
