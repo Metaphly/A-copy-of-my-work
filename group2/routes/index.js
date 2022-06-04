@@ -63,7 +63,14 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
-    connection.query("INSERT INTO users(email,password) VALUES (?,?);",[req.body.email], function(error, rows, fields) {
+    if(req.body.passward != req.body.passward2)
+    {
+      console.log("Get two different password");
+      res.sendStatus(400);
+      return;
+    }
+
+    connection.query("INSERT INTO users(email,password) VALUES (?,?);",[req.body.email,req.body.password], function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
