@@ -62,7 +62,7 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
-    if(req.body.passward != req.body.passward2)
+    if(req.body.password != req.body.password2)
     {
       console.log("Get two different password");
       res.sendStatus(400);
