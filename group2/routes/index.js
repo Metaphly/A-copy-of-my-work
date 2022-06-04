@@ -58,6 +58,15 @@ router.get('/login', function(req, res, next) {
         return;
       }
       if ('username' in req.body && 'password' in req.body) {
+        
+        if(req.body.username in users && users[req.body.username].password === req.body.password){
+          console.log('success');
+          req.session.user = users[req.body.username];
+          res.sendStatus(200);
+        } else {
+          console.log('bad login');
+          res.sendStatus(401);
+        }
 
       } else {
         console.log('Incorrect request');
