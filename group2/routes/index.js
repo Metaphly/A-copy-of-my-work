@@ -72,7 +72,7 @@ router.post('/signup', function(req, res, next) {
       console.log("invalid email");
       res.sendStatus(400);
       return;
-    }else if(req.body.password == null || req.body.password2 == null)
+    }else if(req.body.password || req.body.password2)
     {
       console.log("invalid password");
       res.sendStatus(400);
