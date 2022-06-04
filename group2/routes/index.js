@@ -46,7 +46,8 @@ router.post('/login', function(req, res, next) {
         res.sendStatus(401);
       } else if(rows[0].password == req.body.password) {
         console.log('sccuess');
-        res.send(rows[0].password);
+        //res.send(rows[0].password);
+        res.sendStatus(200);
       } else {
         console.log('wrong password');
         res.sendStatus(401);
