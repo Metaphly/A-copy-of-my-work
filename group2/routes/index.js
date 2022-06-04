@@ -72,12 +72,17 @@ router.post('/signup', function(req, res, next) {
       console.log("invalid email");
       res.sendStatus(400);
       return;
-    }else if(req.body.password || req.body.password2)
+    }
+
+    if(req.body.password || req.body.password2)
     {
       console.log("invalid password");
       res.sendStatus(400);
       return;
     }
+
+    console.log("req.body.password");
+    console.log(req.body.password);
 
     connection.query("INSERT INTO users(email,password) VALUES (?,?);",[req.body.email,req.body.password], function(error, rows, fields) {
       connection.release();
