@@ -59,7 +59,10 @@ router.get('/login', function(req, res, next) {
       }
       if ('username' in req.body && 'password' in req.body) {
 
-      res.json(rows);
+      } else {
+        console.log('Incorrect request');
+        res.sendStatus(400);
+      }
     });
   });
 });
