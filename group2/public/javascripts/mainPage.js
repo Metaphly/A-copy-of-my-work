@@ -66,7 +66,7 @@ function signup() {
     let user = {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value,
-        
+        password2: document.getElementById('password2').value
     };
 
     let xhttp = new XMLHttpRequest();
