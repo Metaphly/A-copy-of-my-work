@@ -4,6 +4,7 @@ var router = express.Router();
 
 router.use('/', function(req, res, next) {
   if(!(user in req.session)) {
+    console.log("Haven't login");
     res.sendStatus(403);
   }else
   {
