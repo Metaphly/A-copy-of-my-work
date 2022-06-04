@@ -44,9 +44,12 @@ router.post('/login', function(req, res, next) {
       {
         console.log('incorrect email');
         res.sendStatus(401);
-      } else{
-        res.send(rows[0].email);
-        //res.json(rows);
+      } else if(rows[0].password == req.body.password) {
+        console.log('sccuess');
+        res.send(rows[0].password);
+      } else {
+        console.log('wrong password');
+        res.sendStatus(401);
       }
 
     });
