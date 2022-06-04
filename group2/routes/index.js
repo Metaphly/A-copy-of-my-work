@@ -41,7 +41,7 @@ router.post('/login', function(req, res, next) {
       } else {
         if(rows==null)
         {
-          
+          console.log('incorrect email');
         }
       }
       res.json(rows);
