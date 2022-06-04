@@ -72,16 +72,16 @@ router.post('/signup', function(req, res, next) {
     connection.query("INSERT INTO users(email,password) VALUES (?,?);",[req.body.email,req.body.password], function(error, rows, fields) {
       connection.release();
       if (error) {
-        console.log(user exist);
+        console.log('user exist');
         res.sendStatus(500);
         return;
       }
-
       console.log('sccuess');
       res.sendStatus(200);
-
     });
   });
 });
+
+
 
 module.exports = router;
