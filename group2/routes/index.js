@@ -45,8 +45,8 @@ router.post('/login', function(req, res, next) {
         console.log('incorrect email');
         res.sendStatus(401);
       } else{
-        console.log(rows[0]);
-        res.(rows[0].passward);
+        res.send(rows[0]);
+        //res.json(rows);
       }
 
     });
