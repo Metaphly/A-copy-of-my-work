@@ -25,7 +25,7 @@ router.get('/events', function(req, res, next) {
   });
 });
 
-router.get('/login', function(req, res, next) {
+router.post('/login', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
