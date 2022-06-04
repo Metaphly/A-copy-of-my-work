@@ -73,22 +73,13 @@ router.post('/signup', function(req, res, next) {
     connection.query("INSERT INTO users(email,password) VALUES (?,?);",[req.body.email,req.body.password], function(error, rows, fields) {
       connection.release();
       if (error) {
+        console.log(user exist);
         res.sendStatus(500);
         return;
       }
 
-      if(rows.length==0)
-      {
-        console.log('incorrect email');
-        res.sendStatus(401);
-      } else if(rows[0].password == req.body.password) {
-        console.log('sccuess');
-        //res.send(rows[0].password);
-        res.sendStatus(200);
-      } else {
-        console.log('wrong password');
-        res.sendStatus(401);
-      }
+      console.log('sccuess');
+      res.sendStatus(200);
 
     });
   });
