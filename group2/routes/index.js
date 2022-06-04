@@ -38,6 +38,11 @@ router.post('/login', function(req, res, next) {
       if (error) {
         res.sendStatus(500);
         return;
+      } else {
+        if(rows==null)
+        {
+          
+        }
       }
       res.json(rows);
     });
