@@ -67,6 +67,11 @@ router.post('/signup', function(req, res, next) {
       console.log("Get two different password");
       res.sendStatus(400);
       return;
+    }else if(req.body.email == null)
+    {
+      console.log("no email");
+      res.sendStatus(400);
+      return;
     }
 
     connection.query("INSERT INTO users(email,password) VALUES (?,?);",[req.body.email,req.body.password], function(error, rows, fields) {
