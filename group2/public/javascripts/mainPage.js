@@ -38,4 +38,9 @@ function get_events(){
     xhttp.send();
 }
 
+function create_event()
+{
+
+}
+
 get_events();
