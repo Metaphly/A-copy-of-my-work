@@ -64,9 +64,9 @@ function login() {
 function signup() {
 
     let user = {
-        name: document.getElementsByName('name')[0].value,
-        username: document.getElementsByName('username')[0].value,
-        password: document.getElementsByName('password')[0].value
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+        
     };
 
     let xhttp = new XMLHttpRequest();
