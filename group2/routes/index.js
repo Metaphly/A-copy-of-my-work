@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.sendFile(login.html);
 });
 
 router.get('/events', function(req, res, next) {
