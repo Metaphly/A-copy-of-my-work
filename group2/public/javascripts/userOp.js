@@ -9,8 +9,8 @@ function get_userInfo(){
             let user_id = document.createElement('p');
             let user_email = document.createElement('p');
 
-            user_id.innerText = userinfo.user_id;
-            user_email.innerText = userinfo.email;
+            user_id.innerText = "User Id: " + userinfo.user_id;
+            user_email.innerText = "User Name: " + userinfo.email;
             infoArea.appendChild(user_id);
             infoArea.appendChild(user_email);
         }
