@@ -49,6 +49,12 @@ router.get('/userInfo', function(req, res, next) {
 });
 
 router.post('/changeEmail', function(req, res, next) {
+
+  if()
+  {
+
+  }
+  
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
