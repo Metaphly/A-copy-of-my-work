@@ -22,6 +22,9 @@ router.get('/userPage', function(req, res, next) {
 });
 
 router.get('/logout', function(req, res, next) {
+  if('user' in req.session){
+    delete req.session.user;
+  }
   res.sendFile(path.join(__dirname, '/../public/index.html'));
 });
 
