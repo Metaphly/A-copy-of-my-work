@@ -21,4 +21,23 @@ router.get('/userPage', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/user.html'));
 });
 
+router.get('/userInfo', function(req, res, next) {
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "SELECT event_id,event_name,location,start_time FROM events;";
+    connection.query(query, function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        res.sendStatus(500);
+        return;
+      }
+      res.json(rows);
+    });
+  });
+});
+
 module.exports = router;
