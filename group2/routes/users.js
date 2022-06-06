@@ -48,7 +48,7 @@ router.get('/userInfo', function(req, res, next) {
   });
 });
 
-router.get('/changeEmail', function(req, res, next) {
+router.post('/changeEmail', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
