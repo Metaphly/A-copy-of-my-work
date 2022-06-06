@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/', function(req, res, next) {
+router.get('/loginPage', function(req, res, next) {
   res.sendFile(login.html);
 });
 
