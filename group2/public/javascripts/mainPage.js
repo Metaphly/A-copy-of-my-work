@@ -41,7 +41,7 @@ function get_events(){
 function login() {
 
     let user = {
-        email: document.getElementById('email').value,
+        user_name: document.getElementById('user_name').value,
         password: document.getElementById('password').value
     };
 
@@ -65,7 +65,7 @@ function login() {
 function signup() {
 
     let user = {
-        email: document.getElementById('email').value,
+        user_name: document.getElementById('user_name').value,
         password: document.getElementById('password').value,
         password2: document.getElementById('password2').value
     };
