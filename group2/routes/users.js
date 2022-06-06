@@ -28,7 +28,7 @@ router.get('/userInfo', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT * FROM users WHERE;";
+    let query = "SELECT * FROM users WHERE ;";
     connection.query(query, function(error, rows, fields) {
       connection.release();
       if (error) {
