@@ -28,8 +28,8 @@ router.get('/userInfo', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT * FROM users WHERE ;";
-    connection.query(query, function(error, rows, fields) {
+    let query = "SELECT * FROM users WHERE email = ?;";
+    connection.query(query,['test'],function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
