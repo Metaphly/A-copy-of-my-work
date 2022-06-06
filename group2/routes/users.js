@@ -48,4 +48,36 @@ router.get('/userInfo', function(req, res, next) {
   });
 });
 
+router.post('/changeEmail', function(req, res, next) {
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "SELECT * FROM users WHERE user_name = ?;";
+    connection.query(query,[req.body.user_name], function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        res.sendStatus(500);
+        return;
+      }
+
+      if(rows.length==0)
+      {
+        console.log('incorrect email');
+        res.sendStatus(401);
+      } else if(rows[0].password == req.body.password) {
+        console.log('sccuess');
+        req.session.user = rows[0];
+        res.sendStatus(200);
+      } else {
+        console.log('wrong password');
+        res.sendStatus(401);
+      }
+
+    });
+  });
+});
+
 module.exports = router;
