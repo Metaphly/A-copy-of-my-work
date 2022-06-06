@@ -13,6 +13,13 @@ function get_userInfo(){
             user_email.innerText = "User Name: " + userinfo.email;
             infoArea.appendChild(user_id);
             infoArea.appendChild(user_email);
+
+            let infotable = document.createElement('table');
+            let infotitles = document.createElement('tr');
+            infotitles.innerHTML = "<th>User Id</th> <th>User Name</th>";
+            infotable.appendChild(infotitles);
+
+            infoArea.appendChild(infotable);
         }
     };
     xhttp.open("GET", "/users/userInfo");
