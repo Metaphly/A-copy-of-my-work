@@ -63,6 +63,7 @@ router.post('/changeEmail', function(req, res, next) {
         return;
       }
 
+      res.send(rows);
       if(rows.length==0)
       {
         console.log('incorrect email');
