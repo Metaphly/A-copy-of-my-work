@@ -59,11 +59,11 @@ router.post('/changeEmail', function(req, res, next) {
     connection.query(query,["newmail","james"],function(error, rows, fields) {
       connection.release();
       if (error) {
-        console.log("email error");
+        console.log("query error");
         res.sendStatus(500);
         return;
       }
-      res.json(rows[0]);
+      res.sendStatus(200);
     });
   });
 });
