@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/loginPage', function(req, res) {
-  res.sendFile(path.join(__dirname, 'public/login.html'));
+  res.sendFile(path.join(__dirname, './public/login.html'));
 });
 
 router.get('/events', function(req, res, next) {
