@@ -55,7 +55,8 @@ router.post('/login', function(req, res, next) {
       } else if(rows[0].password == req.body.password) {
         console.log('sccuess');
         req.session.user = rows[0];
-        res.sendStatus(200);
+        res.redirect('/');
+        //res.sendStatus(200);
       } else {
         console.log('wrong password');
         res.sendStatus(401);
