@@ -55,8 +55,8 @@ router.post('/changeEmail', function(req, res, next) {
       return;
     }
 
-    let query = "UPDATE users SET email = ? WHERE user_id = ?;";
-    connection.query(query,[req.body.new_email,], function(error, rows, fields) {
+    let query = "UPDATE users SET email = ? WHERE user_name = ?;";
+    connection.query(query,[req.body.new_email,req.session.user.user_name], function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
