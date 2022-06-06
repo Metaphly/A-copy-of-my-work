@@ -22,7 +22,7 @@ router.get('/userPage', function(req, res, next) {
 });
 
 router.get('/logout', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '/../public/user.html'));
+  res.sendFile(path.join(__dirname, '/../public/index.html'));
 });
 
 router.get('/userInfo', function(req, res, next) {
