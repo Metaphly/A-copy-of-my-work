@@ -28,7 +28,7 @@ router.get('/userInfo', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT event_id,event_name,location,start_time FROM events;";
+    let query = "SELECT * FROM users;";
     connection.query(query, function(error, rows, fields) {
       connection.release();
       if (error) {
