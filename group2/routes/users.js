@@ -21,6 +21,10 @@ router.get('/userPage', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/user.html'));
 });
 
+router.get('/logout', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '/../public/user.html'));
+});
+
 router.get('/userInfo', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
