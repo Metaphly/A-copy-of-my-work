@@ -1,9 +1,9 @@
 CREATE TABLE users
 (
     user_id int NOT NULL AUTO_INCREMENT,
-    email VARCHAR(20) UNIQUE,
+    user_name VARCHAR(20) UNIQUE,
     password VARCHAR(20),
-    PRIMARY KEY (user_id,email)
+    PRIMARY KEY (user_id,user_name)
 );
 
 CREATE TABLE events
