@@ -36,7 +36,7 @@ router.get('/userInfo', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
-      res.json(rows);
+      res.json(rows[0]);
     });
   });
 });
