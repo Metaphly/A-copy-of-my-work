@@ -31,9 +31,9 @@ CREATE TABLE user_events
 
 );
 
-INSERT INTO users(name,password) VALUES ('james','james');
-INSERT INTO users(name,password) VALUES ('john','john');
-DELETE FROM users WHERE name='james';
+INSERT INTO users(user_name,password) VALUES ('james','james');
+INSERT INTO users(user_name,password) VALUES ('john','john');
+DELETE FROM users WHERE user_name='james';
 
 SELECT * FROM users;
 
