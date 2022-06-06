@@ -77,7 +77,7 @@ router.post('/signup', function(req, res, next) {
       console.log("Get two different password");
       res.sendStatus(400);
       return;
-    }else if(req.body.user_name == null)
+    }else if(req.body.user_name == [])
     {
       console.log("User name empty!");
       res.sendStatus(400);
