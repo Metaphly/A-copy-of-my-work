@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -8,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/loginPage', function(req, res, next) {
-  res.sendFile(path.join('public'+'/login.html'));
+  res.sendFile(path.join(''+'/sitemap.html'));
 });
 
 router.get('/events', function(req, res, next) {
