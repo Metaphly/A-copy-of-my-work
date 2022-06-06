@@ -11,7 +11,8 @@ function get_userInfo(){
 
             user_id.innerText = userinfo.user_id;
             user_email.innerText = userinfo.email;
-
+            infoArea.appendChild(user_id);
+            infoArea.appendChild(user_email);
         }
     };
     xhttp.open("GET", "/users/userInfo");
