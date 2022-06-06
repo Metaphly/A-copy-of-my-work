@@ -6,6 +6,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
 router.get('/events', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
