@@ -50,7 +50,7 @@ router.get('/userInfo', function(req, res, next) {
 
 router.post('/changeEmail', function(req, res, next) {
 
-  if(req.new_email == [])
+  if(req.body.new_email == [])
   {
     console.log("empty email");
     res.sendStatus(400);
@@ -63,7 +63,7 @@ router.post('/changeEmail', function(req, res, next) {
     }
 
     let query = "UPDATE users SET email = ? WHERE user_name = ?;";
-    connection.query(query,[req.new_email,req.session.user.user_name],function(error, rows, fields) {
+    connection.query(query,[req.body.new_email,req.session.user.user_name],function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("query error");
