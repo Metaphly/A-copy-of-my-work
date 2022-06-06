@@ -7,16 +7,15 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-/*
 router.use('/', function(req, res, next) {
-  if(!(user in req.session)) {
+  if(!('user' in req.session)) {
     console.log("Haven't login");
     res.sendStatus(403);
   }else
   {
     next();
   }
-});*/
+});
 
 router.get('/userPage', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/user.html'));
