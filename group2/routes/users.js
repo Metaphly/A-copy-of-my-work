@@ -55,7 +55,7 @@ router.post('/changeEmail', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT * FROM users WHERE user_name = ?;";
+    let query = "UPDATE users SET email = ? WHERE user_id = ?;";
     connection.query(query,[req.body.user_name], function(error, rows, fields) {
       connection.release();
       if (error) {
