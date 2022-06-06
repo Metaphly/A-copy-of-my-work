@@ -28,6 +28,10 @@ app.use(session({
   cookie: { secure: false }
 }));
 
+app.get('/loginPage', function(req, res) {
+  res.sendFile(path.join(__dirname, '/login.html'));
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

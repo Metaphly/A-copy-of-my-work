@@ -6,10 +6,6 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/loginPage', function(req, res, next) {
-  res.sendFile(path.join(''+'/sitemap.html'));
-});
-
 router.get('/events', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
