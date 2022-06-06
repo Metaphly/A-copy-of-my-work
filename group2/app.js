@@ -29,7 +29,7 @@ app.use(session({
 }));
 
 app.get('/loginPage', function(req, res) {
-  res.sendFile(path.join(__dirname, '/login.html'));
+  res.sendFile(path.join(__dirname, 'public/login.html'));
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
