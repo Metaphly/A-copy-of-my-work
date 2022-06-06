@@ -4,7 +4,10 @@ function get_userInfo(){
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var userinfo = JSON.parse(this.responseText);
-            var infoArea = document.getElementById('allevents');
+            var infoArea = document.getElementById('userInfo');
+
+            let user_id = document.createElement('p');
+            let user_email = document.createElement('p');
 
         }
     };
