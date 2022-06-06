@@ -32,6 +32,10 @@ app.get('/loginPage', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/login.html'));
 });
 
+app.get('/signupPage', function(req, res) {
+  res.sendFile(path.join(__dirname, 'public/signup.html'));
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
