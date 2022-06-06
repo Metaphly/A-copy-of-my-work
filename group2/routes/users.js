@@ -54,6 +54,7 @@ router.post('/changeEmail', function(req, res, next) {
   {
     console.log("empty email");
     res.sendStatus(400);
+    return;
   }
 
   req.pool.getConnection(function(error,connection){
