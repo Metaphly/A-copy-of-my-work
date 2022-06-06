@@ -41,7 +41,7 @@ router.post('/login', function(req, res, next) {
       return;
     }
 
-    connection.query("SELECT * FROM users WHERE email = ?;",[req.body.email], function(error, rows, fields) {
+    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
       connection.release();
       if (error) {
         res.sendStatus(500);
@@ -89,7 +89,7 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
-    connection.query("INSERT INTO users(email,password) VALUES (?,?);",[req.body.email,req.body.password], function(error, rows, fields) {
+    connection.query("INSERT INTO users(user_name,password) VALUES (?,?);",[req.body.user_name,req.body.password], function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log('user exist');
@@ -97,7 +97,7 @@ router.post('/signup', function(req, res, next) {
         return;
       }
       console.log('sccuess');
-      req.session.user = {"email":req.body.email};
+      req.session.user = {"user_name":req.body.user_name};
       res.sendStatus(200);
     });
   });

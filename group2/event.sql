@@ -2,6 +2,7 @@ CREATE TABLE users
 (
     user_id int NOT NULL AUTO_INCREMENT,
     user_name VARCHAR(20) UNIQUE,
+    email VARCHAR(20) UNIQUE,
     password VARCHAR(20),
     PRIMARY KEY (user_id,user_name)
 );
@@ -30,9 +31,9 @@ CREATE TABLE user_events
 
 );
 
-INSERT INTO users(email,password) VALUES ('james@event.com','james');
-INSERT INTO users(email,password) VALUES ('john@event.com','john');
-DELETE FROM users WHERE email='james@event.com';
+INSERT INTO users(name,password) VALUES ('james','james');
+INSERT INTO users(name,password) VALUES ('john','john');
+DELETE FROM users WHERE name='james';
 
 SELECT * FROM users;
 

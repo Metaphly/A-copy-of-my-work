@@ -35,8 +35,8 @@ router.get('/userInfo', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT * FROM users WHERE email = ?;";
-    connection.query(query,[req.session.user.email],function(error, rows, fields) {
+    let query = "SELECT * FROM users WHERE user_name = ?;";
+    connection.query(query,[req.session.user.user_name],function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("email error");
