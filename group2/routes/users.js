@@ -50,11 +50,6 @@ router.get('/userInfo', function(req, res, next) {
 
 router.post('/changeEmail', function(req, res, next) {
 
-  if()
-  {
-
-  }
-  
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
@@ -62,7 +57,7 @@ router.post('/changeEmail', function(req, res, next) {
     }
 
     let query = "UPDATE users SET email = ? WHERE user_name = ?;";
-    connection.query(query,["newmail","james"],function(error, rows, fields) {
+    connection.query(query,[req.new_mail,req.session.user.user_name],function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("query error");
