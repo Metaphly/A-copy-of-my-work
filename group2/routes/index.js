@@ -41,6 +41,12 @@ router.post('/login', function(req, res, next) {
       return;
     }
 
+    if('user' in req.session){
+      console.log("already log in");
+      res.sendStatus(500);
+      return;
+    }
+
     connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
       connection.release();
       if (error) {
@@ -68,6 +74,12 @@ router.post('/login', function(req, res, next) {
 router.post('/signup', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    if('user' in req.session){
+      console.log("already log in");
       res.sendStatus(500);
       return;
     }
