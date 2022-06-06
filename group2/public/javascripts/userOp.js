@@ -14,11 +14,14 @@ function get_userInfo(){
             let detailrow = document.createElement('tr');
             let user_id = document.createElement('th');
             let user_name = document.createElement('th');
+            let user_email = document.createElement('th');
             user_id.innerText = userinfo.user_id;
             user_name.innerText = userinfo.user_name;
+            user_email.innerText = userinfo.user_email;
 
             detailrow.appendChild(user_id);
             detailrow.appendChild(user_name);
+            detailrow.appendChild(user_email);
             infotable.appendChild(detailrow);
             infoArea.appendChild(infotable);
         }
