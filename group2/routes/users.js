@@ -19,7 +19,7 @@ router.use('/', function(req, res, next) {
 });*/
 
 router.get('/userPage', function(req, res, next) {
-  res.sendFile(path.join(__dirname, '/../public/login.html'));
+  res.sendFile(path.join(__dirname, '/../public/user.html'));
 });
 
 module.exports = router;
