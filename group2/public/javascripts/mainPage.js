@@ -75,6 +75,7 @@ function signup() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             alert("Valid Signup");
+            location.href = '/';
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Invalid Signup");
         }
