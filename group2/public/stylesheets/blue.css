@@ -101,3 +101,9 @@
     margin-top: 10px;
     margin-left:43.4%;
 }
+
+table, th, td {
+    border: 1px solid;
+  }
+
+  

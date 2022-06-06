@@ -5,20 +5,21 @@ function get_userInfo(){
         if (this.readyState == 4 && this.status == 200) {
             var userinfo = JSON.parse(this.responseText);
             var infoArea = document.getElementById('userInfo');
-
-            let user_id = document.createElement('p');
-            let user_email = document.createElement('p');
-
-            user_id.innerText = "User Id: " + userinfo.user_id;
-            user_email.innerText = "User Name: " + userinfo.email;
-            infoArea.appendChild(user_id);
-            infoArea.appendChild(user_email);
-
+            
             let infotable = document.createElement('table');
             let infotitles = document.createElement('tr');
             infotitles.innerHTML = "<th>User Id</th> <th>User Name</th>";
             infotable.appendChild(infotitles);
 
+            let detailrow = document.createElement('tr');
+            let user_id = document.createElement('th');
+            let user_email = document.createElement('th');
+            user_id.innerText = userinfo.user_id;
+            user_email.innerText = userinfo.email;
+
+            detailrow.appendChild(user_id);
+            detailrow.appendChild(user_email);
+            infotable.appendChild(detailrow);
             infoArea.appendChild(infotable);
         }
     };
