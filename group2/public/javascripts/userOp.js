@@ -15,10 +15,10 @@ function get_userInfo(){
             let user_id = document.createElement('th');
             let user_name = document.createElement('th');
             user_id.innerText = userinfo.user_id;
-            user_email.innerText = userinfo.email;
+            user_name.innerText = userinfo.user_name;
 
             detailrow.appendChild(user_id);
-            detailrow.appendChild(user_email);
+            detailrow.appendChild(user_name);
             infotable.appendChild(detailrow);
             infoArea.appendChild(infotable);
         }
