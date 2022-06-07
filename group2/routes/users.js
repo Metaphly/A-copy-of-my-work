@@ -152,8 +152,24 @@ router.post('/addevent', function(req, res, next) {
   });
 });
 
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/events', function(req, res, next) {
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "SELECT event_id,event_name,location,start_date,description FROM events;";
+    connection.query(query, function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log("query error");
+        res.sendStatus(500);
+        return;
+      }
+      res.json(rows);
+    });
+  });
 });
 
 module.exports = router;
