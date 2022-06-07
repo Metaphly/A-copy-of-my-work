@@ -96,3 +96,8 @@ function signup() {
     xhttp.send(JSON.stringify(user));
 
 }
+
+
+function show_event_details(){
+
+}
