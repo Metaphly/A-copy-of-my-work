@@ -184,7 +184,7 @@ router.get('/myevents', function(req, res, next) {
     connection.query(query,[req.session.user.user_id],function(error, rows, fields) {
       connection.release();
       if (error) {
-        console.log("email error");
+        console.log("query error");
         res.sendStatus(500);
         return;
       }
