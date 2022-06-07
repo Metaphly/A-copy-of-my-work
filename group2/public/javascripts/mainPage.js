@@ -5,8 +5,12 @@ function get_events(){
         if (this.readyState == 4 && this.status == 200) {
             var event_list = JSON.parse(this.responseText);
 
+            var selection = document.getElementsByTagName("select")[0];
             var eventArea = document.getElementById('allevents');
             for (let event of event_list) {
+
+                let newop = make_choice(event);
+                selection.appendChild(newop);
 
                 let anevent = create_single_event(event);
                 eventArea.appendChild(anevent);
@@ -46,6 +50,12 @@ function create_single_event(event){
     anevent.appendChild(details);
 
     return anevent;
+}
+
+function make_choice(event){
+    let newchoice = document.createElement('option');
+    newchoice.innerText = event.event_id;
+    return newchoice;
 }
 
 function login() {
