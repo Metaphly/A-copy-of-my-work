@@ -79,5 +79,36 @@ router.post('/changeEmail', function(req, res, next) {
 });
 
 
+router.post('/changeName', function(req, res, next) {
+
+  if(req.body.new_email == [])
+  {
+    console.log("empty name");
+    res.sendStatus(400);
+    return;
+  }
+
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "UPDATE users SET uer_name = ? WHERE user_name = ?;";
+    connection.query(query,[req.body.new_email,req.session.user.user_name],function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log("query error");
+        res.sendStatus(500);
+        return;
+      }
+      console.log("name changed");
+      req.session.email = req.body.new_email;
+      res.sendStatus(200);
+    });
+  });
+});
+
+
 
 module.exports = router;
