@@ -180,7 +180,7 @@ router.get('/myevents', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT * FROM user_event WHERE user_id = ?;";
+    let query = "SELECT * FROM user_events WHERE user_id = ?;";
     connection.query(query,[req.session.user.user_id],function(error, rows, fields) {
       connection.release();
       if (error) {
