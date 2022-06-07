@@ -25,7 +25,7 @@ function get_events(){
                 eventname.innerText = event.event_name;
                 location.innerText = event.location;
                 time.innerText = event.start_date;
-                event_id.innerText = "EVENT ID: " + event.event_id;
+                event_id.innerText = "Event Id: " + event.event_id;
 
                 details.appendChild(eventname);
                 details.appendChild(location);
