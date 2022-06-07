@@ -193,4 +193,27 @@ router.get('/myevents', function(req, res, next) {
   });
 });
 
+router.post('/freetime', function(req, res, next) {
+
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "UPDATE user_events SET email = ? WHERE user_name = ?;";
+    connection.query(query,[req.body.new_email,req.session.user.user_name],function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log("query error");
+        res.sendStatus(500);
+        return;
+      }
+      console.log("email changed");
+      req.session.email = req.body.new_email;
+      res.sendStatus(200);
+    });
+  });
+});
+
 module.exports = router;
