@@ -156,10 +156,10 @@ function get_myevents(){
 
 function set_freetime() {
 
-    document.getElementsByTagName("select")
+    let event_id = document.getElementsByTagName("select")[0];
     let user_event = {
         free_time: document.getElementById('freetime').value,
-        event_id: document.getElementById('event_id_bar').value
+        event_id: event_id
     };
 
     let xhttp = new XMLHttpRequest();
