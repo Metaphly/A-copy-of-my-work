@@ -169,7 +169,7 @@ router.post('/takeevent', function(req, res, next) {
       if(rows.length != 0)
       {
         console.log("already existed");
-        res.sendStatus(500);
+        res.sendStatus(400);
         return;
       }
     });
