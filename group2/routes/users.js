@@ -107,7 +107,7 @@ router.post('/changeName', function(req, res, next) {
       //res.sendStatus(200);
     });
 
-    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
+    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.new_name], function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log('Can not find crated user info');
