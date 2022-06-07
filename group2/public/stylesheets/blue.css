@@ -108,14 +108,18 @@ table, td, th {
     border: 1px solid;
 }
 
-  table {
+#infotable {
     width: 100%;
     border-collapse: collapse;
-    display: inline-block;
 }
 
 .eventdetail
 {
     width:80%;
     border-top: 10px solid #C4C4C4;
+}
+
+#membertable
+{
+    display: inline-block;
 }
