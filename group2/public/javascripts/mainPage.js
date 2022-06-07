@@ -89,3 +89,27 @@ function signup() {
     xhttp.send(JSON.stringify(user));
 
 }
+
+
+function signup() {
+
+    let user_event = {
+        event_id: document.getElementById('user_name').value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Valid Signup");
+            location.href = '/';
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Invalid Signup");
+        }
+    };
+
+    xhttp.open("POST", "/signup");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user));
+
+}
