@@ -19,7 +19,7 @@ function get_userInfo(){
             user_name.innerText = userinfo.user_name;
             user_email.innerText = userinfo.user_email;
 
-            detailrow.appendChild(user_id);
+            detailrow.apchanpendChild(user_id);
             detailrow.appendChild(user_name);
             detailrow.appendChild(user_email);
             infotable.appendChild(detailrow);
@@ -30,7 +30,7 @@ function get_userInfo(){
     xhttp.send();
 }
 
-function change_email(){
+function ge_email(){
 
     let new_email = {
         new_email: document.getElementById('new_email').value
@@ -43,6 +43,8 @@ function change_email(){
             reload();
         }
     };
+
     xhttp.open("POST", "/users/changeEmail");
-    xhttp.send();
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(new_email));
 }
