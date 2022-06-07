@@ -8,12 +8,7 @@ function get_events(){
             var eventArea = document.getElementById('allevents');
             for (let event of event_list) {
 
-                let eventcontent = document.createElement('div');
-                eventcontent.className= 'eventcontent';
-
-                eventcontent.innerText = event.description;
-                create_single_event(event)
-
+                let anevent = create_single_event(event);
                 eventArea.appendChild(anevent);
             }
         }
@@ -26,6 +21,11 @@ function create_single_event(event){
 
     let anevent = document.createElement('div');
     anevent.className='event';
+
+    let eventcontent = document.createElement('div');
+    eventcontent.className= 'eventcontent';
+
+    eventcontent.innerText = event.description;
 
     let details = document.createElement('ul');
     let eventname = document.createElement('li');
