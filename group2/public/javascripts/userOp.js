@@ -17,7 +17,7 @@ function get_userInfo(){
             let user_email = document.createElement('th');
             user_id.innerText = userinfo.user_id;
             user_name.innerText = userinfo.user_name;
-            user_email.innerText = userinfo.user_email;
+            user_email.innerText = userinfo.email;
 
             detailrow.appendChild(user_id);
             detailrow.appendChild(user_name);
