@@ -130,7 +130,7 @@ router.post('/signup', function(req, res, next) {
 });
 
 
-router.get('/single_event', function(req, res, next) {
+router.post('/single_event', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
@@ -138,7 +138,7 @@ router.get('/single_event', function(req, res, next) {
     }
 
     let query = "SELECT * FROM user_events WHERE event_id = ?;";
-    connection.query(query,[req.session.user.event_id],function(error, rows, fields) {
+    connection.query(query,[req.body.event_id],function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("query error");
