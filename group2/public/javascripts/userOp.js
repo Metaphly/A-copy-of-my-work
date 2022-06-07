@@ -50,3 +50,9 @@ function change_email(){
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(new_email));
 }
+
+function email_format(email)
+{
+    var simplemodel = /\S+@\S+\.\S+/;
+    return simplemodel.test(email);
+}
