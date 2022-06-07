@@ -138,28 +138,18 @@ router.post('/addevent', function(req, res, next) {
       return;
     }
 
-    let query = "UPDATE users SET user_name = ? WHERE user_name = ?;";
-    connection.query(query,[req.body.new_name,req.session.user.user_name],function(error, rows, fields) {
+    //let query = "INSERT INTO events(event_name,location,description,start_date,creator) VALUES (?,?,?,?,?);";
+    let query = "INSERT INTO events(event_name,creator) VALUES (?,?);";
+    connection.query(query,[req.body.event_name,req.session.user.user_id],function(error, rows, fields) {
+      connection.release();
       if (error) {
         console.log("query error");
         res.sendStatus(500);
         return;
       }
-      console.log("name changed");
-    });
-
-    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.new_name], function(error, rows, fields) {
-      connection.release();
-      if (error) {
-        console.log('Can not find updated user info');
-        res.sendStatus(500);
-        return;
-      }
-      console.log("find updated user session info");
-      req.session.user = rows[0];
+      console.log("event created");
       res.sendStatus(200);
     });
-
   });
 });
 
