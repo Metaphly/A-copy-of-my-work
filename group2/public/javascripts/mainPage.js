@@ -119,7 +119,7 @@ function take_event() {
         if (this.readyState == 4 && this.status == 200) {
             alert("added sucessfully, check it in user center");
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("Pease log in");
+            alert("unauthorized");
         }
     };
 
