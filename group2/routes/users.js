@@ -103,7 +103,7 @@ router.post('/changeName', function(req, res, next) {
         return;
       }
       console.log("name changed");
-      req.session.email = req.body.new_email;
+      req.session.name = req.body.new_name;
       res.sendStatus(200);
     });
   });
