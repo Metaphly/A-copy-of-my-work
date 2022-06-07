@@ -2,7 +2,7 @@ CREATE TABLE users
 (
     user_id int NOT NULL AUTO_INCREMENT,
     user_name VARCHAR(20) UNIQUE,
-    email VARCHAR(20) UNIQUE,
+    email VARCHAR(70) UNIQUE,
     password VARCHAR(20),
     is_admin BOOLEAN default false,
     PRIMARY KEY (user_id,user_name)
