@@ -29,3 +29,14 @@ function get_userInfo(){
     xhttp.open("GET", "/users/userInfo");
     xhttp.send();
 }
+
+function change_email(){
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+        }
+    };
+    xhttp.open("GET", "/users/");
+    xhttp.send();
+}
