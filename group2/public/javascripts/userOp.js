@@ -62,3 +62,25 @@ function email_format(email)
     var simplemodel = /\S+@\S+\.\S+/;
     return simplemodel.test(email);
 }
+
+function change_name(){
+
+    let new_name = {
+        new_name: document.getElementById('new_name').value
+    };
+
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("name changed");
+            location.reload();
+        } else if (this.readyState == 4 && this.status >= 200){
+            alert("Failed");
+        }
+    };
+
+    xhttp.open("POST", "/users/changeName");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(new_name));
+}
