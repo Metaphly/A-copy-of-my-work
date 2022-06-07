@@ -97,3 +97,24 @@ function signup() {
 
 }
 
+function take_event() {
+
+    let user_event = {
+        event_id: document.getElementsByTagName("select")[0].value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("added sucessfully");
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Pease log in");
+        }
+    };
+
+    xhttp.open("POST", "/users/takeevent");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user_event));
+
+}
