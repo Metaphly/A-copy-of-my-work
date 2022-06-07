@@ -47,7 +47,7 @@ function change_email(){
         if (this.readyState == 4 && this.status == 200) {
             alert("email changed");
             location.reload();
-        } else if (this.readyState == 4 && this.status >= 200){
+        } else if (this.readyState == 4 && this.status >= 400){
             alert("Failed");
         }
     };
@@ -75,7 +75,7 @@ function change_name(){
         if (this.readyState == 4 && this.status == 200) {
             alert("name changed");
             location.reload();
-        } else if (this.readyState == 4 && this.status >= 200){
+        } else if (this.readyState == 4 && this.status >= 400){
             alert("Failed");
         }
     };
@@ -98,8 +98,7 @@ function create_event(){
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             alert("Event created");
-            location.reload();
-        } else if (this.readyState == 4 && this.status >= 200){
+        } else if (this.readyState == 4 && this.status >= 400){
             alert("Failed");
         }
     };
