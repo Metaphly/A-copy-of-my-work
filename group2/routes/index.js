@@ -109,7 +109,7 @@ router.post('/signup', function(req, res, next) {
         return;
       }
       console.log('sccuess');
-      req.session.user = {"user_name":req.body.user_name};
+      req.session.user = {"user_name":req.body.user_name, "email":""};
       res.sendStatus(200);
     });
   });
