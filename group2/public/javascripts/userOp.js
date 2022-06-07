@@ -19,7 +19,7 @@ function get_userInfo(){
             user_name.innerText = userinfo.user_name;
             user_email.innerText = userinfo.user_email;
 
-            detailrow.apchanpendChild(user_id);
+            detailrow.appendChild(user_id);
             detailrow.appendChild(user_name);
             detailrow.appendChild(user_email);
             infotable.appendChild(detailrow);
@@ -30,7 +30,7 @@ function get_userInfo(){
     xhttp.send();
 }
 
-function ge_email(){
+function change_email(){
 
     let new_email = {
         new_email: document.getElementById('new_email').value
