@@ -84,3 +84,28 @@ function change_name(){
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(new_name));
 }
+
+function create_event(){
+
+    let event = {
+        event_name: document.getElementById('event_name').value,
+        location: document.getElementById('location').value,
+        start_date: document.getElementById('start_date').value,
+        description: document.getElementById('description').value,
+    };
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("Event created");
+            location.reload();
+        } else if (this.readyState == 4 && this.status >= 200){
+            alert("Failed");
+        }
+    };
+
+    xhttp.open("POST", "/users/addevent");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(event));
+
+}
