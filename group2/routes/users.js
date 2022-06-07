@@ -215,24 +215,4 @@ router.post('/freetime', function(req, res, next) {
   });
 });
 
-router.get('/single_event', function(req, res, next) {
-  req.pool.getConnection(function(error,connection){
-    if(error){
-      res.sendStatus(500);
-      return;
-    }
-
-    let query = "SELECT * FROM user_events WHERE event_id = ?;";
-    connection.query(query,[req.session.user.event_id],function(error, rows, fields) {
-      connection.release();
-      if (error) {
-        console.log("query error");
-        res.sendStatus(500);
-        return;
-      }
-      res.json(rows[0]);
-    });
-  });
-});
-
 module.exports = router;
