@@ -159,21 +159,6 @@ router.post('/takeevent', function(req, res, next) {
       return;
     }
 
-    connection.query("SELECT * FROM user_events WHERE user_id = ? && event_id = ?;",[req.session.user.user_id,req.body.event_id],function(error, rows, fields) {
-      if (error) {
-        console.log("query error");
-        res.sendStatus(500);
-        return;
-      }
-
-      if(rows.length != 0)
-      {
-        console.log("already existed");
-        res.sendStatus(400);
-        return;
-      }
-    });
-
     let query = "INSERT INTO user_events(user_id,event_id) VALUES (?,?);";
     connection.query(query,[req.session.user.user_id,req.body.event_id],function(error, rows, fields) {
       connection.release();
