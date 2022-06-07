@@ -166,9 +166,9 @@ function set_freetime() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("added sucessfully");
+            alert("free time changed");
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("Pease log in");
+            alert("failed");
         }
     };
 
