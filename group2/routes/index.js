@@ -137,7 +137,7 @@ router.post('/single_event', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT * FROM user_events WHERE event_id = ?;";
+    let query = "SELECT * FROM events WHERE event_id = ?;";
     connection.query(query,[req.body.event_id],function(error, rows, fields) {
       connection.release();
       if (error) {
