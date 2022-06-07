@@ -115,5 +115,6 @@ table, td, th {
 
 .eventdetail
 {
+    width:60%;
     border-top: 10px solid #C4C4C4;
 }
