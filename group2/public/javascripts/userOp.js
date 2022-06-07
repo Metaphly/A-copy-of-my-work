@@ -34,10 +34,10 @@ function change_email(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert();
+            alert("email changed");
             reload();
         }
     };
-    xhttp.open("GET", "/users/changeEmail");
+    xhttp.open("POST", "/users/changeEmail");
     xhttp.send();
 }
