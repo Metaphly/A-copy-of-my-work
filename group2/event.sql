@@ -4,7 +4,7 @@ CREATE TABLE users
     user_name VARCHAR(20) UNIQUE,
     email VARCHAR(20) UNIQUE,
     password VARCHAR(20),
-    is_admin BOOLEAN,
+    is_admin BOOLEAN default false,
     PRIMARY KEY (user_id,user_name)
 );
 
