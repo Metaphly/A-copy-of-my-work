@@ -103,14 +103,21 @@ router.post('/signup', function(req, res, next) {
 
     let query="INSERT INTO users(user_name,password) VALUES (?,?);";
     connection.query(query,[req.body.user_name,req.body.password], function(error, rows, fields) {
-      connection.release();
       if (error) {
         console.log('user exist');
         res.sendStatus(500);
         return;
       }
-      console.log('sccuess');
-      req.session.user = {"user_name":req.body.user_name, "email":""};
+      console.log('sccuess created');
+
+      connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
+        connection.release();
+        if (error) {
+          console.log('Can not find crated user info');
+          res.sendStatus(500);
+          return;
+        }
+      });
       res.sendStatus(200);
     });
   });
