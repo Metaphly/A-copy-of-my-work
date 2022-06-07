@@ -124,7 +124,6 @@ router.post('/signup', function(req, res, next) {
       console.log('rows[0]');
       req.session.user = rows[0];
       res.sendStatus(200);
-
     });
 
   });
