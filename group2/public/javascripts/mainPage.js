@@ -15,24 +15,8 @@ function get_events(){
                 eventcontent.className= 'eventcontent';
 
                 eventcontent.innerText = event.description;
+                
 
-                let details = document.createElement('ul');
-                let eventname = document.createElement('li');
-                let location = document.createElement('li');
-                let time = document.createElement('li');
-                let event_id = document.createElement('li');
-
-                eventname.innerText = event.event_name;
-                location.innerText = event.location;
-                time.innerText = event.start_date;
-                event_id.innerText = "Event Id: " + event.event_id;
-
-                details.appendChild(eventname);
-                details.appendChild(location);
-                details.appendChild(time);
-                details.appendChild(event_id);
-                anevent.appendChild(eventcontent);
-                anevent.appendChild(details);
                 eventArea.appendChild(anevent);
             }
         }
@@ -41,8 +25,25 @@ function get_events(){
     xhttp.send();
 }
 
-function create_single_event(){
+function create_single_event(event){
 
+    let details = document.createElement('ul');
+    let eventname = document.createElement('li');
+    let location = document.createElement('li');
+    let time = document.createElement('li');
+    let event_id = document.createElement('li');
+
+    eventname.innerText = event.event_name;
+    location.innerText = event.location;
+    time.innerText = event.start_date;
+    event_id.innerText = "Event Id: " + event.event_id;
+
+    details.appendChild(eventname);
+    details.appendChild(location);
+    details.appendChild(time);
+    details.appendChild(event_id);
+    anevent.appendChild(eventcontent);
+    anevent.appendChild(details);
 }
 
 function login() {
