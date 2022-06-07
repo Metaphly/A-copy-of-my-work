@@ -39,8 +39,8 @@ DELETE FROM users WHERE user_name='james';
 
 SELECT * FROM users;
 
-INSERT INTO events(event_name,description,creator) VALUES ('Hello','Hello',1);
-INSERT INTO events(event_name,description,creator) VALUES ('Hello','Hello',1);
+INSERT INTO events(event_name,description,creator,start_date) VALUES ('Hello','Hello',1,'09/98');
+INSERT INTO events(event_name,description,creator,start_date) VALUES ('Hello','Hello',1,'07/8');
 
 
 SELECT * FROM events;
