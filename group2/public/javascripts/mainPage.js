@@ -91,24 +91,23 @@ function signup() {
 }
 
 
-function signup() {
+function take_event() {
 
     let user_event = {
-        event_id: document.getElementById('user_name').value
+        event_id: document.getElementById('event_id_bar').value
     };
 
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("Valid Signup");
-            location.href = '/';
+            alert("added sucessfully");
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("Invalid Signup");
+            alert("Pease log in");
         }
     };
 
-    xhttp.open("POST", "/signup");
+    xhttp.open("POST", "/takeevent");
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(user));
 
