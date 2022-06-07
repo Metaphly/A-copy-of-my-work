@@ -230,7 +230,7 @@ router.post('/everyone', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
-      res.json(rows[0]);
+      res.json(rows);
     });
   });
 });
