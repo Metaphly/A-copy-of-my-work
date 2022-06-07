@@ -123,4 +123,44 @@ router.post('/changeName', function(req, res, next) {
   });
 });
 
+router.post('/addevent', function(req, res, next) {
+
+  if(req.body.new_email == [])
+  {
+    console.log("empty");
+    res.sendStatus(400);
+    return;
+  }
+
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "UPDATE users SET user_name = ? WHERE user_name = ?;";
+    connection.query(query,[req.body.new_name,req.session.user.user_name],function(error, rows, fields) {
+      if (error) {
+        console.log("query error");
+        res.sendStatus(500);
+        return;
+      }
+      console.log("name changed");
+    });
+
+    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.new_name], function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log('Can not find updated user info');
+        res.sendStatus(500);
+        return;
+      }
+      console.log("find updated user session info");
+      req.session.user = rows[0];
+      res.sendStatus(200);
+    });
+
+  });
+});
+
 module.exports = router;
