@@ -21,6 +21,10 @@ router.get('/userPage', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/user.html'));
 });
 
+router.get('/eventsCreator', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '/../public/eventsCreator.html'));
+});
+
 router.get('/logout', function(req, res, next) {
   if('user' in req.session){
     delete req.session.user;
