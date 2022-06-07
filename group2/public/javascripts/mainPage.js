@@ -117,7 +117,7 @@ function take_event() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("added sucessfully");
+            alert("added sucessfully, check it in user center");
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Pease log in");
         }
