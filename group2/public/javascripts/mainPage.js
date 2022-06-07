@@ -41,6 +41,10 @@ function get_events(){
     xhttp.send();
 }
 
+function create_single_event(){
+
+}
+
 function login() {
 
     let user = {
