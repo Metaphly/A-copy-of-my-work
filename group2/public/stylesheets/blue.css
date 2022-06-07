@@ -120,8 +120,7 @@ td, th {
     border-top: 10px solid #C4C4C4;
 }
 
-#membertable
+#memberlist
 {
-    width:50%;
     display: inline-block;
 }
