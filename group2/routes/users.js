@@ -103,11 +103,22 @@ router.post('/changeName', function(req, res, next) {
         return;
       }
       console.log("name changed");
-      req.session.name = req.body.new_name;
+      //req.session.name = req.body.new_name;
+      //res.sendStatus(200);
+    });
+
+    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log('Can not find crated user info');
+        res.sendStatus(500);
+        return;
+      }
+      console.log("find user session info");
+      req.session.user = rows[0];
       res.sendStatus(200);
     });
 
-    
   });
 });
 
