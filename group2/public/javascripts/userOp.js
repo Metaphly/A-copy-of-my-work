@@ -41,6 +41,8 @@ function change_email(){
         if (this.readyState == 4 && this.status == 200) {
             alert("email changed");
             location.reload();
+        } else if (this.readyState == 4 && this.status == 200){
+
         }
     };
 
