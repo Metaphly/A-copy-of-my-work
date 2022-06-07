@@ -20,14 +20,17 @@ function get_events(){
                 let eventname = document.createElement('li');
                 let location = document.createElement('li');
                 let time = document.createElement('li');
+                let event_id = document.createElement('li');
 
                 eventname.innerText = event.event_name;
                 location.innerText = event.location;
                 time.innerText = event.start_date;
+                event_id.innerText = "EVENT ID: " + event.event_id;
 
                 details.appendChild(eventname);
                 details.appendChild(location);
                 details.appendChild(time);
+                details.appendChild(event_id);
                 anevent.appendChild(eventcontent);
                 anevent.appendChild(details);
                 eventArea.appendChild(anevent);
