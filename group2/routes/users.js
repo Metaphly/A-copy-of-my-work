@@ -153,7 +153,7 @@ router.post('/addevent', function(req, res, next) {
 });
 
 router.post('/takeevent', function(req, res, next) {
-  req.pool.getConnection(function(error,connection){
+    req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
       return;
