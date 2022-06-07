@@ -101,8 +101,8 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
-    let query="INSERT INTO users(user_name,password) VALUES (?,?);SELECT * FROM users WHERE user_name = ?;";
-    connection.query(query,[req.body.user_name,req.body.password,req.body.user_name], function(error, rows, fields) {
+    let query="INSERT INTO users(user_name,password) VALUES (?,?);";
+    connection.query(query,[req.body.user_name,req.body.password], function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log('user exist');
@@ -110,9 +110,7 @@ router.post('/signup', function(req, res, next) {
         return;
       }
       console.log('sccuess');
-      console.log(rows[0]);
-      req.session.user = rows[0];
-      //{"user_name":req.body.user_name, "email":""};
+      req.session.user = {"user_name":req.body.user_name, "email":""};
       res.sendStatus(200);
     });
   });
