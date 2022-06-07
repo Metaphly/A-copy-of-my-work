@@ -114,9 +114,9 @@ router.post('/signup', function(req, res, next) {
       //res.sendStatus(200);
     });
 
-    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
+    connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(err, rows, fields) {
       connection.release();
-      if (error) {
+      if (err) {
         console.log('Can not find crated user info');
         res.sendStatus(500);
         return;
