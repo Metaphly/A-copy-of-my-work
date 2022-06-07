@@ -71,6 +71,8 @@ router.post('/changeEmail', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
+      console.log("email changed");
+      req.session.email = req.body.new_email;
       res.sendStatus(200);
     });
   });
