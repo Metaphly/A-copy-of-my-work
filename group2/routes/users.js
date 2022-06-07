@@ -96,7 +96,7 @@ router.post('/changeName', function(req, res, next) {
 
     let query = "UPDATE users SET user_name = ? WHERE user_name = ?;";
     connection.query(query,[req.body.new_name,req.session.user.user_name],function(error, rows, fields) {
-      connection.release();
+      //connection.release();
       if (error) {
         console.log("query error");
         res.sendStatus(500);
