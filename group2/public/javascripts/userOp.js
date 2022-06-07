@@ -138,12 +138,15 @@ function get_myevents(){
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
-            
+            var event_list = JSON.parse(this.responseText);
             element = document.getElementsByTagName("select");
 
             for (let event of event_list) {
-                let anevent = create_single_event(event);
-                eventArea.appendChild(anevent);
+
+                let choice = document.createElement('option');
+                choice.innerText = event.event_id;
+                element[0].appendChild(choice);
+
             }
         }
     };
