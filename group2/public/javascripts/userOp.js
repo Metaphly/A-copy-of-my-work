@@ -31,6 +31,11 @@ function get_userInfo(){
 }
 
 function change_email(){
+
+    let new_email = {
+        new_email: document.getElementById('new_email').value
+    };
+
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
