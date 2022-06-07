@@ -152,7 +152,7 @@ router.post('/addevent', function(req, res, next) {
   });
 });
 
-router.get('/events', function(req, res, next) {
+router.post('/takeEvent', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
