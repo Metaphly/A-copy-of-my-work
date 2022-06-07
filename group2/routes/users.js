@@ -106,6 +106,8 @@ router.post('/changeName', function(req, res, next) {
       req.session.name = req.body.new_name;
       res.sendStatus(200);
     });
+
+    
   });
 });
 
