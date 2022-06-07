@@ -27,7 +27,7 @@ CREATE TABLE user_events
     user_id int,
     event_id int,
     free_time int,
-    CONSTRAINT user_info UNIQUE(user_id,event_id),
+    CONSTRAINT taked_event UNIQUE(user_id,event_id),
     PRIMARY KEY (id,user_id,event_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (event_id) REFERENCES events(event_id) ON DELETE CASCADE
