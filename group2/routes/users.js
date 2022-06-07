@@ -159,15 +159,16 @@ router.post('/takeEvent', function(req, res, next) {
       return;
     }
 
-    let query = "SELECT event_id,event_name,location,start_date,description FROM events;";
-    connection.query(query, function(error, rows, fields) {
+    let query = "INSERT INTO user_events(user_id,event_id) VALUES (?,?);";
+    connection.query(query,[req.session.user.user_id,req.body.event_id],function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("query error");
         res.sendStatus(500);
         return;
       }
-      res.json(rows);
+      console.log("sucessfully take the event");
+      res.sendStatus(200);
     });
   });
 });
