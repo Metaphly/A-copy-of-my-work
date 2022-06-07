@@ -131,3 +131,15 @@ function take_event() {
     xhttp.send(JSON.stringify(user_event));
 
 }
+
+function get_myevents(){
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+        }
+    };
+    xhttp.open("GET", "/users/myevents");
+    xhttp.send();
+}
