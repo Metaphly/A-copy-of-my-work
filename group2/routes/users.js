@@ -201,16 +201,15 @@ router.post('/freetime', function(req, res, next) {
       return;
     }
 
-    let query = "UPDATE user_events SET email = ? WHERE user_name = ?;";
-    connection.query(query,[req.body.new_email,req.session.user.user_name],function(error, rows, fields) {
+    let query = "UPDATE user_events SET free_time = ? WHERE event_id = ? && user_id= ?;";
+    connection.query(query,[req.body.free_time,req.body.event_id,req.session.user.user_id],function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("query error");
         res.sendStatus(500);
         return;
       }
-      console.log("email changed");
-      req.session.email = req.body.new_email;
+      console.log("availability changed");
       res.sendStatus(200);
     });
   });
