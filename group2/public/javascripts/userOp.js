@@ -153,3 +153,27 @@ function get_myevents(){
     xhttp.open("GET", "/users/myevents");
     xhttp.send();
 }
+
+function set_freetime() {
+
+    document.getElementsByTagName("select")
+    let user_event = {
+        free_time: document.getElementById('freetime').value,
+        event_id: document.getElementById('event_id_bar').value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("added sucessfully");
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Pease log in");
+        }
+    };
+
+    xhttp.open("POST", "/users/freetime");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user_event));
+
+}
