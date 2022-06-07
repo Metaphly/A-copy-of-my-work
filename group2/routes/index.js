@@ -111,7 +111,7 @@ router.post('/signup', function(req, res, next) {
       }
       console.log('sccuess created');
       //req.session.user = {"user_name":req.body.user_name, "email":""};
-      res.sendStatus(200);
+      //res.sendStatus(200);
     });
 
     connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
