@@ -97,7 +97,3 @@ function signup() {
 
 }
 
-
-function show_event_details(){
-
-}
