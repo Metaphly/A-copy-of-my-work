@@ -101,7 +101,8 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
-    connection.query("INSERT INTO users(user_name,password) VALUES (?,?);",[req.body.user_name,req.body.password], function(error, rows, fields) {
+    let query="INSERT INTO users(user_name,password) VALUES (?,?);SELECT * FROM users WHERE user_name = ?;";
+    connection.query(query,[req.body.user_name,req.body.password,req.body.user_name], function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log('user exist');
