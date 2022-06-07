@@ -173,26 +173,24 @@ router.post('/takeevent', function(req, res, next) {
 });
 });
 
-router.get('/userInfo', function(req, res, next) {
+router.get('/myevents', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
       return;
     }
 
-    let query = "SELECT * FROM users WHERE user_name = ?;";
-    connection.query(query,[req.session.user.user_name],function(error, rows, fields) {
+    let query = "SELECT * FROM user_event WHERE user_id = ?;";
+    connection.query(query,[req.session.user.user_id],function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("email error");
         res.sendStatus(500);
         return;
       }
-      res.json(rows[0]);
+      res.json(rows);
     });
   });
 });
-
-
 
 module.exports = router;
