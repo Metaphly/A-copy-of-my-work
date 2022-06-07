@@ -36,6 +36,12 @@ function change_email(){
         new_email: document.getElementById('new_email').value
     };
 
+    if(!email_format(new_email.new_email))
+    {
+        alert("Invalid Email");
+        return;
+    }
+
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
