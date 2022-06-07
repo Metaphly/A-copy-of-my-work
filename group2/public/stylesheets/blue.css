@@ -104,11 +104,14 @@
 }
 
 
-
+td, th {
+    border: 1px solid;
+}
 
 #infotable {
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid;
 }
 
 .eventdetail
