@@ -138,7 +138,6 @@ router.post('/addevent', function(req, res, next) {
       return;
     }
 
-    //let query = "INSERT INTO events(event_name,location,description,start_date,creator) VALUES (?,?,?,?,?);";
     let query = "INSERT INTO events(event_name,location,description,start_date,creator) VALUES (?,?,?,?,?);";
     connection.query(query,[req.body.event_name,req.body.location,req.body.description,req.body.start_date,req.session.user.user_id],function(error, rows, fields) {
       connection.release();
