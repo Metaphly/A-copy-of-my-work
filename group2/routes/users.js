@@ -125,9 +125,9 @@ router.post('/changeName', function(req, res, next) {
 
 router.post('/addevent', function(req, res, next) {
 
-  if(req.body.new_email == [])
+  if(req.body.event_name == [] || req.body.location == [] || req.body.descriptio == [] || req.body.start_date == [])
   {
-    console.log("empty");
+    console.log("empty input");
     res.sendStatus(400);
     return;
   }
