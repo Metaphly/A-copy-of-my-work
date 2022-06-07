@@ -107,8 +107,8 @@ function take_event() {
         }
     };
 
-    xhttp.open("POST", "/takeevent");
+    xhttp.open("POST", "/users/takeevent");
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify(user));
+    xhttp.send(JSON.stringify(user_event));
 
 }
