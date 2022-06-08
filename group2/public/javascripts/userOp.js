@@ -151,6 +151,7 @@ function set_freetime() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             alert("free time changed");
+            show_selected_event();
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("failed");
         }
