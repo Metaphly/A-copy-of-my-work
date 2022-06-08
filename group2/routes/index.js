@@ -189,7 +189,7 @@ router.post('/googleuser', function(req, res, next) {
         if(rows.length==0)
         {
           console.log('have not created account');
-          connection.query("INSERT INTO users(user_name) VALUES (?);",[email], function(error, rows, fields) {
+          connection.query("INSERT INTO users(email) VALUES (?);",[email], function(error, rows, fields) {
             connection.release();
             if (error) {
               console.log("wrong email insert");
