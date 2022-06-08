@@ -129,6 +129,11 @@ td{
     padding:1rem 2rem;
 }
 
+ul.detailist {
+    background: #3399ff;
+    padding: 20px;
+}
+
 ul.detailist li {
     background: #cce5ff;
     color: darkblue;
