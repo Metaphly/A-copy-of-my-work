@@ -259,14 +259,17 @@ function create_event_detail(event)
     let name = document.createElement('li');
     let location = document.createElement('li');
     let date = document.createElement('li');
+    let final_time = document.createElement('li');
 
     name.innerText = event.event_name;
     location.innerText = event.location;
     date.innerText = event.start_date;
+    final_time.innerText = "Finalised Time: " + event.final_time;
 
     headlist.appendChild(name);
     headlist.appendChild(location);
     headlist.appendChild(date);
+    headlist.appendChild(final_time);
 
     return headlist;
 
