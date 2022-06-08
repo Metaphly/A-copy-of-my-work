@@ -184,6 +184,7 @@ function show_selected_event() {
 function create_event_detail(event)
 {
     let headlist = document.createElement('ul');
+    headlist.class = "detailist";
     let name = document.createElement('li');
     let location = document.createElement('li');
     let date = document.createElement('li');
