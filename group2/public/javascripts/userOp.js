@@ -172,6 +172,7 @@ function show_selected_event() {
             let eventdetail = document.getElementById('eventdetail');
             reset_details(eventdetail);
             eventdetail.appendChild(headlist);
+            get_members();
 
         }
     };
@@ -209,7 +210,7 @@ function get_members() {
 
 function create_member_list(everyone)
 {
-    let table = createElement('table');
+    let table = document.createElement('table');
     let head = document.createElement('thead');
     head.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th> <th>Availability</th></tr>";
     table.appendChild(head);
