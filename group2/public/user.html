@@ -25,7 +25,6 @@
 
     <div id="notblue">
 
-        <button type="button" class="bluebutton" v-on:click="hideShow">Hide</button>
         <div id="userInfo">
             <h2 class="left">User Information</h2>
         </div>
@@ -39,6 +38,8 @@
             <input type="text" id="new_name">
             <button type="button" class="bluebutton" onclick="change_name()">Confirm</button>
         </div>
+
+        <button type="button" class="bluebutton" v-on:click="hideShow">Hide</button>
 
         <div v-if="show_event">
             <h2 class="left">Your events</h2>
