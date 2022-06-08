@@ -181,7 +181,6 @@ router.post('/googleuser', function(req, res, next) {
       }
 
       connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
-        //connection.release();
         if (error) {
           res.sendStatus(500);
           return;
