@@ -215,6 +215,10 @@ function create_member_list(everyone)
     head.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th> <th>Availability</th></tr>";
     table.appendChild(head);
 
+    for (let user of everyone) {
+
+    }
+
     return table;
 }
 
