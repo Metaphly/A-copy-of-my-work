@@ -1,6 +1,7 @@
 var part = new Vue({
     el: '#notblue',
     data: {
-      show_area: false
+      show_info: true,
+      show_event: true
     }
 });
