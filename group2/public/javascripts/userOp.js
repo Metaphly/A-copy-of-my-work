@@ -210,7 +210,12 @@ function get_members() {
 
 function create_member_list(everyone)
 {
-    
+    let table = createElement('table');
+    let head = document.createElement('thead');
+    head.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th> <th>Availability</th></tr>";
+    table.appendChild(head);
+
+    return table;
 }
 
 function reset_details(part){
