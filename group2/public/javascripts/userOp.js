@@ -9,7 +9,7 @@ function get_userInfo(){
             let infotable = document.createElement('table');
             infotable.id = "infotable";
             let infotitles = document.createElement('tr');
-            infotitles.innerHTML = "<th>User Id</th> <th>User Name</th> <th>User Email</th>";
+            infotitles.innerHTML = "<thead><th>User Id</th> <th>User Name</th> <th>User Email</th></thead>";
             infotable.appendChild(infotitles);
 
             let detailrow = document.createElement('tr');
