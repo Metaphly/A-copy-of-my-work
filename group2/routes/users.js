@@ -235,4 +235,24 @@ router.post('/everyone', function(req, res, next) {
   });
 });
 
+router.get('/creaevents', function(req, res, next) {
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "SELECT * FROM user_events WHERE user_id = ?;";
+    connection.query(query,[req.session.user.user_id],function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log("query error");
+        res.sendStatus(500);
+        return;
+      }
+      res.json(rows);
+    });
+  });
+});
+
 module.exports = router;
