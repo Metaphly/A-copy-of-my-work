@@ -130,6 +130,7 @@ function take_event() {
 }
 
 function onSignIn(googleUser) {
+
     var profile = googleUser.getBasicProfile();
     console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
     console.log('Name: ' + profile.getName());
@@ -137,7 +138,7 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
     let user_event = {
-        event_id: document.getElementsByTagName("select")[0].value
+        token: document.getElementsByTagName("select")[0].value
     };
 
     let xhttp = new XMLHttpRequest();
