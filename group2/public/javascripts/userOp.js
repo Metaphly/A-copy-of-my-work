@@ -202,7 +202,7 @@ function get_members() {
         }
     };
 
-    xhttp.open("POST", "/single_event");
+    xhttp.open("POST", "/users/everyone");
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(my_event));
 
