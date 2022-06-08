@@ -196,19 +196,7 @@ router.post('/googleuser', function(req, res, next) {
               return;
             }
           });
-          console.log("google user inserted");
-          connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
-            connection.release();
-            if (error) {
-              console.log('Can not find created user info');
-              res.sendStatus(500);
-              return;
-            }
-            console.log("find user session info");
-            req.session.user = rows[0];
-            res.sendStatus(200);
-            return;
-          });
+         res.sendStatus(200);
         } else if(rows[0].email == email) {
           connection.release();
           console.log('sccuess');
