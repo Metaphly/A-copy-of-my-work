@@ -8,8 +8,8 @@ function get_userInfo(){
 
             let infotable = document.createElement('table');
             infotable.id = "infotable";
-            let infotitles = document.createElement('tr');
-            infotitles.innerHTML = "<thead><th>User Id</th> <th>User Name</th> <th>User Email</th></thead>";
+            let infotitles = document.createElement('thead');
+            infotitles.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th></tr>";
             infotable.appendChild(infotitles);
 
             let detailrow = document.createElement('tr');
