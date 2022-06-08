@@ -1,9 +1,9 @@
-var vueinst = new Vue({
+var userop = new Vue({
     el: '#changeInfo',
     data: {
-        show_area: true
+      message: 'Hello Vue!'
     }
-});
+})
 
 function get_userInfo(){
 
