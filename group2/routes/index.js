@@ -180,7 +180,7 @@ router.post('/googleuser', function(req, res, next) {
         return;
       }
 
-      connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
+      connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
         connection.release();
         if (error) {
           res.sendStatus(500);
@@ -189,14 +189,14 @@ router.post('/googleuser', function(req, res, next) {
 
         if(rows.length==0)
         {
-          console.log('incorrect email');
+          console.log('have not created account');
           res.sendStatus(401);
-        } else if(rows[0].password == req.body.password) {
+        } else if(rows[0].email == email) {
           console.log('sccuess');
           req.session.user = rows[0];
           res.sendStatus(200);
         } else {
-          console.log('wrong password');
+          console.log('incorrect google signin');
           res.sendStatus(401);
         }
 
