@@ -1,3 +1,8 @@
+var vueinst = new Vue({
+    el: '#app',
+    data: {
+});
+
 function get_userInfo(){
 
     let xhttp = new XMLHttpRequest();
