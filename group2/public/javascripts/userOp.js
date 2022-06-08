@@ -1,9 +1,4 @@
-var vueinst = new Vue({
-    el: '#changeInfo',
-    data: {
-        show_area: true
-    }
-});
+
 
 function get_userInfo(){
 
