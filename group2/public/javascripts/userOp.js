@@ -134,7 +134,6 @@ function get_myevents(){
 
 function set_freetime() {
 
-    console.log();
     let event_id = document.getElementsByTagName("select")[0];
     let user_event = {
         free_time: document.getElementById('freetime').value,
@@ -159,11 +158,8 @@ function set_freetime() {
 
 function show_selected_event() {
 
-    console.log();
-    let event_id = document.getElementsByTagName("select")[0];
-    console.log(event_id.value);
+
     let my_event = {
-        free_time: document.getElementById('freetime').value,
         event_id: document.getElementsByTagName("select")[0].value
     };
 
