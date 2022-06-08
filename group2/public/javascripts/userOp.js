@@ -194,7 +194,7 @@ function get_members() {
         if (this.readyState == 4 && this.status == 200) {
 
             var everyone = JSON.parse(this.responseText);
-            let headlist = create_event_detail(event);
+            let memberlist = create_member_list(everyone);
             let eventdetail = document.getElementById('eventdetail');
             reset_details(eventdetail);
             eventdetail.appendChild(headlist);
@@ -227,7 +227,11 @@ function create_member_list(everyone)
         email.innerText = user.email;
         freetime.innerText = user.free_time;
 
-        table.append
+        newrow.appendChild(id);
+        newrow.appendChild(name);
+        newrow.appendChild(email);
+        newrow.appendChild(freetime);
+        table.appendChild(newrow);
     }
 
     return table;
