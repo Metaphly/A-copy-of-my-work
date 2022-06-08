@@ -111,6 +111,9 @@ td, th {
 table{
     border-collapse: collapse;
     box-shadow:0 5px 10px $clr-gray300;
+    background-color:white;
+    text-align:left;
+    overflow:hidden;
 }
 
 #infotable {
