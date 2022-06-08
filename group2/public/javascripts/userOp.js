@@ -170,7 +170,6 @@ function show_selected_event() {
             var event = JSON.parse(this.responseText);
             let headlist = create_event_detail(event);
             let eventdetail = document.getElementById('eventdetail');
-            eventdetail.children[0].remove();
             reset_details(eventdetail);
             eventdetail.appendChild(headlist);
 
