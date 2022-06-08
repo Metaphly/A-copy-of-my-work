@@ -31,8 +31,8 @@
         </div>
 
         <div class="pure-button-group" role="group" aria-label="Nightmode">
-          <button v-bind:class="{'pure-button-active':!dark_mode}" class="pure-button" onclick="vueinst.show_area = false;">OFF</button>
-          <button v-bind:class="{'pure-button-active':dark_mode,'pure-button-primary':dark_mode}" class = "pure-button" onclick="vueinst.show_area = true;">ON</button>
+          <button  class="pure-button" onclick="vueinst.show_area = false;">OFF</button>
+          <button  class = "pure-button" onclick="vueinst.show_area = true;">ON</button>
         </div>
 
         <div id="changeInfo" v-if="show_area">
