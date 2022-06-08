@@ -158,7 +158,7 @@ router.post('/googleuser', function(req, res, next) {
   async function verify() {
     const ticket = await client.verifyIdToken({
         idToken: req.body.token,
-        audience: CLIENT_ID,
+        audience: "82416996899-apdbt8826sr91gc3n29li4d6oknnbt02.apps.googleusercontent.com",
     });
     const payload = ticket.getPayload();
     const userid = payload['sub'];
