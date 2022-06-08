@@ -129,6 +129,12 @@ td{
     padding:1rem 2rem;
 }
 
+ul.eventdetail li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+}
+
 #infotable {
     width: 100%;
 }
