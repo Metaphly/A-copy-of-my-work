@@ -2,6 +2,9 @@ var express = require('express');
 var path = require('path');
 var router = express.Router();
 
+const {OAuth2Client} = require('google-auth-library');
+const client = new OAuth2Client(CLIENT_ID);
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
