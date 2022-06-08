@@ -1,5 +1,5 @@
 var vueinst = new Vue({
-    el: '#app',
+    el: '#fistarea',
     data: {
         show_area: true
     }
