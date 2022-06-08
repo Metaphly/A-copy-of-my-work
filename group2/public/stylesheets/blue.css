@@ -130,13 +130,13 @@ td{
 }
 
 ul.detailist {
-    background: white;
+    background: #f9f9e2;
     box-shadow:0 5px 10px #888888;
     padding: 20px;
 }
 
 ul.detailist li {
-    background: #f9f9e2;
+    background: white;
     color: black;
     box-shadow:0 5px 10px #888888;
     margin: 5px;
