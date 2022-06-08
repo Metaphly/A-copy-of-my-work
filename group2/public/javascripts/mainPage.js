@@ -138,7 +138,7 @@ function onSignIn(googleUser) {
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
     let user_event = {
-        token: document.getElementsByTagName("select")[0].value
+        token: googleUser.getAuthResponse().id_token;
     };
 
     let xhttp = new XMLHttpRequest();
