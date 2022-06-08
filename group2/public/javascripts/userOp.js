@@ -157,3 +157,26 @@ function set_freetime() {
     xhttp.send(JSON.stringify(user_event));
 
 }
+
+function show_selected_event(){
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+            var event_list = JSON.parse(this.responseText);
+            element = document.getElementsByTagName("select");
+
+            for (let event of event_list) {
+
+                let choice = document.createElement('option');
+                choice.innerText = event.event_id;
+                element[0].appendChild(choice);
+
+            }
+        }
+    };
+    xhttp.open("GET", "/users/myevents");
+    xhttp.send();
+    
+}
