@@ -110,7 +110,7 @@ td, th {
 
 table{
     border-collapse: collapse;
-    box-shadow:0 5px 10px $clr-gray300;
+    box-shadow:0 5px 10px #888888;
     background-color:white;
     text-align:left;
     overflow:hidden;
