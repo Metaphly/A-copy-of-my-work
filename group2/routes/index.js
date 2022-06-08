@@ -157,7 +157,7 @@ router.post('/googleuser', function(req, res, next) {
 
   if('user' in req.session){
     console.log("already log in");
-    res.sendStatus(409);
+    res.sendStatus(202);
     return;
   }
 
