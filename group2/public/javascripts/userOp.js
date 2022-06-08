@@ -136,7 +136,6 @@ function set_freetime() {
 
     console.log();
     let event_id = document.getElementsByTagName("select")[0];
-    console.log(event_id.value);
     let user_event = {
         free_time: document.getElementById('freetime').value,
         event_id: document.getElementsByTagName("select")[0].value
@@ -163,7 +162,7 @@ function show_selected_event() {
     console.log();
     let event_id = document.getElementsByTagName("select")[0];
     console.log(event_id.value);
-    let user_event = {
+    let my_event = {
         free_time: document.getElementById('freetime').value,
         event_id: document.getElementsByTagName("select")[0].value
     };
@@ -178,8 +177,8 @@ function show_selected_event() {
         }
     };
 
-    xhttp.open("POST", "/users/freetime");
+    xhttp.open("POST", "/single_event");
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify(user_event));
+    xhttp.send(JSON.stringify(my_event));
 
 }
