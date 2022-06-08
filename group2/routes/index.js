@@ -192,7 +192,11 @@ router.post('/googleuser', function(req, res, next) {
           console.log('have not created account');
           connection.query("INSERT INTO users(user_name,password) VALUES (?,?);",[email], function(error, rows, fields) {
             connection.release();
-
+            if (error) {
+              console.log("wrong email insert");
+              res.sendStatus(500);
+              return;
+            }
           });
           res.sendStatus(200);
         } else if(rows[0].email == email) {
