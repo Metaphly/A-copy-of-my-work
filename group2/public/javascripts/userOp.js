@@ -1,10 +1,3 @@
-var userop = new Vue({
-    el: '#changeInfo',
-    data: {
-      message: 'Hello Vue!'
-    }
-})
-
 function get_userInfo(){
 
     let xhttp = new XMLHttpRequest();
