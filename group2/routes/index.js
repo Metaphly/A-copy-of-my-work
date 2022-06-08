@@ -155,6 +155,8 @@ router.post('/single_event', function(req, res, next) {
 
 router.post('/googleuser', function(req, res, next) {
 
+  let email = "googlemail";
+
   async function verify() {
     const ticket = await client.verifyIdToken({
         idToken: req.body.token,
@@ -162,6 +164,7 @@ router.post('/googleuser', function(req, res, next) {
     });
     const payload = ticket.getPayload();
     const userid = payload['sub'];
+    email = payload['email'];
   }
   verify().catch(console.error);
 
