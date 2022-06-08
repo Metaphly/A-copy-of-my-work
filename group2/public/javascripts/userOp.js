@@ -216,7 +216,18 @@ function create_member_list(everyone)
     table.appendChild(head);
 
     for (let user of everyone) {
+        let newrow = document.createElement('tr');
+        let id = document.createElement('td');
+        let name = document.createElement('td');
+        let email = document.createElement('td');
+        let freetime = document.createElement('td');
 
+        id.innerText = user.user_id;
+        name.innerText = user.user_name;
+        email.innerText = user.email;
+        freetime.innerText = user.free_time;
+
+        table.append
     }
 
     return table;
