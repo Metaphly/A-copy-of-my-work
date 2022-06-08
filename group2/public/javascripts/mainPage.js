@@ -135,4 +135,22 @@ function onSignIn(googleUser) {
     console.log('Name: ' + profile.getName());
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
+
+    let user_event = {
+        event_id: document.getElementsByTagName("select")[0].value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("added sucessfully, check it in user center");
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("unauthorized");
+        }
+    };
+
+    xhttp.open("POST", "/users/takeevent");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user_event));
+}
