@@ -13,9 +13,9 @@ function get_userInfo(){
             infotable.appendChild(infotitles);
 
             let detailrow = document.createElement('tr');
-            let user_id = document.createElement('th');
-            let user_name = document.createElement('th');
-            let user_email = document.createElement('th');
+            let user_id = document.createElement('td');
+            let user_name = document.createElement('td');
+            let user_email = document.createElement('td');
             user_id.innerText = userinfo.user_id;
             user_name.innerText = userinfo.user_name;
             user_email.innerText = userinfo.email;
