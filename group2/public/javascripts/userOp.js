@@ -1,7 +1,7 @@
 var vueinst = new Vue({
     el: '#app',
     data: {
-        
+        show_area: true
     }
 });
 
