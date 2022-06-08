@@ -179,5 +179,5 @@ function show_selected_event() {
 function create_event_detail(event)
 {
     let headlist = document.createElement('li');
-    let time = document
+    let time = document.createElement('li');
 }
