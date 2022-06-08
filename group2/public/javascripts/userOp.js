@@ -296,3 +296,34 @@ function get_created_events(){
     xhttp.open("GET", "/users/createdevents");
     xhttp.send();
 }
+
+function set_finaltime() {
+
+    let event_id = document.getElementsByTagName("select")[0];
+    if(event_id.value==[])
+    {
+        alert("Please choose an event!");
+        return;
+    }
+
+    let user_event = {
+        final_time: document.getElementById('finaltime').value,
+        event_id: document.getElementsByTagName("select")[0].value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("final time changed");
+            show_selected_event();
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("failed");
+        }
+    };
+
+    xhttp.open("POST", "/users/finaltime");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user_event));
+
+}
