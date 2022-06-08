@@ -179,6 +179,12 @@ function show_selected_event() {
 function create_event_detail(event)
 {
     let headlist = document.createElement('ul');
-    let lcoation
+    let name = document.createElement('li');
+    let location = document.createElement('li');
     let date = document.createElement('li');
+
+    name.innerText = event.event_name;
+    location.innerText = event.event_name;
+    date.innerText = event.event_name;
+
 }
