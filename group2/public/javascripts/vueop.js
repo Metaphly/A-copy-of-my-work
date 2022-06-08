@@ -1,5 +1,5 @@
 var part = new Vue({
-    el: '#changeInfo',
+    el: '#notblue',
     data: {
       show_area: true
     }
