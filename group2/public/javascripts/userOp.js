@@ -170,7 +170,8 @@ function show_selected_event() {
             var event = JSON.parse(this.responseText);
             let headlist = create_event_detail(event);
             let eventdetail = document.getElementById('eventdetail');
-            eventdetail.innertext = " ";
+            eventdetail.children[0].remove();
+            reset_details(eventdetail);
             eventdetail.appendChild(headlist);
 
         }
@@ -179,6 +180,14 @@ function show_selected_event() {
     xhttp.open("POST", "/single_event");
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(my_event));
+
+}
+
+function reset_details(part){
+
+    while(part.children.length >= 1){
+        part.children[0].remove();
+    }
 
 }
 
