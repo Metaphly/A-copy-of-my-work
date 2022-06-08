@@ -6,7 +6,7 @@ var part = new Vue({
     },
     methods: {
         hideShow: function () {
-        this.show_info = !this.show_info;
+        this.show_info = !(this.show_info);
         }
     }
 });
