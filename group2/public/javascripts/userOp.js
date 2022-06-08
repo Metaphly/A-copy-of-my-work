@@ -168,6 +168,7 @@ function show_selected_event() {
         if (this.readyState == 4 && this.status == 200) {
 
             var event = JSON.parse(this.responseText);
+            event.innerText = "";
             let headlist = create_event_detail(event);
             let eventdetail = document.getElementById('eventdetail');
             eventdetail.appendChild(headlist);
@@ -184,7 +185,7 @@ function show_selected_event() {
 function create_event_detail(event)
 {
     let headlist = document.createElement('ul');
-    headlist.class = "detailist";
+    headlist.className = "detailist";
     let name = document.createElement('li');
     let location = document.createElement('li');
     let date = document.createElement('li');
