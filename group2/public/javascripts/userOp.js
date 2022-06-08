@@ -182,6 +182,32 @@ function show_selected_event() {
 
 }
 
+function get_members() {
+
+    let my_event = {
+        event_id: document.getElementsByTagName("select")[0].value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+            var event = JSON.parse(this.responseText);
+            let headlist = create_event_detail(event);
+            let eventdetail = document.getElementById('eventdetail');
+            reset_details(eventdetail);
+            eventdetail.appendChild(headlist);
+
+        }
+    };
+
+    xhttp.open("POST", "/single_event");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(my_event));
+
+}
+
 function reset_details(part){
 
     while(part.children.length >= 1){
