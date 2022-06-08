@@ -196,8 +196,7 @@ function get_members() {
             var everyone = JSON.parse(this.responseText);
             let memberlist = create_member_list(everyone);
             let eventdetail = document.getElementById('eventdetail');
-            reset_details(eventdetail);
-            eventdetail.appendChild(headlist);
+            eventdetail.appendChild(memberlist);
 
         }
     };
