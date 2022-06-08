@@ -189,14 +189,26 @@ router.post('/googleuser', function(req, res, next) {
         if(rows.length==0)
         {
           console.log('have not created account');
-          connection.query("INSERT INTO users(name,email) VALUES (?);",[email], function(error, rows, fields) {
+          connection.query("INSERT INTO users(email) VALUES (?);",[email], function(error, rows, fields) {
             if (error) {
               console.log("wrong email insert");
               res.sendStatus(500);
               return;
             }
           });
-         res.sendStatus(200);
+          console.log("google user inserted");
+          connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
+            connection.release();
+            if (error) {
+              console.log('Can not find created user info');
+              res.sendStatus(500);
+              return;
+            }
+            console.log("find user session info");
+            req.session.user = rows[0];
+            res.sendStatus(200);
+            return;
+          });
         } else if(rows[0].email == email) {
           connection.release();
           console.log('sccuess');
