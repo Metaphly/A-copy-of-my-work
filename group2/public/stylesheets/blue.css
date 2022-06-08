@@ -108,6 +108,11 @@ td, th {
     border: 1px solid;
 }
 
+table{
+    border-collapse: collapse;
+    box-shadow:0 5px 10px $clr-gray300;
+}
+
 #infotable {
     width: 100%;
     border-collapse: collapse;
