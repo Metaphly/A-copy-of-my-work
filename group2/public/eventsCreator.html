@@ -41,8 +41,23 @@
           <button type="button" class="bluebutton" onclick="create_event()">Submit</button>
 
         </form>
+      </div>
 
-        <div>
+      <h2 class="left">Finalising time</h2>
+
+        <label for="appt-time">Choose an event ID</label>
+        <select onchange="show_selected_event()">
+          <option disabled selected value> -- select an option -- </option>
+        </select>
+
+        <div class="eventdetail" id="eventdetail">
+
+        </div>
+
+        <br>
+        <label for="freetime">Set final time: </label>
+        <input id="freetime" type="time" name="appt-time" value="13:30">
+        <button type="button" class="bluebutton" onclick="set_freetime()">Set</button>
 
 
     </div>
