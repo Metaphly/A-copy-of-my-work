@@ -43,21 +43,23 @@
             <button type="button" class="bluebutton" onclick="change_name()">Confirm</button>
         </div>
 
-        <h2 class="left">Your events</h2>
+        <div v-if="show_event">
+            <h2 class="left">Your events</h2>
 
-        <label for="appt-time">Choose an event ID</label>
-        <select onchange="show_selected_event()">
-          <option disabled selected value> -- select an option -- </option>
-        </select>
+            <label for="appt-time">Choose an event ID</label>
+            <select onchange="show_selected_event()">
+              <option disabled selected value> -- select an option -- </option>
+            </select>
 
-        <div class="eventdetail" id="eventdetail">
+            <div class="eventdetail" id="eventdetail">
 
-        </div>
+            </div>
 
-        <br>
-        <label for="freetime">Set available time: </label>
-        <input id="freetime" type="time" name="appt-time" value="13:30">
-        <button type="button" class="bluebutton" onclick="set_freetime()">Set</button>
+            <br>
+            <label for="freetime">Set available time: </label>
+            <input id="freetime" type="time" name="appt-time" value="13:30">
+            <button type="button" class="bluebutton" onclick="set_freetime()">Set</button>
+        </div>div>
 
     </div>
 
