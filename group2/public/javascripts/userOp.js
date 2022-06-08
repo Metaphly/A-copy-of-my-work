@@ -158,25 +158,28 @@ function set_freetime() {
 
 }
 
-function show_selected_event(){
+function show_selected_event() {
+
+    console.log();
+    let event_id = document.getElementsByTagName("select")[0];
+    console.log(event_id.value);
+    let user_event = {
+        free_time: document.getElementById('freetime').value,
+        event_id: document.getElementsByTagName("select")[0].value
+    };
 
     let xhttp = new XMLHttpRequest();
+
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-
-            var event_list = JSON.parse(this.responseText);
-            element = document.getElementsByTagName("select");
-
-            for (let event of event_list) {
-
-                let choice = document.createElement('option');
-                choice.innerText = event.event_id;
-                element[0].appendChild(choice);
-
-            }
+            alert("free time changed");
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("failed");
         }
     };
-    xhttp.open("GET", "/users/myevents");
-    xhttp.send();
-    
+
+    xhttp.open("POST", "/users/freetime");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user_event));
+
 }
