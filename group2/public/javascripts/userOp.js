@@ -193,7 +193,7 @@ function get_members() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
-            var event = JSON.parse(this.responseText);
+            var everyone = JSON.parse(this.responseText);
             let headlist = create_event_detail(event);
             let eventdetail = document.getElementById('eventdetail');
             reset_details(eventdetail);
@@ -206,6 +206,11 @@ function get_members() {
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(my_event));
 
+}
+
+function create_member_list(everyone)
+{
+    
 }
 
 function reset_details(part){
