@@ -136,8 +136,9 @@ ul.detailist {
 }
 
 ul.detailist li {
-    background: #cce5ff;
-    color: darkblue;
+    background: #e6eeff;
+    color: #163776;
+    box-shadow:0 5px 10px #888888;
     margin: 5px;
 }
 
