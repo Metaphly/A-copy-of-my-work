@@ -167,6 +167,10 @@ function show_selected_event() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
+            var event = JSON.parse(this.responseText);
+            let headlist = create_event_detail(event);
+            let 
+
         }
     };
 
@@ -184,7 +188,13 @@ function create_event_detail(event)
     let date = document.createElement('li');
 
     name.innerText = event.event_name;
-    location.innerText = event.event_name;
-    date.innerText = event.event_name;
+    location.innerText = event.location;
+    date.innerText = event.start_date;
+
+    headlist.appendChild(name);
+    headlist.appendChild(location);
+    headlist.appendChild(date);
+
+    return headlist;
 
 }
