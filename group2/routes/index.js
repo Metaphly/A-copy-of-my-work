@@ -194,13 +194,14 @@ router.post('/googleuser', function(req, res, next) {
             connection.release();
 
           });
-
-          res.sendStatus(401);
+          res.sendStatus(200);
         } else if(rows[0].email == email) {
+          connection.release();
           console.log('sccuess');
           req.session.user = rows[0];
           res.sendStatus(200);
         } else {
+          connection.release();
           console.log('incorrect google signin');
           res.sendStatus(401);
         }
