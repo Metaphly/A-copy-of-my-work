@@ -181,7 +181,7 @@ router.post('/googleuser', function(req, res, next) {
       }
 
       connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
-        connection.release();
+        //connection.release();
         if (error) {
           res.sendStatus(500);
           return;
@@ -190,6 +190,10 @@ router.post('/googleuser', function(req, res, next) {
         if(rows.length==0)
         {
           console.log('have not created account');
+          connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
+            
+          });
+
           res.sendStatus(401);
         } else if(rows[0].email == email) {
           console.log('sccuess');
