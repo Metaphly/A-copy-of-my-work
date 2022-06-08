@@ -135,9 +135,8 @@ function get_myevents(){
 function set_freetime() {
 
     let event_id = document.getElementsByTagName("select")[0];
-    if(event_id==[])
+    if(event_id.value==[])
     {
-        cosnole.log(event_id);
         alert("Please choose an event!");
         return;
     }
