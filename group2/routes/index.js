@@ -120,7 +120,7 @@ router.post('/signup', function(req, res, next) {
     connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
       connection.release();
       if (error) {
-        console.log('Can not find crated user info');
+        console.log('Can not find created user info');
         res.sendStatus(500);
         return;
       }
