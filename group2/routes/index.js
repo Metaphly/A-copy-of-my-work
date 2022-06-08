@@ -166,7 +166,9 @@ router.post('/googleuser', function(req, res, next) {
     const userid = payload['sub'];
     email = payload['email'];
   }
-  verify().catch(console.error);
+  verify().catch(function(){
+    res.sendStatus(403);
+  });
 
   req.pool.getConnection(function(error,connection){
     if(error){
