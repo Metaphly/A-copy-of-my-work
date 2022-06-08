@@ -152,3 +152,10 @@ ul.detailist li {
     width:80%;
     border-top: 10px solid #C4C4C4;
 }
+
+.lower_right
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
