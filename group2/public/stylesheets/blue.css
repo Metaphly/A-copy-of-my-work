@@ -7,7 +7,7 @@
     background-color: #163776;
 }
 
-input{
+input,textarea{
     box-shadow:0 2px 4px #888888;
 }
 
