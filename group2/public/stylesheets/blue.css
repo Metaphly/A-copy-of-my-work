@@ -104,9 +104,6 @@
 }
 
 
-td, th {
-    border: 1px solid;
-}
 
 table{
     border-collapse: collapse;
@@ -117,13 +114,16 @@ table{
 }
 
 thead{
-    box-shadow:0 5px 10px $clr-gray300;
+    box-shadow:0 5px 10px #888888;
+}
+
+th{
+    padding:1rem 2rem;
+    text-transform:uppercase;
 }
 
 #infotable {
     width: 100%;
-    border-collapse: collapse;
-    border: 1px solid;
 }
 
 .eventdetail
