@@ -153,61 +153,6 @@ router.post('/single_event', function(req, res, next) {
   });
 });
 
-router.post('/googleuser', function(req, res, next) {
 
-  if('user' in req.session){
-    console.log("already log in");
-    res.sendStatus(409);
-    return;
-  }
-
-  let email = "googlemail";
-
-  async function verify() {
-    const ticket = await client.verifyIdToken({
-        idToken: req.body.token,
-        audience: "82416996899-apdbt8826sr91gc3n29li4d6oknnbt02.apps.googleusercontent.com",
-    });
-    const payload = ticket.getPayload();
-    const userid = payload['sub'];
-    email = payload['email'];
-  }
-  verify().then(function(){
-
-    req.pool.getConnection(function(error,connection){
-      if(error){
-        res.sendStatus(500);
-        return;
-      }
-
-      connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
-        connection.release();
-        if (error) {
-          res.sendStatus(500);
-          return;
-        }
-
-        if(rows.length==0)
-        {
-          console.log('have not created account');
-          res.sendStatus(401);
-        } else if(rows[0].email == email) {
-          console.log('sccuess');
-          req.session.user = rows[0];
-          res.sendStatus(200);
-        } else {
-          console.log('incorrect google signin');
-          res.sendStatus(401);
-        }
-
-      });
-    });
-
-  }).catch(function(){
-    res.sendStatus(403);
-  });
-
-
-});
 
 module.exports = router;
