@@ -178,6 +178,7 @@ function show_selected_event() {
 
 function create_event_detail(event)
 {
-    let headlist = document.createElement('li');
-    let time = document.createElement('li');
+    let headlist = document.createElement('ul');
+    let lcoation
+    let date = document.createElement('li');
 }
