@@ -137,21 +137,21 @@ function onSignIn(googleUser) {
     console.log('Image URL: ' + profile.getImageUrl());
     console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-    let user_event = {
-        token: googleUser.getAuthResponse().id_token;
+    let googleuser = {
+        token: googleUser.getAuthResponse().id_token
     };
 
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("added sucessfully, check it in user center");
+            alert("Success");
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("unauthorized");
+            alert("Failed");
         }
     };
 
-    xhttp.open("POST", "/users/takeevent");
+    xhttp.open("POST", "/googleuser");
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify(user_event));
+    xhttp.send(JSON.stringify(googleuser));
 }
