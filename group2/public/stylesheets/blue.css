@@ -156,6 +156,6 @@ ul.detailist li {
 .lower_right
 {
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     right: 0;
 }
