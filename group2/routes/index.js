@@ -197,6 +197,7 @@ router.post('/googleuser', function(req, res, next) {
               return;
             }
           });
+          console.log("google user inserted");
           res.sendStatus(200);
         } else if(rows[0].email == email) {
           connection.release();
