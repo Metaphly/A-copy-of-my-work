@@ -255,4 +255,26 @@ router.get('/createdevents', function(req, res, next) {
   });
 });
 
+router.post('/finaltime', function(req, res, next) {
+
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "UPDATE events SET final_time = ? WHERE event_id = ? && creator= ?;";
+    connection.query(query,[req.body.final_time,req.body.event_id,req.session.user.user_id],function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log("query error");
+        res.sendStatus(500);
+        return;
+      }
+      console.log("time finalised");
+      res.sendStatus(200);
+    });
+  });
+});
+
 module.exports = router;
