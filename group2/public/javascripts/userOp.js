@@ -158,7 +158,6 @@ function set_freetime() {
 
 function show_selected_event() {
 
-
     let my_event = {
         event_id: document.getElementsByTagName("select")[0].value
     };
@@ -167,9 +166,7 @@ function show_selected_event() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("free time changed");
-        } else if (this.readyState == 4 && this.status >= 400) {
-            alert("failed");
+
         }
     };
 
@@ -177,4 +174,10 @@ function show_selected_event() {
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(my_event));
 
+}
+
+function create_event_detail(event)
+{
+    let headlist = document.createElement('li');
+    let time = document
 }
