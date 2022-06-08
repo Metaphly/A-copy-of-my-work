@@ -207,6 +207,7 @@ router.post('/googleuser', function(req, res, next) {
             console.log("find user session info");
             req.session.user = rows[0];
             res.sendStatus(200);
+            return;
           });
         } else if(rows[0].email == email) {
           connection.release();
