@@ -1,5 +1,5 @@
 var vueinst = new Vue({
-    el: '#fistarea',
+    el: '#changeInfo',
     data: {
         show_area: true
     }

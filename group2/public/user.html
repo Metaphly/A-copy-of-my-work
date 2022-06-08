@@ -24,12 +24,11 @@
 
     <div id="notblue">
 
-      <div id="fistarea">
         <div id="userInfo">
             <h2 class="left">User Information</h2>
         </div>
 
-        <div id="changeInfo">
+        <div id="changeInfo" v-if="show_area">
             <h4 class="left">Change your email<h4>
             <input type="email" id="new_email">
             <button type="button" class="bluebutton" onclick="change_email()">Confirm</button>
@@ -38,7 +37,6 @@
             <input type="text" id="new_name">
             <button type="button" class="bluebutton" onclick="change_name()">Confirm</button>
         </div>
-      </div>
 
         <h2 class="left">Your events</h2>
 
