@@ -368,23 +368,21 @@ function create_admin_table(list)
     infotable.appendChild(infotitles);
 
     for(let user of list){
-
         let detailrow = document.createElement('tr');
         let user_id = document.createElement('td');
         let user_name = document.createElement('td');
         let user_email = document.createElement('td');
         let is_admin = document.createElement('td');
-        user_id.innerText = userinfo.user_id;
-        user_name.innerText = userinfo.user_name;
-        user_email.innerText = userinfo.email;
-        is_admin.innerText = userinfo.is_admin;
+        user_id.innerText = list.user_id;
+        user_name.innerText = list.user_name;
+        user_email.innerText = list.email;
+        is_admin.innerText = list.is_admin;
 
         detailrow.appendChild(user_id);
         detailrow.appendChild(user_name);
         detailrow.appendChild(user_email);
         detailrow.appendChild(is_admin);
         infotable.appendChild(detailrow);
-        infoArea.appendChild(infotable);
         return infotable;
     }
 }
