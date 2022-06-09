@@ -144,6 +144,7 @@ router.post('/signup', function(req, res, next) {
 
     if(exist)
     {
+      console.log("work here");
       return;
     }
 
