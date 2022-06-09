@@ -18,7 +18,7 @@ router.use('/', function(req, res, next) {
 });
 
 router.use('/admin', function(req, res, next) {
-  if(req.session.user.admin) {
+  if(req.session.user.is_admin) {
     console.log("admin operation");
     next();
   }else
