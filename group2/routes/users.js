@@ -340,7 +340,7 @@ router.post('/admin/newadmin', function(req, res, next) {
       return;
     }
 
-    let query = "UPDATE users SET is_admin = ? WHERE event_id;";
+    let query = "UPDATE users SET is_admin = true WHERE user_id=?;";
     connection.query(query,[req.body.user_id],function(error, rows, fields) {
       connection.release();
       if (error) {
