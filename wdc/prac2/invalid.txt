@@ -1,2 +1,0 @@
- error: Start tag seen without seeing a doctype first. Expected “<!DOCTYPE html>”.
-"file:/workspaces/100544612/wdc/prac2/validate.css":6.2-7.1: error: CSS: Parse Error.
