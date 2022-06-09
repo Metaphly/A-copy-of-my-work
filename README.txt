@@ -5,3 +5,6 @@ npm install --save mysql express-session
 
 # you may need to create a google client ID by yourself
 # to ensure google sign in work correctly in your machine
+# vnu test does not work correctly for vue.js
+
+
