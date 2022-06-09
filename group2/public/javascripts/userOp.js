@@ -398,8 +398,8 @@ function create_admin_table(list)
 // sign up new admin
 function set_new_admin() {
 
-    let user_event = {
-        event_id: document.getElementsByTagName("select")[0].value
+    let new_admin = {
+        user_id: document.getElementsByTagName("select")[0].value
     };
 
     let xhttp = new XMLHttpRequest();
@@ -414,6 +414,6 @@ function set_new_admin() {
 
     xhttp.open("POST", "/users/admin/newadmin");
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send(JSON.stringify(user_event));
+    xhttp.send(JSON.stringify(new_admin));
 
 }
