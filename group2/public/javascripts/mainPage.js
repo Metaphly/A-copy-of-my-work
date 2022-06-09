@@ -23,7 +23,8 @@ function get_events(){
 }
 
 
-// events are listed as rectangles, this function created the 
+// events are listed as rectangles in main page
+// this function creates the template of an event rectangle
 function create_single_event(event){
 
     let anevent = document.createElement('div');
