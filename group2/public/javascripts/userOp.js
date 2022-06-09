@@ -370,9 +370,12 @@ function create_admin_table(list)
     var selection = document.getElementsByTagName("select")[0];
     for (let user of list){
 
-        let newop = make_choice(user.user_id);
-        selection.appendChild(newop);
+        // add user_id to selector
+        let choice = document.createElement('option');
+        choice.innerText = user.user_id;
+        selection.appendChild(choice);
 
+        // create table row
         let detailrow = document.createElement('tr');
         let user_id = document.createElement('td');
         let user_name = document.createElement('td');
