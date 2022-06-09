@@ -10,7 +10,7 @@ npm install --save mysql express-session
 # event.sql is used for shecma
 # backup.sql is backup
 
-# the password is show to make video easy to understand
-# in real webiste, the password is s
+# the password is visible to make video easy to understand
+# in real webiste, the password is not visible
 
 
