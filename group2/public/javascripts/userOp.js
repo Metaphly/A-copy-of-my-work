@@ -385,6 +385,6 @@ function create_admin_table(list)
         detailrow.appendChild(user_email);
         detailrow.appendChild(is_admin);
         infotable.appendChild(detailrow);
-        return infotable;
     }
+    return infotable;
 }
