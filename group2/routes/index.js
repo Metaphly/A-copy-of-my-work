@@ -132,7 +132,7 @@ router.post('/signup', function(req, res, next) {
     let query="INSERT INTO users(user_name,password) VALUES (?,?);";
     connection.query(query,[req.body.user_name,req.body.password], function(error, rows, fields) {
       if (error) {
-        connection.release();
+        //connection.release();
         console.log('user exist');
         res.sendStatus(500);
         return;
