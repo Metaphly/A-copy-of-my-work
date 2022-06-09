@@ -134,9 +134,8 @@ router.post('/signup', function(req, res, next) {
       if (error) {
         connection.release();
         console.log('user exist');
-        exist = 1;
         res.sendStatus(500);
-        return;
+        next();
       }
       console.log('success created');
       req.session.user = {"user_name":req.body.user_name, "email":""};
