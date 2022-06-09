@@ -8,6 +8,9 @@ npm install --save mysql express-session
 # vnu test does not work correctly for vue.js
 
 # event.sql is used for shecma
-# backup.sql is backup, it is used at the start of vieo presentation
+# backup.sql is backup
+
+# the password is show to make video easy to understand
+# in real webiste, the password is s
 
 
