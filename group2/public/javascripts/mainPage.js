@@ -1,3 +1,4 @@
+// get all events in database, render them into page
 function get_events(){
 
     let xhttp = new XMLHttpRequest();
@@ -21,6 +22,8 @@ function get_events(){
     xhttp.send();
 }
 
+
+// events are listed as rectangles, this function created the 
 function create_single_event(event){
 
     let anevent = document.createElement('div');

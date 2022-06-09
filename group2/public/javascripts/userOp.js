@@ -1,3 +1,4 @@
+// get the user information and render it into page
 function get_userInfo(){
 
     let xhttp = new XMLHttpRequest();
@@ -31,6 +32,7 @@ function get_userInfo(){
     xhttp.send();
 }
 
+// change user email
 function change_email(){
 
     let new_email = {
@@ -58,6 +60,8 @@ function change_email(){
     xhttp.send(JSON.stringify(new_email));
 }
 
+
+// check format (anything@anything.anything) for sign up email input
 function email_format(email)
 {
     var simplemodel = /\S+@\S+\.\S+/;
@@ -86,6 +90,7 @@ function change_name(){
     xhttp.send(JSON.stringify(new_name));
 }
 
+// send event info to server to create event
 function create_event(){
 
     let event = {
@@ -111,6 +116,8 @@ function create_event(){
 
 }
 
+
+// get all events a user enaged in
 function get_myevents(){
 
     let xhttp = new XMLHttpRequest();
@@ -133,6 +140,7 @@ function get_myevents(){
     xhttp.send();
 }
 
+// set availability
 function set_freetime() {
 
     let event_id = document.getElementsByTagName("select")[0];
@@ -164,6 +172,7 @@ function set_freetime() {
 
 }
 
+// show event details and all participants of a selected event
 function show_selected_event() {
 
     let my_event = {
@@ -191,6 +200,7 @@ function show_selected_event() {
 
 }
 
+// get all participants of an event
 function get_members() {
 
     let my_event = {
@@ -216,6 +226,7 @@ function get_members() {
 
 }
 
+// create an name list
 function create_member_list(everyone)
 {
     let table = document.createElement('table');
@@ -253,6 +264,7 @@ function reset_details(part){
 
 }
 
+// show event details in user center
 function create_event_detail(event)
 {
     let headlist = document.createElement('ul');
@@ -276,6 +288,7 @@ function create_event_detail(event)
 
 }
 
+// get all events created by user, then put them as options in select tag
 function get_created_events(){
 
     let xhttp = new XMLHttpRequest();
@@ -298,6 +311,7 @@ function get_created_events(){
     xhttp.send();
 }
 
+// to finalised time
 function set_finaltime() {
 
     let event_id = document.getElementsByTagName("select")[0];
