@@ -53,6 +53,7 @@ router.post('/login', function(req, res, next) {
 
     if('user' in req.session){
       console.log("already log in");
+      res.redirect(403, '/');
       res.sendStatus(409);
       return;
     }
@@ -92,6 +93,7 @@ router.post('/signup', function(req, res, next) {
 
     if('user' in req.session){
       console.log("already log in");
+      res.redirect(403, '/');
       res.sendStatus(409);
       return;
     }
