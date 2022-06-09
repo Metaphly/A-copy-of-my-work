@@ -309,4 +309,25 @@ router.post('/finaltime', function(req, res, next) {
   });
 });
 
+// admin get all user info
+router.get('/userInfo', function(req, res, next) {
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "SELECT * FROM users;";
+    connection.query(query,[req.session.user.user_name],function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log("email error");
+        res.sendStatus(500);
+        return;
+      }
+      res.json(rows[0]);
+    });
+  });
+});
+
 module.exports = router;
