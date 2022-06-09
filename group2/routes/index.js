@@ -134,7 +134,7 @@ router.post('/signup', function(req, res, next) {
       if (error) {
         connection.release();
         console.log('user exist');
-        exist = true;
+        exist = 1;
         res.sendStatus(500);
         return;
       }
