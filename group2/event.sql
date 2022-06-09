@@ -36,14 +36,14 @@ CREATE TABLE user_events
 
 INSERT INTO users(user_name,password,email,is_admin) VALUES ('james','james','james@kgb.com',true);
 INSERT INTO users(user_name,password) VALUES ('john','john');
-INSERT INTO users(user_name,password) VALUES ('gleen','Gleen');
+INSERT INTO users(user_name,password) VALUES ('gleen','gleen');
 INSERT INTO users(user_name,password,email) VALUES ('meg','megtron','megtron@cyber.com');
 
 
 INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Hello party','jim building, 2rd road, Prague','Welcome to have a chat',1,'2022-07-17');
 INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Wdc Webnair','zoom online','let us reveiw the exam',1,'2022-07-12');
 
-(user_name,password,email) VALUES ('meg','megtron','megtron@cyber.com');
+INSERT INTO user_events(user_id,event_id) VALUES (1,21);
 
 SELECT * FROM events;
 SELECT * FROM users;
