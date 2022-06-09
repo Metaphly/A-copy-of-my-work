@@ -142,8 +142,8 @@ router.post('/signup', function(req, res, next) {
       req.session.user = {"user_name":req.body.user_name, "email":""};
     });
 
-    
-    console.log("exist again");
+
+    console.log(exist);
     if(exist)
     {
       console.log("work here");
