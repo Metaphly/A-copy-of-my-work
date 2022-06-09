@@ -134,19 +134,12 @@ router.post('/signup', function(req, res, next) {
       if (error) {
         connection.release();
         console.log('user exist');
-        exist = true;
-        res.sendStatus(400);
+        res.sendStatus(500);
         return;
       }
       console.log('sccuess created');
       req.session.user = {"user_name":req.body.user_name, "email":""};
     });
-
-    if(exist)
-    {
-      console.log("work here");
-      return;
-    }
 
     // query user info and store in session
     connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
