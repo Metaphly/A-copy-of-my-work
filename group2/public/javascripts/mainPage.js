@@ -180,7 +180,7 @@ function signOut() {
 
 // sign out google if no user session
 
-/*function signOut_google(){
+function signOut_google(){
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -190,4 +190,4 @@ function signOut() {
     };
     xhttp.open("GET", "/google_logout");
     xhttp.send();
-}*/
+}
