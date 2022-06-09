@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <title>Theoparty</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="../javascripts/userOp.js"></script>
+    <script src="../javascripts/mainPage.js"></script>
+    <script src="../javascripts/vueop.js" defer></script>
+    <script>
+    get_userInfo();
+    get_myevents();
+    </script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/blue.css">
+  </head>
+
+  <body>
+    <div id="blueheader">
+        <a id="logotext" href="/">Theoparty</a>
+        <nav id="toprightmenu">
+            <a href="/users/eventsCreator">Go to Events Creator</a>
+            <a href="/users/admin/allinfo">Admin</a>
+        </nav>
+    </div>
+
+    <div id="notblue">
+
+        <div id="userInfo">
+            <h2 class="left">User Information</h2>
+        </div>
+
+        <div>
+        <button type="button" class="bluebutton" v-on:click="hideShow">{{ button }}</button>
+        </div>
+
+        <div id="changeInfo" v-if="show_info">
+            <h4 class="left">Change your email</h4>
+            <input type="email" id="new_email">
+            <button type="button" class="bluebutton" onclick="change_email()">Confirm</button>
+
+            <h4 class="left">Change your user name</h4>
+            <input type="text" id="new_name">
+            <button type="button" class="bluebutton" onclick="change_name()">Confirm</button>
+        </div>
+
+        <div v-if="show_event">
+            <h2 class="left">Your events</h2>
+
+            <label>Choose an event ID</label>
+            <select onchange="show_selected_event()">
+              <option disabled selected value> -- select an option -- </option>
+            </select>
+
+            <div class="eventdetail" id="eventdetail">
+
+            </div>
+
+            <br>
+            <label for="freetime">Set available time: </label>
+            <input id="freetime" type="time" name="appt-time" value="13:30">
+            <button type="button" class="bluebutton" onclick="set_freetime()">Set</button>
+        </div>
+
+    </div>
+
+  </body>
+</html>
