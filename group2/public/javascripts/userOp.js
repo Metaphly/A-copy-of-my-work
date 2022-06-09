@@ -407,6 +407,7 @@ function set_new_admin() {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             alert("Sign up new admin sucessfully");
+            location.reload();
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("failed");
         }
