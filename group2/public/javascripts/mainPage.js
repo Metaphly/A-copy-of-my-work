@@ -177,3 +177,5 @@ function signOut() {
       console.log('User signed out.');
     });
 }
+
+// sign out google if no user session
