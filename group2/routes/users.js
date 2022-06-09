@@ -321,11 +321,12 @@ router.get('/admin/userlist', function(req, res, next) {
     connection.query(query,function(error, rows, fields) {
       connection.release();
       if (error) {
-        console.log("email error");
+        console.log("query error");
         res.sendStatus(500);
         return;
       }
-      res.json(rows[0]);
+      console.log("admin get all users");
+      res.json(rows);
     });
   });
 });
