@@ -127,7 +127,7 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
-    let exist = false;
+    var exist = false;
     // insert new user into database
     let query="INSERT INTO users(user_name,password) VALUES (?,?);";
     connection.query(query,[req.body.user_name,req.body.password], function(error, rows, fields) {
