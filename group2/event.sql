@@ -40,9 +40,8 @@ INSERT INTO users(user_name,password) VALUES ('gleen','Gleen');
 INSERT INTO users(user_name,password,email) VALUES ('meg','megtron','megtron@cyber.com');
 
 
-INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Hello party','Welcome to have a caht',1,'2022-07-17');
-INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Hello','Hello',1,'2022-06-30');
-
+INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Hello party','jim building, 2rd road, Prague','Welcome to have a chat',1,'2022-07-17');
+INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Wdc Webnair','zoom online','let us reveiw the exam',1,'2022-07-12');
 
 SELECT * FROM events;
 SELECT * FROM users;
