@@ -138,10 +138,11 @@ router.post('/signup', function(req, res, next) {
         res.sendStatus(500);
         return;
       }
-      console.log('sccuess created');
+      console.log('success created');
       req.session.user = {"user_name":req.body.user_name, "email":""};
     });
 
+    
     console.log("exist again");
     if(exist)
     {
