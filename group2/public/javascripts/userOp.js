@@ -351,8 +351,7 @@ function get_all_userInfo(){
         if (this.readyState == 4 && this.status == 200) {
             var list = JSON.parse(this.responseText);
             var infoArea = document.getElementById('userInfo');
-
-
+            infoArea.appendChild(create_admin_table(list));
         }
     };
     xhttp.open("GET", "/users/admin/userlist");
@@ -360,7 +359,7 @@ function get_all_userInfo(){
 }
 
 // create table
-function_create_admin_table(list)
+function create_admin_table(list)
 {
     let infotable = document.createElement('table');
     infotable.id = "infotable";
@@ -387,6 +386,5 @@ function_create_admin_table(list)
         infotable.appendChild(detailrow);
         infoArea.appendChild(infotable);
         return infotable;
-
     }
 }
