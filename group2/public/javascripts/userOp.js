@@ -398,15 +398,7 @@ function create_admin_table(list)
 // sign up new admin
 function set_new_admin() {
 
-    let event_id = document.getElementsByTagName("select")[0];
-    if(event_id.value==[])
-    {
-        alert("Please choose an event!");
-        return;
-    }
-
     let user_event = {
-        free_time: document.getElementById('freetime').value,
         event_id: document.getElementsByTagName("select")[0].value
     };
 
@@ -414,14 +406,13 @@ function set_new_admin() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("free time changed");
-            show_selected_event();
+            alert("added sucessfully, check it in user center");
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("failed");
+            alert("unauthorized");
         }
     };
 
-    xhttp.open("POST", "/users/freetime");
+    xhttp.open("POST", "/users/admin/newadmin");
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send(JSON.stringify(user_event));
 
