@@ -249,6 +249,7 @@ router.post('/googleuser', function(req, res, next) {
 
 
 // log out google
+/*
 router.get('/google_logout', function(req, res, next) {
   if('user' in req.session){
     console.log(already sign out);
@@ -257,5 +258,6 @@ router.get('/google_logout', function(req, res, next) {
   console.log(google sign out);
   res.sendStatus(200);
 });
+*/
 
 module.exports = router;

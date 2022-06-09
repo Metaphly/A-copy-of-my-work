@@ -179,6 +179,7 @@ function signOut() {
 }
 
 // sign out google if no user session
+
 function signOut_google(){
 
     let xhttp = new XMLHttpRequest();
