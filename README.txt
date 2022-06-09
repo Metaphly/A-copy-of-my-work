@@ -7,4 +7,7 @@ npm install --save mysql express-session
 # to ensure google sign in work correctly in your machine
 # vnu test does not work correctly for vue.js
 
+# event.sql is used for shecma
+# backup.sql is backup, it is used at the start of vieo presentation
+
 
