@@ -43,7 +43,7 @@ INSERT INTO users(user_name,password,email) VALUES ('meg','megtron','megtron@cyb
 INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Hello party','jim building, 2rd road, Prague','Welcome to have a chat',1,'2022-07-17');
 INSERT INTO events(event_name,location,description,creator,start_date) VALUES ('Wdc Webnair','zoom online','let us reveiw the exam',1,'2022-07-12');
 
-INSERT INTO user_events(user_id,event_id) VALUES (1,20);
+(user_name,password,email) VALUES ('meg','megtron','megtron@cyber.com');
 
 SELECT * FROM events;
 SELECT * FROM users;
