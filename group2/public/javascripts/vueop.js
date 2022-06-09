@@ -8,6 +8,12 @@ var part = new Vue({
     methods: {
         hideShow: function () {
         this.show_info = !(this.show_info);
+
+        if (this.show_info) {
+          this.button = "Hide Penal";
+        }else {
+          this.button = "Show Penal";
+        }
         }
     }
 });
