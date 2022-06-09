@@ -373,6 +373,6 @@ function get_userInfo(){
             infoArea.appendChild(infotable);
         }
     };
-    xhttp.open("GET", "/users/userInfo");
+    xhttp.open("GET", "/users/admin/userlist");
     xhttp.send();
 }
