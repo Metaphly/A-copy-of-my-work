@@ -370,7 +370,7 @@ function create_admin_table(list)
     var selection = document.getElementsByTagName("select")[0];
     for (let user of list){
 
-        let newop = make_choice(event);
+        let newop = make_choice(user.user_id);
         selection.appendChild(newop);
 
         let detailrow = document.createElement('tr');
