@@ -310,15 +310,15 @@ router.post('/finaltime', function(req, res, next) {
 });
 
 // admin get all user info
-router.get('/userInfo', function(req, res, next) {
+router.get('/admin/userlist', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
       res.sendStatus(500);
       return;
     }
 
-    let query = "SELECT * FROM users;";
-    connection.query(query,[req.session.user.user_name],function(error, rows, fields) {
+    let query = "SELECT user_id,user_name,email,is_admin FROM users;";
+    connection.query(query,function(error, rows, fields) {
       connection.release();
       if (error) {
         console.log("email error");
