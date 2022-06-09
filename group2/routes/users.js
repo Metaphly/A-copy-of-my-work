@@ -331,4 +331,27 @@ router.get('/admin/userlist', function(req, res, next) {
   });
 });
 
+// set new admin
+router.post('/admin/newadmin', function(req, res, next) {
+
+  req.pool.getConnection(function(error,connection){
+    if(error){
+      res.sendStatus(500);
+      return;
+    }
+
+    let query = "UPDATE users SET is_admin = ? WHERE event_id;";
+    connection.query(query,[req.body.user_id],function(error, rows, fields) {
+      connection.release();
+      if (error) {
+        console.log("query error");
+        res.sendStatus(500);
+        return;
+      }
+      console.log("New admin");
+      res.sendStatus(200);
+    });
+  });
+});
+
 module.exports = router;
