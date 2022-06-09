@@ -248,7 +248,7 @@ router.post('/googleuser', function(req, res, next) {
 });
 
 
-// log out google
+// log 
 router.post('/google_logout', function(req, res, next) {
   if('user' in req.session){
     console.log("google sign out");
