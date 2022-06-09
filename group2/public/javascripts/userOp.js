@@ -367,16 +367,18 @@ function create_admin_table(list)
     infotitles.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th> <th>Is Admin</th></tr>";
     infotable.appendChild(infotitles);
 
-    for(let user of list){
+    console.log(list);
+    for (let user of list){
+        console.log(user);
         let detailrow = document.createElement('tr');
         let user_id = document.createElement('td');
         let user_name = document.createElement('td');
         let user_email = document.createElement('td');
         let is_admin = document.createElement('td');
-        user_id.innerText = list.user_id;
-        user_name.innerText = list.user_name;
-        user_email.innerText = list.email;
-        is_admin.innerText = list.is_admin;
+        user_id.innerText = user.user_id;
+        user_name.innerText = user.user_name;
+        user_email.innerText = user.email;
+        is_admin.innerText = user.is_admin;
 
         detailrow.appendChild(user_id);
         detailrow.appendChild(user_name);
