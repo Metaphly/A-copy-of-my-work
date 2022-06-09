@@ -186,8 +186,7 @@ function signOut_google(){
         if (this.readyState == 4 && this.status == 200) {
             signOut();
         }
-    }
-};
+    };
     xhttp.open("GET", "/google_logout");
     xhttp.send();
 }

@@ -252,7 +252,7 @@ router.post('/googleuser', function(req, res, next) {
 router.get('/google_logout', function(req, res, next) {
   if('user' in req.session){
     console.log(already sign out);
-    res.sendStatus(400);
+    res.sendStatus(202);
   }
   console.log(google sign out);
   res.sendStatus(200);
