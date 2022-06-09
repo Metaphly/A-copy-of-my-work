@@ -135,7 +135,7 @@ router.post('/signup', function(req, res, next) {
         connection.release();
         console.log('user exist');
         exist = true;
-        res.sendStatus(500);
+        res.sendStatus(400);
         return;
       }
       console.log('sccuess created');
