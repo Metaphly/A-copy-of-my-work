@@ -184,10 +184,10 @@ function signOut_google(){
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            
-            }
+            signOut();
         }
-    };
-    xhttp.open("GET", "/events");
+    }
+};
+    xhttp.open("GET", "/google_logout");
     xhttp.send();
 }
