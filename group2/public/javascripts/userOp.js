@@ -369,7 +369,7 @@ function create_admin_table(list)
 
     console.log(list);
     for (let user of list){
-        console.log(user);
+        console.log(list);
         let detailrow = document.createElement('tr');
         let user_id = document.createElement('td');
         let user_name = document.createElement('td');
