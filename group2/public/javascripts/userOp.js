@@ -344,7 +344,7 @@ function set_finaltime() {
 }
 
 // get the user information and render it into page
-function get_userInfo(){
+function get_all_userInfo(){
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
