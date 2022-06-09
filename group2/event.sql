@@ -34,19 +34,18 @@ CREATE TABLE user_events
 
 );
 
-INSERT INTO users(user_name,password) VALUES ('james','james');
+INSERT INTO users(user_name,password,email,is_admin) VALUES ('james','james','james@kgb.com',true);
 INSERT INTO users(user_name,password) VALUES ('john','john');
-DELETE FROM users WHERE user_name='james';
+INSERT INTO users(user_name,password) VALUES ('gleen','Gleen');
+INSERT INTO users(user_name,password,email) VALUES ('meg','megtron','megtron@cyber.com');
 
-SELECT * FROM users;
 
 INSERT INTO events(event_name,description,creator,start_date) VALUES ('Hello','Hello',1,'09/98');
 INSERT INTO events(event_name,description,creator,start_date) VALUES ('Hello','Hello',1,'07/8');
 
 
 SELECT * FROM events;
+SELECT * FROM users;
+SELECT * FROM user_events;
 
-TABLE user_events;
-TABLE events;
-TABLE user;
 
