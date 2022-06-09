@@ -367,9 +367,12 @@ function create_admin_table(list)
     infotitles.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th> <th>Is Admin</th></tr>";
     infotable.appendChild(infotitles);
 
-    console.log(list);
+    var selection = document.getElementsByTagName("select")[0];
     for (let user of list){
-        console.log(list);
+
+        let newop = make_choice(event);
+        selection.appendChild(newop);
+
         let detailrow = document.createElement('tr');
         let user_id = document.createElement('td');
         let user_name = document.createElement('td');
