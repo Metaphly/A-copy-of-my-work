@@ -142,7 +142,7 @@ router.post('/signup', function(req, res, next) {
   });
 });
 
-
+// send all events created by a particular user
 router.post('/single_event', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -163,6 +163,9 @@ router.post('/single_event', function(req, res, next) {
   });
 });
 
+
+// google log in
+// if email is not existed in data base, create one, use email info as name and email
 router.post('/googleuser', function(req, res, next) {
 
   if('user' in req.session){
@@ -198,6 +201,7 @@ router.post('/googleuser', function(req, res, next) {
 
         if(rows.length==0)
         {
+          // create new user
           console.log('have not created account');
           connection.query("INSERT INTO users(user_name,email) VALUES (?,?);",[email,email], function(error, rows, fields) {
             if (error) {
@@ -207,6 +211,8 @@ router.post('/googleuser', function(req, res, next) {
             }
           });
           console.log("google user inserted");
+
+          // store user info in session
           connection.query("SELECT * FROM users WHERE email = ?;",[email], function(error, rows, fields) {
             connection.release();
             if (error) {
@@ -220,6 +226,7 @@ router.post('/googleuser', function(req, res, next) {
             return;
           });
         } else if(rows[0].email == email) {
+          // find user email in database, log in
           connection.release();
           console.log('sccuess');
           req.session.user = rows[0];

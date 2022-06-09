@@ -1,3 +1,4 @@
+// use to hide and display a section
 var part = new Vue({
     el: '#notblue',
     data: {

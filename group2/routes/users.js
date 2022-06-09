@@ -7,6 +7,8 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+// middleware check the user login
+// user must login to perform user operations
 router.use('/', function(req, res, next) {
   if(!('user' in req.session)) {
     console.log("Haven't login");
@@ -17,6 +19,8 @@ router.use('/', function(req, res, next) {
   }
 });
 
+// check the admin indentity
+// limit all admin operation
 router.use('/admin', function(req, res, next) {
   if(req.session.user.is_admin) {
     console.log("admin operation");
@@ -28,6 +32,7 @@ router.use('/admin', function(req, res, next) {
   }
 });
 
+// following 2 routers are used to render the page, user must login to acess them
 router.get('/userPage', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/user.html'));
 });
@@ -36,6 +41,7 @@ router.get('/eventsCreator', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/eventsCreator.html'));
 });
 
+// delete session when logout
 router.get('/logout', function(req, res, next) {
   if('user' in req.session){
     delete req.session.user;
@@ -43,6 +49,8 @@ router.get('/logout', function(req, res, next) {
   res.redirect(200, '/');
 });
 
+
+// get user info
 router.get('/userInfo', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -63,6 +71,7 @@ router.get('/userInfo', function(req, res, next) {
   });
 });
 
+// cahnge user email
 router.post('/changeEmail', function(req, res, next) {
 
   if(req.body.new_email == [])
@@ -93,7 +102,7 @@ router.post('/changeEmail', function(req, res, next) {
   });
 });
 
-
+// change user name
 router.post('/changeName', function(req, res, next) {
 
   if(req.body.new_email == [])
@@ -134,8 +143,10 @@ router.post('/changeName', function(req, res, next) {
   });
 });
 
+// insert event to database
 router.post('/addevent', function(req, res, next) {
 
+  // check emptyness of input
   if(req.body.event_name == [] || req.body.location == [] || req.body.descriptio == [] || req.body.start_date == [])
   {
     console.log("empty input");
@@ -163,6 +174,7 @@ router.post('/addevent', function(req, res, next) {
   });
 });
 
+// enrol in new event
 router.post('/takeevent', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
   if(error){
@@ -184,6 +196,7 @@ router.post('/takeevent', function(req, res, next) {
 });
 });
 
+// all enroled event
 router.get('/myevents', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -204,6 +217,7 @@ router.get('/myevents', function(req, res, next) {
   });
 });
 
+// set availability
 router.post('/freetime', function(req, res, next) {
 
   req.pool.getConnection(function(error,connection){
@@ -226,6 +240,7 @@ router.post('/freetime', function(req, res, next) {
   });
 });
 
+// query all members in a particualr event
 router.post('/everyone', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -246,6 +261,7 @@ router.post('/everyone', function(req, res, next) {
   });
 });
 
+// get all event created by pritciular user
 router.get('/createdevents', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -266,6 +282,7 @@ router.get('/createdevents', function(req, res, next) {
   });
 });
 
+// finalise the time
 router.post('/finaltime', function(req, res, next) {
 
   req.pool.getConnection(function(error,connection){
