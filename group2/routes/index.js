@@ -25,7 +25,7 @@ router.get('/loginPage', function(req, res) {
 });
 
 router.get('/signupPage', function(req, res) {
-  
+
   //in case user have login
   if('user' in req.session){
     console.log("already log in");
@@ -127,18 +127,25 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
+    let exist = false;
     // insert new user into database
     let query="INSERT INTO users(user_name,password) VALUES (?,?);";
     connection.query(query,[req.body.user_name,req.body.password], function(error, rows, fields) {
       if (error) {
         connection.release();
         console.log('user exist');
+        exist = true;
         res.sendStatus(500);
         return;
       }
       console.log('sccuess created');
       req.session.user = {"user_name":req.body.user_name, "email":""};
     });
+
+    if(exist)
+    {
+      return;
+    }
 
     // query user info and store in session
     connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
