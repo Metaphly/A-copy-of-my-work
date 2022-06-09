@@ -179,13 +179,27 @@ function signOut() {
 }
 
 // sign out google if no user session
-
+/*
 function signOut_google(){
 
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             //signOut();
+        }
+    };
+    xhttp.open("GET", "/google_logout");
+    xhttp.send();
+}
+*/
+
+function signOut_google(){
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+
+            }
         }
     };
     xhttp.open("GET", "/google_logout");
