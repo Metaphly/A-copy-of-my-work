@@ -342,3 +342,37 @@ function set_finaltime() {
     xhttp.send(JSON.stringify(user_event));
 
 }
+
+// get the user information and render it into page
+function get_userInfo(){
+
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var userinfo = JSON.parse(this.responseText);
+            var infoArea = document.getElementById('userInfo');
+
+            let infotable = document.createElement('table');
+            infotable.id = "infotable";
+            let infotitles = document.createElement('thead');
+            infotitles.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th></tr>";
+            infotable.appendChild(infotitles);
+
+            let detailrow = document.createElement('tr');
+            let user_id = document.createElement('td');
+            let user_name = document.createElement('td');
+            let user_email = document.createElement('td');
+            user_id.innerText = userinfo.user_id;
+            user_name.innerText = userinfo.user_name;
+            user_email.innerText = userinfo.email;
+
+            detailrow.appendChild(user_id);
+            detailrow.appendChild(user_name);
+            detailrow.appendChild(user_email);
+            infotable.appendChild(detailrow);
+            infoArea.appendChild(infotable);
+        }
+    };
+    xhttp.open("GET", "/users/userInfo");
+    xhttp.send();
+}
