@@ -360,7 +360,7 @@ function get_all_userInfo(){
 }
 
 // create table
-function_create_table(list)
+function_create_admin_table(list)
 {
     let infotable = document.createElement('table');
     infotable.id = "infotable";
@@ -368,21 +368,25 @@ function_create_table(list)
     infotitles.innerHTML = "<tr><th>User Id</th> <th>User Name</th> <th>User Email</th> <th>Is Admin</th></tr>";
     infotable.appendChild(infotitles);
 
-    for(let user of everyone){
+    for(let user of list){
 
         let detailrow = document.createElement('tr');
         let user_id = document.createElement('td');
         let user_name = document.createElement('td');
         let user_email = document.createElement('td');
+        let is_admin = document.createElement('td');
         user_id.innerText = userinfo.user_id;
         user_name.innerText = userinfo.user_name;
         user_email.innerText = userinfo.email;
+        is_admin.innerText = userinfo.is_admin;
 
         detailrow.appendChild(user_id);
         detailrow.appendChild(user_name);
         detailrow.appendChild(user_email);
+        detailrow.appendChild(is_admin);
         infotable.appendChild(detailrow);
         infoArea.appendChild(infotable);
+        return infotable;
 
     }
 }
