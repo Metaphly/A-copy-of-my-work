@@ -46,7 +46,7 @@ router.get('/logout', function(req, res, next) {
   if('user' in req.session){
     delete req.session.user;
   }
-  res.sendStatus(200);
+  res.redirect(200, '/');
 });
 
 
