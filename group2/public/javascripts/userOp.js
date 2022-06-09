@@ -394,3 +394,35 @@ function create_admin_table(list)
     }
     return infotable;
 }
+
+// sign up new admin
+function set_new_admin() {
+
+    let event_id = document.getElementsByTagName("select")[0];
+    if(event_id.value==[])
+    {
+        alert("Please choose an event!");
+        return;
+    }
+
+    let user_event = {
+        free_time: document.getElementById('freetime').value,
+        event_id: document.getElementsByTagName("select")[0].value
+    };
+
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            alert("free time changed");
+            show_selected_event();
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("failed");
+        }
+    };
+
+    xhttp.open("POST", "/users/freetime");
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(JSON.stringify(user_event));
+
+}
