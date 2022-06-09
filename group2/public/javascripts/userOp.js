@@ -406,9 +406,9 @@ function set_new_admin() {
 
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            alert("added sucessfully, check it in user center");
+            alert("Sign up new admin sucessfully");
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("unauthorized");
+            alert("failed");
         }
     };
 
