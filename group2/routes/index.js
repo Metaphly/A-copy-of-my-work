@@ -10,6 +10,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// console.log are used partly as comment
+
+// following two routers are used to redner the html file
 router.get('/loginPage', function(req, res) {
   res.sendFile(path.join(__dirname, '/../public/login.html'));
 });
@@ -18,6 +21,8 @@ router.get('/signupPage', function(req, res) {
   res.sendFile(path.join(__dirname, '/../public/signup.html'));
 });
 
+
+// send all events to user
 router.get('/events', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -38,6 +43,7 @@ router.get('/events', function(req, res, next) {
   });
 });
 
+// check login info in database
 router.post('/login', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -75,6 +81,8 @@ router.post('/login', function(req, res, next) {
   });
 });
 
+
+// check sign up info in database
 router.post('/signup', function(req, res, next) {
   req.pool.getConnection(function(error,connection){
     if(error){
@@ -105,6 +113,7 @@ router.post('/signup', function(req, res, next) {
       return;
     }
 
+    // insert new user into database
     let query="INSERT INTO users(user_name,password) VALUES (?,?);";
     connection.query(query,[req.body.user_name,req.body.password], function(error, rows, fields) {
       if (error) {
@@ -117,6 +126,7 @@ router.post('/signup', function(req, res, next) {
       req.session.user = {"user_name":req.body.user_name, "email":""};
     });
 
+    // query user info and store in session
     connection.query("SELECT * FROM users WHERE user_name = ?;",[req.body.user_name], function(error, rows, fields) {
       connection.release();
       if (error) {
