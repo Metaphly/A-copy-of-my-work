@@ -32,13 +32,17 @@ router.use('/admin', function(req, res, next) {
   }
 });
 
-// following 2 routers are used to render the page, user must login to acess them
+// following 3 routers are used to render the page, user must login to acess them
 router.get('/userPage', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/user.html'));
 });
 
 router.get('/eventsCreator', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/eventsCreator.html'));
+});
+
+router.get('/admin/allinfo', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '/../public/admin.html'));
 });
 
 // delete session when logout
