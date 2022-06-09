@@ -14,10 +14,24 @@ router.get('/', function(req, res, next) {
 
 // following two routers are used to redner the html file
 router.get('/loginPage', function(req, res) {
+
+  //in case user have login
+  if('user' in req.session){
+    console.log("already log in");
+    res.redirect(409, '/');
+    return;
+  }
   res.sendFile(path.join(__dirname, '/../public/login.html'));
 });
 
 router.get('/signupPage', function(req, res) {
+  
+  //in case user have login
+  if('user' in req.session){
+    console.log("already log in");
+    res.redirect(409, '/');
+    return;
+  }
   res.sendFile(path.join(__dirname, '/../public/signup.html'));
 });
 
@@ -53,7 +67,7 @@ router.post('/login', function(req, res, next) {
 
     if('user' in req.session){
       console.log("already log in");
-      res.redirect(409, '/');
+      res.sendStatus(409);
       return;
     }
 
@@ -92,7 +106,7 @@ router.post('/signup', function(req, res, next) {
 
     if('user' in req.session){
       console.log("already log in");
-      res.redirect(409, '/');
+      res.sendStatus(409);
       return;
     }
 
