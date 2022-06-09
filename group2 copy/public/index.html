@@ -1,53 +1,13 @@
-<!DOCTYPE html>
-<html lang='en'>
+<html>
 
-  <head>
-    <meta charset='UTF-8'>
-    <meta name="google-signin-client_id" content="82416996899-apdbt8826sr91gc3n29li4d6oknnbt02.apps.googleusercontent.com">
-    <meta name="google-signin-plugin_name" content="APP">
-    <title>Theoparty</title>
-    <script src="javascripts/mainPage.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script>
-    get_events();
-    </script>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/blue.css">
-  </head>
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
 
-  <body>
-    <div id="blueheader">
-        <a id="logotext" href="/">Theoparty</a>
-        <div class="g-signin2 lower_right" data-onsuccess="onSignIn"></div>
-        <nav id="toprightmenu">
-            <a href="/users/userPage">User Center</a>
-            <a href="/users/logout" onclick="signOut();">Log out</a>
-            <a href="/signupPage">Sign up</a>
-            <a href="/loginPage">Log in</a>
-        </nav>
-    </div>
+<body>
+  <h1>Express</h1>
+  <p>Welcome to Express</p>
+</body>
 
-    <div id="notblue">
-        <div id="searcharea">
-            <input type="text" placeholder="Enter an event id" class="inputbar">
-            <input type="text" placeholder="Location" class="inputbar">
-            <br>
-            <label>Use event Id to add an event to schedule: </label>
-            <select>
-              <option disabled selected value> -- select an option -- </option>
-            </select>
-            <br>
-            <button type="button" class="bluebutton" onclick="take_event()">Confirm</button>
-        </div>
-
-        <div id="allevents">
-            <h2 class="sectionheader">Recent Events</h2>
-
-
-
-        </div>
-
-        <button type="button" class="bluebutton centerbutton">Load More</button>
-    </div>
-
-  </body>
 </html>
