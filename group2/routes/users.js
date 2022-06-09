@@ -17,6 +17,17 @@ router.use('/', function(req, res, next) {
   }
 });
 
+router.use('/admin', function(req, res, next) {
+  if(req.session.user.admin) {
+    console.log("admin operation");
+    next();
+  }else
+  {
+    console.log("wrong admin");
+    res.redirect(403, '/');
+  }
+});
+
 router.get('/userPage', function(req, res, next) {
   res.sendFile(path.join(__dirname, '/../public/user.html'));
 });
