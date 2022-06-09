@@ -10,9 +10,11 @@ function get_events(){
             var eventArea = document.getElementById('allevents');
             for (let event of event_list) {
 
+                // add event id to the selector
                 let newop = make_choice(event);
                 selection.appendChild(newop);
 
+                // add an event to page
                 let anevent = create_single_event(event);
                 eventArea.appendChild(anevent);
             }
@@ -56,12 +58,15 @@ function create_single_event(event){
     return anevent;
 }
 
+// add an event id to the selector
 function make_choice(event){
     let newchoice = document.createElement('option');
     newchoice.innerText = event.event_id;
     return newchoice;
 }
 
+
+// send login info to server
 function login() {
 
     let user = {
@@ -86,6 +91,7 @@ function login() {
 
 }
 
+// send sign up info to server
 function signup() {
 
     let user = {
@@ -111,6 +117,8 @@ function signup() {
 
 }
 
+// send the selected event to server
+// add this event as enroled
 function take_event() {
 
     let user_event = {
@@ -133,6 +141,8 @@ function take_event() {
 
 }
 
+
+// google login
 function onSignIn(googleUser) {
 
     var profile = googleUser.getBasicProfile();
